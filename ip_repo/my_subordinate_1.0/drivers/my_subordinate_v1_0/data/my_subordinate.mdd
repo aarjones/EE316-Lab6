@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER my_subordinate
+	OPTION supported_peripherals = (my_subordinate);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = my_subordinate;
+END DRIVER

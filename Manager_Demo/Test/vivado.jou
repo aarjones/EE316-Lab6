@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr  7 14:22:59 2022
+# Process ID: 16020
+# Current directory: C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14640 C:\Users\jones\Desktop\EE316-Lab6\Manager_Demo\Test\Test.xpr
+# Log file: C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test/vivado.log
+# Journal file: C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test/Test.xpr
+open_bd_design {C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name axilab_master_v1_0_project -directory C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test/Test.tmp/axilab_master_v1_0_project c:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/ip_repo/axilab_master_1.0/component.xml
+update_compile_order -fileset sources_1
+close_project
+set_property board_part digilentinc.com:cora-z7-07s:part0:1.0 [current_project]
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {design_1_axilab_master_0_axi_periph_0 design_1_rst_clk_wiz_100M_0 design_1_axilab_master_0_1 design_1_axi_gpio_1_0 design_1_clk_wiz_0 design_1_axi_gpio_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {design_1_axilab_master_0_axi_periph_0 design_1_rst_clk_wiz_100M_0 design_1_axilab_master_0_1 design_1_axi_gpio_1_0 design_1_clk_wiz_0 design_1_axi_gpio_0_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_axi_gpio_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_gpio_1_0] }
+catch { config_ip_cache -export [get_ips -all design_1_clk_wiz_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_clk_wiz_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axilab_master_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+export_ip_user_files -of_objects [get_files C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test/Test.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/jones/Desktop/EE316-Lab6/Manager_Demo/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 {design_1_axi_gpio_0_0_synth_1 design_1_axi_gpio_1_0_synth_1 design_1_clk_wiz_0_synth_1 design_1_rst_clk_wiz_100M_0_synth_1 design_1_axilab_master_0_1_synth_1 design_1_xbar_0_synth_1}

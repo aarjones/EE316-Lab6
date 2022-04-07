@@ -1,0 +1,25 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk_in1_0 -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port reset_0 -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace inst my_manager_0 -pg 1 -lvl 3 -x 710 -y 80 -defaultsOSRD
+preplace inst my_subordinate_0 -pg 1 -lvl 5 -x 1260 -y 140 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 160 -defaultsOSRD
+preplace inst my_manager_0_axi_periph -pg 1 -lvl 4 -x 1010 -y 120 -defaultsOSRD
+preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 380 -y 130 -defaultsOSRD
+preplace netloc clk_in1_0_1 1 0 1 NJ 170
+preplace netloc reset_0_1 1 0 2 20 90 200
+preplace netloc clk_wiz_0_clk_out1 1 1 4 210 30 550 160 860 240 1150J
+preplace netloc clk_wiz_0_locked 1 1 1 N 170
+preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 3 560 170 870 250 1160J
+preplace netloc my_manager_0_M00_AXI 1 3 1 N 60
+preplace netloc my_manager_0_axi_periph_M00_AXI 1 4 1 N 120
+levelinfo -pg 1 0 110 380 710 1010 1260 1370
+pagesize -pg 1 -db -bbox -sgen -110 0 1370 260
+"
+}
+{
+   "da_axi4_cnt":"1"
+}

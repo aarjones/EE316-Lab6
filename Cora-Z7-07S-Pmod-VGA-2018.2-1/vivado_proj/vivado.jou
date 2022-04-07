@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr  7 14:03:13 2022
+# Process ID: 4792
+# Current directory: C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22876 C:\Users\jones\Desktop\EE316-Lab6\Cora-Z7-07S-Pmod-VGA-2018.2-1\vivado_proj\Cora-Z7-07S-Pmod-VGA.xpr
+# Log file: C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/vivado.log
+# Journal file: C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.xpr
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+upgrade_ip -srcset clk_wiz_0 -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+set_property BOARD_PART_REPO_PATHS {C:/Users/jones/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
+set_param board.repoPaths {C:/Users/jones/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store}
+set_property BOARD_PART_REPO_PATHS {C:/Users/jones/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
+set_param board.repoPaths {C:/Users/jones/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store}
+set_property board_part {} [current_project]
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+convert_ips [get_files  C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0.xci] -sync -lib_map_path [list {modelsim=C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.cache/compile_simlib/modelsim} {questa=C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.cache/compile_simlib/questa} {riviera=C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.cache/compile_simlib/riviera} {activehdl=C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.cache/compile_simlib/activehdl}] -force -quiet
+set_property coreContainer.enable 1 [current_project]
+generate_target all [get_files  C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs -jobs 8 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.srcs/clk_wiz_0/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.ip_user_files -ipstatic_source_dir C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.cache/compile_simlib/modelsim} {questa=C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.cache/compile_simlib/questa} {riviera=C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.cache/compile_simlib/riviera} {activehdl=C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.runs/impl_1/top.bit} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/Users/jones/Desktop/EE316-Lab6/Cora-Z7-07S-Pmod-VGA-2018.2-1/vivado_proj/Cora-Z7-07S-Pmod-VGA.runs/impl_1/top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
