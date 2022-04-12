@@ -1,0 +1,4 @@
+ground wire (yellow)  ---> ground
+vcc wire (black) ---> 3.3v
+data wire (purple) ---> IO0
+clock wire (green) ---> IO1
