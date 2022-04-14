@@ -1,0 +1,283 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr 14 13:24:57 2022
+# Process ID: 24052
+# Current directory: C:/Users/jones/Desktop/EE316-Lab6/Lab6
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent368 C:\Users\jones\Desktop\EE316-Lab6\Lab6\Lab6.xpr
+# Log file: C:/Users/jones/Desktop/EE316-Lab6/Lab6/vivado.log
+# Journal file: C:/Users/jones/Desktop/EE316-Lab6/Lab6\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.xpr
+WARNING: [Board 49-91] Board repository path 'C:/Users/jones/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/jones/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 979.309 ; gain = 58.250
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:user:keyboard_subordinate:1.0 - keyboard_subordinate_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - videomemlab_master_0_axi_periph
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_100M
+Adding component instance block -- xilinx.com:user:videomemlab_master:1.0 - videomemlab_master_0
+Successfully read diagram <design_1> from BD file <C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1032.816 ; gain = 36.652
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:vga_bram:1.0 vga_bram_0
+endgroup
+ipx::edit_ip_in_project -upgrade true -name vga_bram_v1_0_project -directory C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.tmp/vga_bram_v1_0_project c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1092.539 ; gain = 44.312
+update_compile_order -fileset sources_1
+current_project Lab6
+delete_bd_objs [get_bd_cells vga_bram_0]
+current_project vga_bram_v1_0_project
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0/hdl/vga_bram_v1_0_S00_AXI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0/hdl/vga_bram_v1_0.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+add_files -norecurse -copy_to c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0/src C:/Users/jones/Desktop/FPGAFlashController/FPGA_NAND_Controller/FPGA_NAND_Controller.srcs/sources_1/new/bram.vhd
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0/src C:/Users/jones/Downloads/fpga_vhdl_src/fpga_vhdl_src/ch12/list_ch12_01_vga_sync.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+current_project Lab6
+open_bd_design {C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0'.
+report_ip_status -name ip_status
+ipx::edit_ip_in_project -upgrade true -name videomemlab_master_v1_0_project -directory C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.tmp/videomemlab_master_v1_0_project c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1158.090 ; gain = 0.000
+update_compile_order -fileset sources_1
+current_project Lab6
+ipx::edit_ip_in_project -upgrade true -name keyboard_subordinate_v1_0_project -directory C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.tmp/keyboard_subordinate_v1_0_project c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/jones/desktop/ee316-lab6/lab6/lab6.tmp/keyboard_subordinate_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1208.234 ; gain = 2.043
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1209.820 ; gain = 3.629
+update_compile_order -fileset sources_1
+current_project Lab6
+close_bd_design [get_bd_designs design_1]
+open_bd_design {C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:user:keyboard_subordinate:1.0 - keyboard_subordinate_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - videomemlab_master_0_axi_periph
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_100M
+Adding component instance block -- xilinx.com:user:videomemlab_master:1.0 - videomemlab_master_0
+Successfully read diagram <design_1> from BD file <C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd>
+current_project keyboard_subordinate_v1_0_project
+current_project videomemlab_master_v1_0_project
+close_project
+close_project
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0'
+open_bd_design {C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:vga_bram:1.0 vga_bram_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out2 (50 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (100 MHz)} Master {/videomemlab_master_0/M00_AXI} Slave {/vga_bram_0/S00_AXI} intc_ip {/videomemlab_master_0_axi_periph} master_apm {0}}  [get_bd_intf_pins vga_bram_0/S00_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment </vga_bram_0/S00_AXI/S00_AXI_reg> is being mapped into address space </videomemlab_master_0/M00_AXI> at <0x44A1_0000 [ 64K ]>
+regenerate_bd_layout
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins vga_bram_0/I_CLK_50]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_out2(clk) and /vga_bram_0/I_CLK_50(undef)
+startgroup
+make_bd_pins_external  [get_bd_pins vga_bram_0/g] [get_bd_pins vga_bram_0/r] [get_bd_pins vga_bram_0/vsync] [get_bd_pins vga_bram_0/hsync] [get_bd_pins vga_bram_0/b]
+endgroup
+save_bd_design
+Wrote  : <C:\Users\jones\Desktop\EE316-Lab6\Lab6\Lab6.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+generate_target all [get_files  C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-1363] The clock pins '/videomemlab_master_0_axi_periph/S00_ACLK' (interface '/videomemlab_master_0_axi_periph/S00_AXI') and '/videomemlab_master_0/m00_axi_aclk' (interface '/videomemlab_master_0/M00_AXI') must be connected to the same source 
+CRITICAL WARNING: [BD 41-1363] The clock pins '/videomemlab_master_0_axi_periph/M00_ACLK' (interface '/videomemlab_master_0_axi_periph/M00_AXI') and '/keyboard_subordinate_0/s00_axi_aclk' (interface '/keyboard_subordinate_0/S00_AXI') must be connected to the same source 
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+CRITICAL WARNING: [BD 41-1344] Reset pin /keyboard_subordinate_0/s00_axi_aresetn (associated clock /keyboard_subordinate_0/s00_axi_aclk) is connected to reset source /rst_clk_wiz_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_clk_wiz_0_50M/peripheral_aresetn.
+CRITICAL WARNING: [BD 41-1344] Reset pin /videomemlab_master_0/m00_axi_aresetn (associated clock /videomemlab_master_0/m00_axi_aclk) is connected to reset source /rst_clk_wiz_0_100M/peripheral_aresetn (synchronous to clock source /clk_wiz_0/clk_out1).
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_clk_wiz_0_50M/peripheral_aresetn.
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /videomemlab_master_0_axi_periph/xbar/S00_AXI(100000000) and /videomemlab_master_0/M00_AXI(50000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /keyboard_subordinate_0/S00_AXI(50000000) and /videomemlab_master_0_axi_periph/xbar/M00_AXI(100000000)
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd 
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+open_bd_design {C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out2]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (100 MHz)" }  [get_bd_pins keyboard_subordinate_0/s00_axi_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (100 MHz)" }  [get_bd_pins videomemlab_master_0_axi_periph/M01_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (100 MHz)" }  [get_bd_pins videomemlab_master_0/m00_axi_aclk]
+INFO: [BD 5-455] Automation on '/vga_bram_0/s00_axi_aclk' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (100 MHz)" }  [get_bd_pins rst_clk_wiz_0_50M/slowest_sync_clk]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins vga_bram_0/I_CLK_50]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_out2(clk) and /vga_bram_0/I_CLK_50(undef)
+regenerate_bd_layout
+ipx::edit_ip_in_project -upgrade true -name videomemlab_master_v1_0_project -directory C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.tmp/videomemlab_master_v1_0_project c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0/component.xml' ignored by IP packager.
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:videomemlab_master:1.0 [get_ips  design_1_videomemlab_master_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_videomemlab_master_0_0 (videomemlab_master_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <C:\Users\jones\Desktop\EE316-Lab6\Lab6\Lab6.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_videomemlab_master_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/videomemlab_master_0/m00_axi_init_axi_txn
+
+Wrote  : <C:\Users\jones\Desktop\EE316-Lab6\Lab6\Lab6.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block videomemlab_master_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block keyboard_subordinate_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block videomemlab_master_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vga_bram_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_50M .
+Exporting to file C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_videomemlab_master_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_clk_wiz_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_keyboard_subordinate_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_clk_wiz_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_vga_bram_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_clk_wiz_0_50M_0] }
+export_ip_user_files -of_objects [get_files C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 {design_1_videomemlab_master_0_0_synth_1 design_1_clk_wiz_0_0_synth_1 design_1_keyboard_subordinate_0_0_synth_1 design_1_rst_clk_wiz_0_100M_0_synth_1 design_1_xbar_0_synth_1 design_1_vga_bram_0_0_synth_1 design_1_rst_clk_wiz_0_50M_0_synth_1}
+[Thu Apr 14 14:58:55 2022] Launched design_1_videomemlab_master_0_0_synth_1, design_1_clk_wiz_0_0_synth_1, design_1_keyboard_subordinate_0_0_synth_1, design_1_rst_clk_wiz_0_100M_0_synth_1, design_1_xbar_0_synth_1, design_1_vga_bram_0_0_synth_1, design_1_rst_clk_wiz_0_50M_0_synth_1...
+Run output will be captured here:
+design_1_videomemlab_master_0_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_videomemlab_master_0_0_synth_1/runme.log
+design_1_clk_wiz_0_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_clk_wiz_0_0_synth_1/runme.log
+design_1_keyboard_subordinate_0_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_keyboard_subordinate_0_0_synth_1/runme.log
+design_1_rst_clk_wiz_0_100M_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_rst_clk_wiz_0_100M_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_xbar_0_synth_1/runme.log
+design_1_vga_bram_0_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_vga_bram_0_0_synth_1/runme.log
+design_1_rst_clk_wiz_0_50M_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_rst_clk_wiz_0_50M_0_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:02:07 . Memory (MB): peak = 1621.359 ; gain = 22.402
+export_simulation -of_objects [get_files C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.ip_user_files -ipstatic_source_dir C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.cache/compile_simlib/modelsim} {questa=C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.cache/compile_simlib/questa} {riviera=C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.cache/compile_simlib/riviera} {activehdl=C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+validate_bd_design -force
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/videomemlab_master_0/m00_axi_init_axi_txn
+
+report_ip_status -name ip_status 
+regenerate_bd_layout
+reset_target all [get_files  C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd]
+delete_ip_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2380.809 ; gain = 34.609
+generate_target all [get_files  C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/videomemlab_master_0/m00_axi_init_axi_txn
+
+Wrote  : <C:\Users\jones\Desktop\EE316-Lab6\Lab6\Lab6.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block videomemlab_master_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block keyboard_subordinate_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block videomemlab_master_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vga_bram_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_50M .
+Exporting to file C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_videomemlab_master_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_clk_wiz_0_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_clk_wiz_0_0, cache-ID = e39ffef511feb87d; cache size = 0.646 MB.
+catch { config_ip_cache -export [get_ips -all design_1_keyboard_subordinate_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_clk_wiz_0_100M_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_clk_wiz_0_100M_0, cache-ID = 1413e1c91de6b465; cache size = 0.646 MB.
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_xbar_0, cache-ID = 57b10f973321d753; cache size = 0.646 MB.
+catch { config_ip_cache -export [get_ips -all design_1_vga_bram_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_clk_wiz_0_50M_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_clk_wiz_0_50M_0, cache-ID = 1413e1c91de6b465; cache size = 0.646 MB.
+export_ip_user_files -of_objects [get_files C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 {design_1_videomemlab_master_0_0_synth_1 design_1_keyboard_subordinate_0_0_synth_1 design_1_vga_bram_0_0_synth_1}
+[Thu Apr 14 15:02:23 2022] Launched design_1_videomemlab_master_0_0_synth_1, design_1_keyboard_subordinate_0_0_synth_1, design_1_vga_bram_0_0_synth_1...
+Run output will be captured here:
+design_1_videomemlab_master_0_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_videomemlab_master_0_0_synth_1/runme.log
+design_1_keyboard_subordinate_0_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_keyboard_subordinate_0_0_synth_1/runme.log
+design_1_vga_bram_0_0_synth_1: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_vga_bram_0_0_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:55 . Memory (MB): peak = 2380.809 ; gain = 0.000
+export_simulation -of_objects [get_files C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.ip_user_files -ipstatic_source_dir C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.cache/compile_simlib/modelsim} {questa=C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.cache/compile_simlib/questa} {riviera=C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.cache/compile_simlib/riviera} {activehdl=C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 14 15:02:43 2022...

@@ -1,0 +1,14 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[25]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[26]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[27]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[24]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[22]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[20]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[18]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[17]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[4]/D|
+| clk_out1_design_1_clk_wiz_0_0_1 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/videomemlab_master_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[3]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
