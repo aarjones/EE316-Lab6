@@ -19,7 +19,7 @@ entity videomemlab_master_v1_0 is
 	);
 	port (
 		-- Users to add ports here
-
+        IRQ_I : in std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -64,6 +64,7 @@ architecture arch_imp of videomemlab_master_v1_0 is
 		C_M_TRANSACTIONS_NUM	: integer	:= 4
 		);
 		port (
+		IRQ_I : in std_logic;
 		INIT_AXI_TXN	: in std_logic;
 		ERROR	: out std_logic;
 		TXN_DONE	: out std_logic;
@@ -103,6 +104,7 @@ videomemlab_master_v1_0_M00_AXI_inst : videomemlab_master_v1_0_M00_AXI
 		C_M_TRANSACTIONS_NUM	=> C_M00_AXI_TRANSACTIONS_NUM
 	)
 	port map (
+	   IRQ_I => IRQ_I,
 		INIT_AXI_TXN	=> m00_axi_init_axi_txn,
 		ERROR	=> m00_axi_error,
 		TXN_DONE	=> m00_axi_txn_done,

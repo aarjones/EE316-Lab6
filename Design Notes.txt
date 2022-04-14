@@ -1,0 +1,6 @@
+Ports:
+	ps2_clk - IO1
+	ps2_clk - IO0
+	
+bram regs:
+	

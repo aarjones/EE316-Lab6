@@ -1,0 +1,33 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port reset_rtl -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port ps2_clk_0 -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port ps2_data_0 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 320 -defaultsOSRD
+preplace inst keyboard_subordinate_0 -pg 1 -lvl 5 -x 1290 -y 100 -defaultsOSRD
+preplace inst videomemlab_master_0_axi_periph -pg 1 -lvl 4 -x 1030 -y 280 -defaultsOSRD
+preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 380 -y 230 -defaultsOSRD
+preplace inst videomemlab_master_0 -pg 1 -lvl 3 -x 720 -y 240 -defaultsOSRD
+preplace netloc reset_rtl_1 1 0 2 20 210 NJ
+preplace netloc sys_clock_1 1 0 1 NJ 330
+preplace netloc clk_wiz_0_locked 1 1 1 210 270n
+preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 3 560 140 890 140 N
+preplace netloc ps2_clk_0_1 1 0 5 NJ 70 NJ 70 NJ 70 NJ 70 1170J
+preplace netloc ps2_data_0_1 1 0 5 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc keyboard_subordinate_0_IRQ_O 1 2 4 570 150 870J 400 NJ 400 1400
+preplace netloc clk_wiz_0_clk_out2 1 1 4 N 330 550 120 NJ 120 NJ
+preplace netloc clk_wiz_0_clk_out1 1 1 3 200 130 NJ 130 880
+preplace netloc videomemlab_master_0_M00_AXI 1 3 1 N 220
+preplace netloc videomemlab_master_0_axi_periph_M00_AXI 1 4 1 1180 60n
+levelinfo -pg 1 0 110 380 720 1030 1290 1420
+pagesize -pg 1 -db -bbox -sgen -120 0 1420 410
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"4"
+}

@@ -9,33 +9,23 @@ entity videomemlab_master_v1_0_M00_AXI is
 		-- User parameters ends
 		-- Do not modify the parameters beyond this line
 
-		-- The master will start generating data from the C_M_START_DATA_VALUE value
-		C_M_START_DATA_VALUE	: std_logic_vector	:= x"AA000000";
 		-- The master requires a target slave base address.
     -- The master will initiate read and write transactions on the slave with base address specified here as a parameter.
-		C_M_TARGET_SLAVE_BASE_ADDR	: std_logic_vector	:= x"40000000";
+		C_M_PS2_SLAVE_BASE_ADDR	: std_logic_vector	:= x"40000000";
+		C_M_VIDEOMEM_BASE_ADDR	: std_logic_vector	:= x"80000000";
 		-- Width of M_AXI address bus. 
     -- The master generates the read and write addresses of width specified as C_M_AXI_ADDR_WIDTH.
 		C_M_AXI_ADDR_WIDTH	: integer	:= 32;
 		-- Width of M_AXI data bus. 
     -- The master issues write data and accept read data where the width of the data bus is C_M_AXI_DATA_WIDTH
-		C_M_AXI_DATA_WIDTH	: integer	:= 32;
-		-- Transaction number is the number of write 
-    -- and read transactions the master will perform as a part of this example memory test.
-		C_M_TRANSACTIONS_NUM	: integer	:= 4
+		C_M_AXI_DATA_WIDTH	: integer	:= 32
 	);
 	port (
 		-- Users to add ports here
-
+        IRQ_I : in std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
-		-- Initiate AXI transactions
-		INIT_AXI_TXN	: in std_logic;
-		-- Asserts when ERROR is detected
-		ERROR	: out std_logic;
-		-- Asserts when AXI transactions is complete
-		TXN_DONE	: out std_logic;
 		-- AXI clock signal
 		M_AXI_ACLK	: in std_logic;
 		-- AXI active low reset signal
@@ -95,49 +85,56 @@ end videomemlab_master_v1_0_M00_AXI;
 
 architecture implementation of videomemlab_master_v1_0_M00_AXI is
 
-	-- function called clogb2 that returns an integer which has the
-	-- value of the ceiling of the log base 2
-	function clogb2 (bit_depth : integer) return integer is            
-	 	variable depth  : integer := bit_depth;                               
-	 	variable count  : integer := 1;                                       
-	 begin                                                                   
-	 	 for clogb2 in 1 to bit_depth loop  -- Works for up to 32 bit integers
-	      if (bit_depth <= 2) then                                           
-	        count := 1;                                                      
-	      else                                                               
-	        if(depth <= 1) then                                              
-	 	       count := count;                                                
-	 	     else                                                             
-	 	       depth := depth / 2;                                            
-	          count := count + 1;                                            
-	 	     end if;                                                          
-	 	   end if;                                                            
-	   end loop;                                                             
-	   return(count);        	                                              
-	 end;                                                                    
+    component char8x12_lookup_table is
+        Port ( clk : in std_logic;
+               reset : in std_logic;
+               ascii : in std_logic_vector(7 downto 0);
+               line : in integer range 0 to 11;
+               pixels : out std_logic_vector(7 downto 0));
+    end component;
+    
+    component scancode2ascii is
+        Port ( scancode : in std_logic_vector(7 downto 0);
+               ascii : out std_logic_vector(7 downto 0);
+                  shift, ctrl, alt : in std_logic
+                 );
+    end component;
+    
+    --signal ascii : std_logic_vector(7 downto 0);
+    --signal line : integer range 0 to 11;
+    --signal pixels : std_logic_vector(7 downto 0);
 
-	-- Example user application signals
+	signal code, ascii : std_logic_vector(7 downto 0);
+	signal shift, ctrl, alt : std_logic;
 
-	-- TRANS_NUM_BITS is the width of the index counter for
-	-- number of write or read transaction..
-	 constant  TRANS_NUM_BITS  : integer := clogb2(C_M_TRANSACTIONS_NUM-1);
-
-	-- Example State machine to initialize counter, initialize write transactions, 
-	 -- initialize read transactions and comparison of read data with the 
-	 -- written data words.
-	 type state is ( IDLE, -- This state initiates AXI4Lite transaction
-	 							-- after the state machine changes state to INIT_WRITE
-	 							-- when there is 0 to 1 transition on INIT_AXI_TXN
-	 				INIT_WRITE,   -- This state initializes write transaction,
-	 							-- once writes are done, the state machine 
-	 							-- changes state to INIT_READ 
-	 				INIT_READ,    -- This state initializes read transaction
-	 							-- once reads are done, the state machine 
-	 							-- changes state to INIT_COMPARE 
-	 				INIT_COMPARE);-- This state issues the status of comparison 
-	 							-- of the written data with the read data
+    signal current_addr : std_logic_vector(31 downto 0);
+	 type state is ( INITMEM,   -- Clear the memory
+	                 WAIT4IRQ,  -- Wait for interrupt from PS/2
+	 				 WAIT4CODE,	-- Read scancode from PS/2
+	 				 GETPIXELS1,-- Wait for pixel data to be ready
+	 				 GETPIXELS2,-- Wait for pixel data to be ready
+                     WAIT4MEMACK);-- write pixels to memory 
 
 	 signal mst_exec_state  : state ; 
+
+	constant CHARS_PER_LINE : integer := 80;
+	constant LINES_PER_PAGE : integer := 40;
+	constant CHARS_PER_PAGE : integer := CHARS_PER_LINE * LINES_PER_PAGE;
+	constant CHAR_WIDTH : integer := 8;
+	constant CHAR_HEIGHT : integer := 12;
+	constant PIXELS_PER_WORD : integer := 8;
+	constant BITS_PER_PIXEL : integer := 4;
+
+	signal txtcolor, bgcolor : std_logic_vector(BITS_PER_PIXEL-1 downto 0);
+	signal pixels : std_logic_vector(CHAR_WIDTH-1 downto 0);
+	signal reg_pixels : std_logic_vector(CHAR_WIDTH-1 downto 0);
+	signal color_pixels : std_logic_vector(31 downto 0);
+	signal current_char : integer range 0 to CHARS_PER_LINE-1;
+	signal current_line : integer range 0 to LINES_PER_PAGE-1;
+	signal scan_line : integer range 0 to CHAR_HEIGHT;
+	signal pixelnum : integer range 0 to CHAR_WIDTH-1;
+
+	signal rst_p : std_logic;
 
 	-- AXI4LITE signals
 	--write address valid
@@ -150,12 +147,8 @@ architecture implementation of videomemlab_master_v1_0_M00_AXI is
 	signal axi_rready	: std_logic;
 	--write response acceptance
 	signal axi_bready	: std_logic;
-	--write address
-	signal axi_awaddr	: std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0);
 	--write data
 	signal axi_wdata	: std_logic_vector(C_M_AXI_DATA_WIDTH-1 downto 0);
-	--read addresss
-	signal axi_araddr	: std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0);
 	--Asserts when there is a write response error
 	signal write_resp_error	: std_logic;
 	--Asserts when there is a read response error
@@ -168,37 +161,15 @@ architecture implementation of videomemlab_master_v1_0_M00_AXI is
 	signal write_issued	: std_logic;
 	--Asserts when a single beat read transaction is issued and remains asserted till the completion of read trasaction.
 	signal read_issued	: std_logic;
-	--flag that marks the completion of write trasactions. The number of write transaction is user selected by the parameter C_M_TRANSACTIONS_NUM.
-	signal writes_done	: std_logic;
-	--flag that marks the completion of read trasactions. The number of read transaction is user selected by the parameter C_M_TRANSACTIONS_NUM
-	signal reads_done	: std_logic;
-	--The error register is asserted when any of the write response error, read response error or the data mismatch flags are asserted.
-	signal error_reg	: std_logic;
-	--index counter to track the number of write transaction issued
-	signal write_index	: std_logic_vector(TRANS_NUM_BITS downto 0);
-	--index counter to track the number of read transaction issued
-	signal read_index	: std_logic_vector(TRANS_NUM_BITS downto 0);
-	--Expected read data used to compare with the read data.
-	signal expected_rdata	: std_logic_vector(C_M_AXI_DATA_WIDTH-1 downto 0);
-	--Flag marks the completion of comparison of the read data with the expected read data
-	signal compare_done	: std_logic;
-	--This flag is asserted when there is a mismatch of the read data with the expected read data.
-	signal read_mismatch	: std_logic;
-	--Flag is asserted when the write index reaches the last write transction number
-	signal last_write	: std_logic;
-	--Flag is asserted when the read index reaches the last read transction number
-	signal last_read	: std_logic;
-	signal init_txn_ff	: std_logic;
-	signal init_txn_ff2	: std_logic;
-	signal init_txn_edge	: std_logic;
-	signal init_txn_pulse	: std_logic;
-
+	--Registered read data
+	signal reg_rdata	: std_logic_vector(C_M_AXI_DATA_WIDTH-1 downto 0);
 
 begin
 	-- I/O Connections assignments
 
-	--Adding the offset address to the base addr of the slave
-	M_AXI_AWADDR	<= std_logic_vector (unsigned(C_M_TARGET_SLAVE_BASE_ADDR) + unsigned(axi_awaddr));
+	current_addr <= std_logic_vector (unsigned(C_M_VIDEOMEM_BASE_ADDR) + (current_line*CHARS_PER_LINE*CHAR_HEIGHT + current_char + scan_line*CHARS_PER_LINE)*CHAR_WIDTH/PIXELS_PER_WORD*4);
+	--slave write address
+	M_AXI_AWADDR	<= current_addr;
 	--AXI 4 write data
 	M_AXI_WDATA	<= axi_wdata;
 	M_AXI_AWPROT	<= "000";
@@ -210,31 +181,11 @@ begin
 	--Write Response (B)
 	M_AXI_BREADY	<= axi_bready;
 	--Read Address (AR)
-	M_AXI_ARADDR	<= std_logic_vector(unsigned(C_M_TARGET_SLAVE_BASE_ADDR) + unsigned(axi_araddr));
+	M_AXI_ARADDR	<= std_logic_vector(unsigned(C_M_PS2_SLAVE_BASE_ADDR));
 	M_AXI_ARVALID	<= axi_arvalid;
 	M_AXI_ARPROT	<= "001";
 	--Read and Read Response (R)
 	M_AXI_RREADY	<= axi_rready;
-	--Example design I/O
-	TXN_DONE	<= compare_done;
-	init_txn_pulse	<= ( not init_txn_ff2)  and  init_txn_ff;
-
-
-	--Generate a pulse to initiate AXI transaction.
-	process(M_AXI_ACLK)                                                          
-	begin                                                                             
-	  if (rising_edge (M_AXI_ACLK)) then                                              
-	      -- Initiates AXI transaction delay        
-	    if (M_AXI_ARESETN = '0' ) then                                                
-	      init_txn_ff <= '0';                                                   
-	        init_txn_ff2 <= '0';                                                          
-	    else                                                                                       
-	      init_txn_ff <= INIT_AXI_TXN;
-	        init_txn_ff2 <= init_txn_ff;                                                                     
-	    end if;                                                                       
-	  end if;                                                                         
-	end process; 
-
 
 	----------------------
 	--Write Address Channel
@@ -265,7 +216,7 @@ begin
 	    if (rising_edge (M_AXI_ACLK)) then                                              
 	      --Only VALID signals must be deasserted during reset per AXI spec             
 	      --Consider inverting then registering active-low reset for higher fmax        
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                
+	      if (M_AXI_ARESETN = '0' or mst_exec_state = WAIT4IRQ) then                                                
 	        axi_awvalid <= '0';                                                         
 	      else                                                                          
 	        --Signal a new address/data command is available by user logic              
@@ -278,24 +229,6 @@ begin
 	      end if;                                                                       
 	    end if;                                                                         
 	  end process;                                                                      
-	                                                                                    
-	  -- start_single_write triggers a new write                                        
-	  -- transaction. write_index is a counter to                                       
-	  -- keep track with number of write transaction                                    
-	  -- issued/initiated                                                               
-	  process(M_AXI_ACLK)                                                               
-	  begin                                                                             
-	    if (rising_edge (M_AXI_ACLK)) then                                              
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                
-	        write_index <= (others => '0');                                             
-	      elsif (start_single_write = '1') then                                         
-	        -- Signals a new write address/ write data is                               
-	        -- available by user logic                                                  
-	        write_index <= std_logic_vector (unsigned(write_index) + 1);                                           
-	      end if;                                                                       
-	    end if;                                                                         
-	  end process;                                                                      
-
 
 	----------------------
 	--Write Data Channel
@@ -308,7 +241,7 @@ begin
 	   process(M_AXI_ACLK)                                                 
 	   begin                                                                         
 	     if (rising_edge (M_AXI_ACLK)) then                                          
-	       if (M_AXI_ARESETN = '0' or init_txn_pulse = '1' ) then                                            
+	       if (M_AXI_ARESETN = '0' or mst_exec_state = WAIT4IRQ ) then                                            
 	         axi_wvalid <= '0';                                                      
 	       else                                                                      
 	         if (start_single_write = '1') then                                      
@@ -341,7 +274,7 @@ begin
 	  process(M_AXI_ACLK)                                            
 	  begin                                                                
 	    if (rising_edge (M_AXI_ACLK)) then                                 
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                   
+	      if (M_AXI_ARESETN = '0' or mst_exec_state = WAIT4IRQ) then                                   
 	        axi_bready <= '0';                                             
 	      else                                                             
 	        if (M_AXI_BVALID = '1' and axi_bready = '0') then              
@@ -363,31 +296,13 @@ begin
 	--Read Address Channel
 	------------------------------
 
-	--start_single_read triggers a new read transaction. read_index is a counter to
-	--keep track with number of read transaction issued/initiated
-
-	  process(M_AXI_ACLK)                                                              
-	  begin                                                                            
-	    if (rising_edge (M_AXI_ACLK)) then                                             
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                               
-	        read_index <= (others => '0');                                             
-	      else                                                                         
-	        if (start_single_read = '1') then                                          
-	          -- Signals a new read address is                                         
-	          -- available by user logic                                               
-	          read_index <= std_logic_vector (unsigned(read_index) + 1);                                          
-	        end if;                                                                    
-	      end if;                                                                      
-	    end if;                                                                        
-	  end process;                                                                     
-	                                                                                   
 	  -- A new axi_arvalid is asserted when there is a valid read address              
 	  -- available by the master. start_single_read triggers a new read                
 	  -- transaction                                                                   
 	  process(M_AXI_ACLK)                                                              
 	  begin                                                                            
 	    if (rising_edge (M_AXI_ACLK)) then                                             
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                               
+	      if (M_AXI_ARESETN = '0' or mst_exec_state = WAIT4IRQ) then                                               
 	        axi_arvalid <= '0';                                                        
 	      else                                                                         
 	        if (start_single_read = '1') then                                          
@@ -415,7 +330,7 @@ begin
 	  process(M_AXI_ACLK)                                             
 	  begin                                                                 
 	    if (rising_edge (M_AXI_ACLK)) then                                  
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                    
+	      if (M_AXI_ARESETN = '0' or mst_exec_state = WAIT4IRQ) then                                    
 	        axi_rready <= '1';                                              
 	      else                                                              
 	        if (M_AXI_RVALID = '1' and axi_rready = '0') then               
@@ -430,137 +345,150 @@ begin
 	    end if;                                                             
 	  end process;                                                          
 	                                                                        
-	--Flag write errors                                                     
-	  read_resp_error <= (axi_rready and M_AXI_RVALID and M_AXI_RRESP(1));  
-
-
 	----------------------------------
 	--User Logic
 	----------------------------------
 
-	--Address/Data Stimulus
+	--Data Stimulus
 
-	--Address/data pairs for this example. The read and write values should
-	--match.
-	--Modify these as desired for different address patterns.
-
-	--  Write Addresses                                                               
-	    process(M_AXI_ACLK)                                                                 
-	      begin                                                                            
-	    	if (rising_edge (M_AXI_ACLK)) then                                              
-	    	  if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                
-	    	    axi_awaddr <= (others => '0');                                              
-	    	  elsif (M_AXI_AWREADY = '1' and axi_awvalid = '1') then                        
-	    	    -- Signals a new write address/ write data is                               
-	    	    -- available by user logic                                                  
-	    	    axi_awaddr <= std_logic_vector (unsigned(axi_awaddr) + 4);                                     
-	    	  end if;                                                                       
-	    	end if;                                                                         
-	      end process;                                                                     
-	                                                                                       
-	-- Read Addresses                                                                      
-	    process(M_AXI_ACLK)                                                                
-	   	  begin                                                                         
-	   	    if (rising_edge (M_AXI_ACLK)) then                                          
-	   	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1' ) then                                            
-	   	        axi_araddr <= (others => '0');                                          
-	   	      elsif (M_AXI_ARREADY = '1' and axi_arvalid = '1') then                    
-	   	        -- Signals a new write address/ write data is                           
-	   	        -- available by user logic                                              
-	   	        axi_araddr <= std_logic_vector (unsigned(axi_araddr) + 4);                                 
-	   	      end if;                                                                   
-	   	    end if;                                                                     
-	   	  end process;                                                                  
+	-- Write data - always write the color pixels
+	axi_wdata <= color_pixels;    	                                    
 		                                                                                    
-	-- Write data                                                                          
-	    process(M_AXI_ACLK)                                                                
-		  begin                                                                             
-		    if (rising_edge (M_AXI_ACLK)) then                                              
-		      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                
-		        axi_wdata <= C_M_START_DATA_VALUE;    	                                    
-		      elsif (M_AXI_WREADY = '1' and axi_wvalid = '1') then                          
-		        -- Signals a new write address/ write data is                               
-		        -- available by user logic                                                  
-		        axi_wdata <= std_logic_vector (unsigned(C_M_START_DATA_VALUE) + unsigned(write_index));    
-		      end if;                                                                       
-		    end if;                                                                         
-		  end process;                                                                      
-		                                                                                    
-		                                                                                    
-	-- Expected read data                                                                  
-	    process(M_AXI_ACLK)                                                                
-	    begin                                                                              
-	      if (rising_edge (M_AXI_ACLK)) then                                               
-	        if (M_AXI_ARESETN = '0' or init_txn_pulse = '1' ) then                                                 
-	          expected_rdata <= C_M_START_DATA_VALUE;    	                                
-	        elsif (M_AXI_RVALID = '1' and axi_rready = '1') then                           
-	          -- Signals a new write address/ write data is                                
-	          -- available by user logic                                                   
-	          expected_rdata <= std_logic_vector (unsigned(C_M_START_DATA_VALUE) + unsigned(read_index)); 
-	        end if;                                                                        
-	      end if;                                                                          
-	    end process;                                                                       
 	  --implement master command interface state machine                                           
 	  MASTER_EXECUTION_PROC:process(M_AXI_ACLK)                                                         
+           	variable scancode : std_logic_vector(7 downto 0);
+           	variable extended, keyup : std_logic;
+            variable shift_l_down, ctrl_l_down, alt_l_down : std_logic; 
+            variable shift_r_down, ctrl_r_down, alt_r_down : std_logic;
+            variable next_state : state;
 	  begin                                                                                             
 	    if (rising_edge (M_AXI_ACLK)) then                                                              
 	      if (M_AXI_ARESETN = '0' ) then                                                                
 	        -- reset condition                                                                          
 	        -- All the signals are ed default values under reset condition                              
-	        mst_exec_state  <= IDLE;                                                            
+	        mst_exec_state  <= INITMEM;                                                            
 	        start_single_write <= '0';                                                                  
 	        write_issued   <= '0';                                                                      
 	        start_single_read  <= '0';                                                                  
 	        read_issued  <= '0';                                                                        
-	        compare_done   <= '0';                                                                      
-	        ERROR <= '0'; 
+			current_char <= 0;
+            current_line <= 0;
+            scan_line <= 0;
+            reg_pixels <= X"00";
+            shift_l_down := '0';
+            ctrl_l_down := '0';
+            alt_l_down := '0';
+            shift_r_down := '0';
+            ctrl_r_down := '0';
+            alt_r_down := '0';
+            keyup := '0';
+            extended := '0';
 	      else                                                                                          
 	        -- state transition                                                                         
 	        case (mst_exec_state) is                                                                    
 	                                                                                                    
-	          when IDLE =>                                                                      
-	            -- This state is responsible to initiate
-	            -- AXI transaction when init_txn_pulse is asserted 
-	            if ( init_txn_pulse = '1') then    
-	              mst_exec_state  <= INIT_WRITE;                                                        
-	              ERROR <= '0';
-	              compare_done <= '0';
-	            else                                                                                    
-	              mst_exec_state  <= IDLE;                                                      
-	            end if;                                                                                 
+	          when INITMEM =>  
+				-- This state is responsible for doing write transactions to                       
+                -- clear memory. Write transactions will be issued continuously.                                          
+                if (M_AXI_BVALID = '1' and axi_bready='1') then                                                             
+                    if ( scan_line = CHAR_HEIGHT-1 ) then
+                        scan_line <= 0;
+                        if ( current_char = CHARS_PER_LINE-1 ) then
+                            current_char <= 0;
+                            if ( current_line = LINES_PER_PAGE-1 ) then
+                                current_line <= 0;
+                                mst_exec_state <= WAIT4IRQ;
+                            else
+                                current_line <= current_line + 1;
+                            end if;
+                        else
+                            current_char <= current_char + 1;
+                        end if;
+                    else
+                        scan_line <= scan_line + 1;
+                        mst_exec_state <= INITMEM;
+                    end if;
+                    write_issued <= '0';
+                else                                                                                    
+                  mst_exec_state  <= INITMEM;
+
+                  if (axi_awvalid = '0' and axi_wvalid = '0' and M_AXI_BVALID = '0' and                 
+                    start_single_write = '0' and write_issued = '0') then          
+                    start_single_write <= '1';                                                          
+                    write_issued  <= '1';                                                               
+                  elsif (axi_bready = '1') then                                                         
+                    write_issued   <= '0';                                                              
+                  else                                                                                  
+                    start_single_write <= '0'; --Negate to generate a pulse                             
+                  end if;                                                                               
+                end if;
+
+	          when WAIT4IRQ =>                                                                      
+	            -- This state is just a pause between READ/WRITE transactions
+                if ( IRQ_I = '1' ) then
+    	            mst_exec_state  <= WAIT4CODE;                                                        
+                end if;
 	                                                                                                    
-	          when INIT_WRITE =>                                                                        
-	            -- This state is responsible to issue start_single_write pulse to                       
-	            -- initiate a write transaction. Write transactions will be                             
-	            -- issued until last_write signal is asserted.                                          
-	            -- write controller                                                                     
-	            if (writes_done = '1') then                                                             
-	              mst_exec_state <= INIT_READ;                                                          
-	            else                                                                                    
-	              mst_exec_state  <= INIT_WRITE;                                                        
-	                                                                                                    
-	              if (axi_awvalid = '0' and axi_wvalid = '0' and M_AXI_BVALID = '0' and                 
-	                last_write = '0' and start_single_write = '0' and write_issued = '0') then          
-	                start_single_write <= '1';                                                          
-	                write_issued  <= '1';                                                               
-	              elsif (axi_bready = '1') then                                                         
-	                write_issued   <= '0';                                                              
-	              else                                                                                  
-	                start_single_write <= '0'; --Negate to generate a pulse                             
-	              end if;                                                                               
-	            end if;                                                                                 
-	                                                                                                    
-	          when INIT_READ =>                                                                         
+	          when WAIT4CODE =>                                                                         
 	            -- This state is responsible to issue start_single_read pulse to                        
 	            -- initiate a read transaction. Read transactions will be                               
-	            -- issued until last_read signal is asserted.                                           
+	            -- issued continuously.                                           
 	            -- read controller                                                                      
-	            if (reads_done = '1') then                                                              
-	              mst_exec_state <= INIT_COMPARE;                                                       
+	            if (M_AXI_RVALID = '1' and axi_rready = '1') then
+	                next_state := WAIT4IRQ;         
+	                scancode := M_AXI_RDATA(7 downto 0);                                                      
+                    if ( scancode = X"F0" ) then
+                        keyup := '1';
+                    elsif ( scancode = X"E0" ) then
+                        extended := '1';
+                    else
+                        if ( keyup = '1' ) then
+                            if ( scancode = X"59" ) then 
+                                shift_r_down := '0';
+                            elsif ( scancode = X"14" and extended = '1' ) then 
+                                ctrl_r_down := '0';
+                            elsif ( scancode = X"11" and extended = '1' ) then 
+                                alt_r_down := '0';
+                            elsif ( scancode = X"12" ) then
+                                shift_l_down := '0';
+                            elsif ( scancode = X"14" ) then 
+                                ctrl_l_down := '0';
+                            elsif ( scancode = X"11" ) then 
+                                alt_l_down := '0';
+                            end if;
+                        elsif ( extended = '1' ) then
+                            if ( scancode = X"14" ) then
+                                ctrl_r_down := '1';
+                            elsif ( scancode = X"11" ) then 
+                                alt_r_down := '1';
+                            end if;
+                        elsif ( scancode = X"12" ) then
+                            shift_l_down := '1';
+                        elsif ( scancode = X"14") then
+                            ctrl_l_down := '1';
+                        elsif ( scancode = X"11") then
+                            alt_l_down := '1';
+                        elsif ( scancode = X"59" ) then
+                            shift_r_down := '1';
+                        else
+                            next_state := GETPIXELS1;
+                        end if;
+    
+                        keyup := '0';
+                        extended := '0';
+                    end if;
+    
+                    -- transfer variables to signals
+                    mst_exec_state <= next_state;
+                    shift <= shift_l_down or shift_r_down;
+                    ctrl <= ctrl_l_down or ctrl_r_down;
+                    alt <= alt_l_down or alt_r_down;
+                    code <= scancode;
+                  read_issued   <= '0';
 	            else                                                                                    
-	              mst_exec_state  <= INIT_READ;                                                         
+	              mst_exec_state  <= WAIT4CODE;                                                         
 	                                                                                                    
-	              if (axi_arvalid = '0' and M_AXI_RVALID = '0' and last_read = '0' and                  
+	              if (axi_arvalid = '0' and M_AXI_RVALID = '0' and                  
 	                start_single_read = '0' and read_issued = '0') then                                 
 	                start_single_read <= '1';                                                           
 	                read_issued   <= '1';                                                               
@@ -571,136 +499,124 @@ begin
 	              end if;                                                                               
 	            end if;                                                                                 
 	                                                                                                    
-	          when INIT_COMPARE =>                                                                      
-	            -- This state is responsible to issue the state of comparison                           
-	            -- of written data with the read data. If no error flags are set,                       
-	            -- compare_done signal will be asseted to indicate success.                             
-	            ERROR <= error_reg;                                                               
-	            mst_exec_state <= IDLE;                                                       
-	            compare_done <= '1';                                                                  
-	                                                                                                    
+			when GETPIXELS1 =>
+                -- wait for pixels to be ready from lookup table
+                mst_exec_state <= GETPIXELS2;
+    
+            when GETPIXELS2 =>
+                -- if the character is a carriage return, go to the next line
+                pixelnum <= 0;
+                if ( ascii = X"0D" ) then
+                    current_char <= 0;
+                    if ( current_line = LINES_PER_PAGE-1 ) then
+                        current_line <= 0;
+                    else
+                        current_line <= current_line + 1;
+                    end if;
+                    mst_exec_state <= WAIT4IRQ;
+                -- if the character is a back space, backup a character
+                elsif ( ascii = X"08" ) then
+                    if ( scan_line = 0 ) then
+                        if ( current_char = 0 ) then
+                            current_char <= CHARS_PER_LINE-1;
+                            if ( current_line = 0 ) then
+                                current_line <= 0;
+                            else
+                            current_line <= current_line - 1;
+                            end if;
+                        else
+                            current_char <= current_char - 1;
+                        end if;
+                    end if;
+                    reg_pixels <= X"00"; -- clear the character
+                    mst_exec_state <= WAIT4MEMACK;
+                else
+                    reg_pixels <= pixels;
+                    mst_exec_state <= WAIT4MEMACK;
+                end if;
+
+            when WAIT4MEMACK =>
+                if (M_AXI_BVALID = '1' and axi_bready='1') then                                                             
+                    write_issued   <= '0';                                                              
+                    if ( scan_line = CHAR_HEIGHT-1 ) then
+                        mst_exec_state <= WAIT4IRQ;
+                        scan_line <= 0;
+                        if ( ascii /= X"08" ) then -- increment the cursor if it wasnt a back space
+                            if ( current_char = CHARS_PER_LINE-1 ) then
+                                current_char <= 0;
+                                if ( current_line = LINES_PER_PAGE-1 ) then
+                                    current_line <= 0;
+                                else
+                                    current_line <= current_line + 1;
+                                end if;
+                            else
+                                current_char <= current_char + 1;
+                            end if;
+                        end if;
+                    else
+                        scan_line <= scan_line + 1;
+                        mst_exec_state <= GETPIXELS1;
+                    end if;
+                else                                                                                    
+                  mst_exec_state  <= WAIT4MEMACK;
+
+                  if (axi_awvalid = '0' and axi_wvalid = '0' and M_AXI_BVALID = '0' and                 
+                    start_single_write = '0' and write_issued = '0') then          
+                    start_single_write <= '1';                                                          
+                    write_issued  <= '1';                                                               
+                  elsif (axi_bready = '1') then                                                         
+                    write_issued   <= '0';                                                              
+                  else                                                                                  
+                    start_single_write <= '0'; --Negate to generate a pulse                             
+                  end if;                                                                               
+                end if;
+                                                                                                            
 	          when others  =>                                                                           
-	              mst_exec_state  <= IDLE;                                                      
+	              mst_exec_state  <= WAIT4IRQ;                                                      
 	        end case  ;                                                                                 
 	      end if;                                                                                       
 	    end if;                                                                                         
-	  end process;                                                                                      
-	                                                                                                    
-	--Terminal write count                                                                              
-	  process(M_AXI_ACLK)                                                                               
-	  begin                                                                                             
-	    if (rising_edge (M_AXI_ACLK)) then                                                              
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                                
-	        -- reset condition                                                                          
-	        last_write <= '0';                                                                          
-	      else                                                                                          
-	        --The last write should be associated with a write address ready response                   
-	        if (write_index = STD_LOGIC_VECTOR(TO_UNSIGNED(C_M_TRANSACTIONS_NUM, TRANS_NUM_BITS+1)) and M_AXI_AWREADY = '1') then
-	          last_write  <= '1';                                                                       
-	        end if;                                                                                     
-	      end if;                                                                                       
-	    end if;                                                                                         
-	  end process;                                                                                      
-	                                                                                                    
-	--/*                                                                                                
-	-- Check for last write completion.                                                                 
-	--                                                                                                  
-	-- This logic is to qualify the last write count with the final write                               
-	-- response. This demonstrates how to confirm that a write has been                                 
-	-- committed.                                                                                       
-	-- */                                                                                               
-	  process(M_AXI_ACLK)                                                                               
-	  begin                                                                                             
-	    if (rising_edge (M_AXI_ACLK)) then                                                              
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                                
-	        -- reset condition                                                                          
-	        writes_done <= '0';                                                                         
-	      else                                                                                          
-	        if (last_write = '1' and M_AXI_BVALID = '1' and axi_bready = '1') then                      
-	          --The writes_done should be associated with a bready response                             
-	          writes_done <= '1';                                                                       
-	        end if;                                                                                     
-	      end if;                                                                                       
-	    end if;                                                                                         
-	  end process;                                                                                      
-	                                                                                                    
-	--------------                                                                                      
-	--Read example                                                                                      
-	--------------                                                                                      
-	                                                                                                    
-	--Terminal Read Count                                                                               
-	                                                                                                    
-	  process(M_AXI_ACLK)                                                                               
-	  begin                                                                                             
-	    if (rising_edge (M_AXI_ACLK)) then                                                              
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                                
-	        last_read <= '0';                                                                           
-	      else                                                                                          
-	        if (read_index = STD_LOGIC_VECTOR(TO_UNSIGNED(C_M_TRANSACTIONS_NUM, TRANS_NUM_BITS+1)) and (M_AXI_ARREADY = '1') ) then
-	          --The last read should be associated with a read address ready response                   
-	          last_read <= '1';                                                                         
-	        end if;                                                                                     
-	      end if;                                                                                       
-	    end if;                                                                                         
-	  end process;                                                                                      
-	                                                                                                    
-	                                                                                                    
-	--/*                                                                                                
-	-- Check for last read completion.                                                                  
-	--                                                                                                  
-	-- This logic is to qualify the last read count with the final read                                 
-	-- response/data.                                                                                   
-	-- */                                                                                               
-	  process(M_AXI_ACLK)                                                                               
-	  begin                                                                                             
-	    if (rising_edge (M_AXI_ACLK)) then                                                              
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                                
-	        reads_done <= '0';                                                                          
-	      else                                                                                          
-	        if (last_read = '1' and M_AXI_RVALID = '1' and axi_rready = '1') then                       
-	          --The reads_done should be associated with a read ready response                          
-	          reads_done <= '1';                                                                        
-	        end if;                                                                                     
-	      end if;                                                                                       
-	    end if;                                                                                         
-	  end process;                                                                                      
-	                                                                                                    
-	                                                                                                    
-	------------------------------/                                                                     
-	--Example design error register                                                                     
-	------------------------------/                                                                     
-	                                                                                                    
-	--Data Comparison                                                                                   
-	  process(M_AXI_ACLK)                                                                               
-	  begin                                                                                             
-	    if (rising_edge (M_AXI_ACLK)) then                                                              
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                                
-	        read_mismatch <= '0';                                                                       
-	      else                                                                                          
-	        if ((M_AXI_RVALID = '1' and axi_rready = '1') and  M_AXI_RDATA /= expected_rdata) then      
-	          --The read data when available (on axi_rready) is compared with the expected data         
-	          read_mismatch <= '1';                                                                     
-	        end if;                                                                                     
-	      end if;                                                                                       
-	    end if;                                                                                         
-	  end process;                                                                                      
-	                                                                                                    
-	-- Register and hold any data mismatches, or read/write interface errors                            
-	  process(M_AXI_ACLK)                                                                               
-	  begin                                                                                             
-	    if (rising_edge (M_AXI_ACLK)) then                                                              
-	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                                
-	        error_reg <= '0';                                                                           
-	      else                                                                                          
-	        if (read_mismatch = '1' or write_resp_error = '1' or read_resp_error = '1') then            
-	          --Capture any error types                                                                 
-	          error_reg <= '1';                                                                         
-	        end if;                                                                                     
-	      end if;                                                                                       
-	    end if;                                                                                         
-	  end process;                                                                                      
+	  end process;
+                                                                              	                                                                                                    	                                                                                                    
+    -- Add user logic here
 
-	-- Add user logic here
+	rst_p <= not M_AXI_ARESETN;
+
+    -- instantiate the 8x12 lookup table here
+    Inst_char_lookup : char8x12_lookup_table 
+        port map( 
+            clk => M_AXI_ACLK,
+            reset => M_AXI_ARESETN,
+            ascii => ascii,
+            line => current_line,
+            pixels => pixels
+        );
+      
+    -- instantiate the scancode to ascii component here
+    Inst_scancode_ascii : scancode2ascii 
+        port map(
+            scancode => code,
+            ascii => ascii,
+            shift => shift,
+            ctrl => ctrl,
+            alt => alt
+        );
+  
+    -- The following steps can be done in the manager (or color pixels can be created in the VGA-subordinate.)
+    -- set the text and background color here
+	-- Example: 	
+    -- If, axi_wdata <= color_pixels;	
+	-- txtcolor <= "1111"; 
+	-- bgcolor <= "0001";	--r1r0gb (for blue background)
+	
+    -- set the color_pixels word based on the reg_pixels byte which is a registered
+    -- version of the pixels byte that comes from the lookup table.  When reg_pixels is '1', we use the
+    -- text color, otherwise we use the background color
+	-- Example: if signal color_pixels : std_logic_vector(31 downto 0);
+	-- color_pixels(3 downto 0) <= txtcolor when reg_pixels(0) = '0' else bgcolor;
+	-- ......
+	-- color_pixels(31 downto 28) <= txtcolor when reg_pixels(7) = '0' else bgcolor;
+
 
 	-- User logic ends
 
