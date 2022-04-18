@@ -203,6 +203,9 @@ proc create_root_design { parentCell } {
 
   # Create instance: vga_bram_0, and set properties
   set vga_bram_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:vga_bram:1.0 vga_bram_0 ]
+  set_property -dict [ list \
+   CONFIG.C_S00_AXI_ADDR_WIDTH {16} \
+ ] $vga_bram_0
 
   # Create instance: videomemlab_master_0, and set properties
   set videomemlab_master_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:videomemlab_master:1.0 videomemlab_master_0 ]

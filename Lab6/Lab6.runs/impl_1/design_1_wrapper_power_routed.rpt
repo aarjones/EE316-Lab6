@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Thu Apr 14 16:01:46 2022
+| Date             : Mon Apr 18 15:14:47 2022
 | Host             : AaronThinkPad running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.257        |
+| Total On-Chip Power (W)  | 0.255        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.162        |
+| Dynamic (W)              | 0.160        |
 | Device Static (W)        | 0.096        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 82.0         |
-| Junction Temperature (C) | 28.0         |
+| Max Ambient (C)          | 82.1         |
+| Junction Temperature (C) | 27.9         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |       10 |       --- |             --- |
-| Slice Logic             |    <0.001 |      932 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      377 |     14400 |            2.62 |
-|   CARRY4                |    <0.001 |       21 |      4400 |            0.48 |
-|   Register              |    <0.001 |      363 |     28800 |            1.26 |
+| Slice Logic             |    <0.001 |      970 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      414 |     14400 |            2.88 |
+|   CARRY4                |    <0.001 |       20 |      4400 |            0.45 |
+|   Register              |    <0.001 |      365 |     28800 |            1.27 |
 |   F7/F8 Muxes           |    <0.001 |       21 |     17600 |            0.12 |
-|   Others                |     0.000 |       59 |       --- |             --- |
+|   Others                |     0.000 |       60 |       --- |             --- |
 |   LUT as Shift Register |     0.000 |        2 |      6000 |            0.03 |
-| Signals                 |    <0.001 |      965 |       --- |             --- |
-| Block RAM               |     0.042 |       16 |        50 |           32.00 |
+| Signals                 |     0.001 |     1010 |       --- |             --- |
+| Block RAM               |     0.040 |       16 |        50 |           32.00 |
 | MMCM                    |     0.106 |        1 |         2 |           50.00 |
-| DSPs                    |    <0.001 |        8 |        66 |           12.12 |
-| I/O                     |     0.008 |       18 |       100 |           18.00 |
+| DSPs                    |     0.002 |        8 |        66 |           12.12 |
+| I/O                     |     0.006 |       18 |       100 |           18.00 |
 | Static Power            |     0.096 |          |           |                 |
-| Total                   |     0.257 |          |           |                 |
+| Total                   |     0.255 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.049 |       0.044 |      0.004 |
+| Vccint    |       1.000 |     0.049 |       0.045 |      0.004 |
 | Vccaux    |       1.800 |     0.065 |       0.059 |      0.006 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -85,7 +85,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.004 |       0.004 |      0.001 |
+| Vccbram   |       1.000 |     0.004 |       0.003 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -156,17 +156,21 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------+-----------+
-| Name                     | Power (W) |
-+--------------------------+-----------+
-| design_1_wrapper         |     0.162 |
-|   design_1_i             |     0.154 |
-|     clk_wiz_0            |     0.107 |
-|       inst               |     0.107 |
-|     vga_bram_0           |     0.043 |
-|       U0                 |     0.043 |
-|     videomemlab_master_0 |     0.001 |
-|       U0                 |     0.001 |
-+--------------------------+-----------+
++-------------------------------------+-----------+
+| Name                                | Power (W) |
++-------------------------------------+-----------+
+| design_1_wrapper                    |     0.160 |
+|   design_1_i                        |     0.154 |
+|     clk_wiz_0                       |     0.107 |
+|       inst                          |     0.107 |
+|     keyboard_subordinate_0          |     0.001 |
+|       U0                            |     0.001 |
+|     vga_bram_0                      |     0.042 |
+|       U0                            |     0.042 |
+|     videomemlab_master_0            |     0.003 |
+|       U0                            |     0.003 |
+|     videomemlab_master_0_axi_periph |     0.001 |
+|       xbar                          |     0.001 |
++-------------------------------------+-----------+
 
 

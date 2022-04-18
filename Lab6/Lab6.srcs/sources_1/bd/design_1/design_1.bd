@@ -18,9 +18,9 @@
       },
       "rst_clk_wiz_0_100M": "",
       "rst_clk_wiz_0_50M": "",
-      "videomemlab_master_0": "",
       "keyboard_subordinate_0": "",
-      "vga_bram_0": ""
+      "vga_bram_0": "",
+      "videomemlab_master_0": ""
     },
     "ports": {
       "reset_rtl": {
@@ -398,16 +398,16 @@
               "s00_couplers/S_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
           "m00_couplers_to_videomemlab_master_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -494,10 +494,6 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_clk_wiz_0_50M_0"
       },
-      "videomemlab_master_0": {
-        "vlnv": "xilinx.com:user:videomemlab_master:1.0",
-        "xci_name": "design_1_videomemlab_master_0_0"
-      },
       "keyboard_subordinate_0": {
         "vlnv": "xilinx.com:user:keyboard_subordinate:1.0",
         "xci_name": "design_1_keyboard_subordinate_0_0"
@@ -505,6 +501,10 @@
       "vga_bram_0": {
         "vlnv": "xilinx.com:user:vga_bram:1.0",
         "xci_name": "design_1_vga_bram_0_0"
+      },
+      "videomemlab_master_0": {
+        "vlnv": "xilinx.com:user:videomemlab_master:1.0",
+        "xci_name": "design_1_videomemlab_master_0_0"
       }
     },
     "interface_nets": {
@@ -555,8 +555,8 @@
           "videomemlab_master_0_axi_periph/S00_ARESETN",
           "videomemlab_master_0_axi_periph/M00_ARESETN",
           "videomemlab_master_0_axi_periph/ARESETN",
-          "videomemlab_master_0/m00_axi_aresetn",
-          "keyboard_subordinate_0/s00_axi_aresetn"
+          "keyboard_subordinate_0/s00_axi_aresetn",
+          "videomemlab_master_0/m00_axi_aresetn"
         ]
       },
       "ps2_clk_0_1": {
@@ -586,9 +586,9 @@
           "rst_clk_wiz_0_100M/slowest_sync_clk",
           "videomemlab_master_0_axi_periph/M01_ACLK",
           "rst_clk_wiz_0_50M/slowest_sync_clk",
-          "videomemlab_master_0/m00_axi_aclk",
           "keyboard_subordinate_0/s00_axi_aclk",
-          "vga_bram_0/s00_axi_aclk"
+          "vga_bram_0/s00_axi_aclk",
+          "videomemlab_master_0/m00_axi_aclk"
         ]
       },
       "rst_clk_wiz_0_50M_peripheral_aresetn": {

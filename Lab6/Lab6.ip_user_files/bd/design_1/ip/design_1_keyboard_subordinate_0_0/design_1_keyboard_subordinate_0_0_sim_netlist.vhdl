@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Thu Apr 14 15:36:06 2022
 -- Host        : AaronThinkPad running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_keyboard_subordinate_0_0/design_1_keyboard_subordinate_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_keyboard_subordinate_0_0 -prefix
+--               design_1_keyboard_subordinate_0_0_ design_1_keyboard_subordinate_0_0_sim_netlist.vhdl
 -- Design      : design_1_keyboard_subordinate_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity design_1_keyboard_subordinate_0_0_debounce is
     s00_axi_aclk : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_keyboard_subordinate_0_0_debounce : entity is "debounce";
 end design_1_keyboard_subordinate_0_0_debounce;
 
 architecture STRUCTURE of design_1_keyboard_subordinate_0_0_debounce is
@@ -690,8 +688,6 @@ entity design_1_keyboard_subordinate_0_0_ps2_keyboard is
     s00_axi_aclk : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_keyboard_subordinate_0_0_ps2_keyboard : entity is "ps2_keyboard";
 end design_1_keyboard_subordinate_0_0_ps2_keyboard;
 
 architecture STRUCTURE of design_1_keyboard_subordinate_0_0_ps2_keyboard is
@@ -1235,8 +1231,6 @@ entity design_1_keyboard_subordinate_0_0_keyboard_subordinate_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_keyboard_subordinate_0_0_keyboard_subordinate_v1_0_S00_AXI : entity is "keyboard_subordinate_v1_0_S00_AXI";
 end design_1_keyboard_subordinate_0_0_keyboard_subordinate_v1_0_S00_AXI;
 
 architecture STRUCTURE of design_1_keyboard_subordinate_0_0_keyboard_subordinate_v1_0_S00_AXI is
@@ -3135,8 +3129,6 @@ entity design_1_keyboard_subordinate_0_0_keyboard_subordinate_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_keyboard_subordinate_0_0_keyboard_subordinate_v1_0 : entity is "keyboard_subordinate_v1_0";
 end design_1_keyboard_subordinate_0_0_keyboard_subordinate_v1_0;
 
 architecture STRUCTURE of design_1_keyboard_subordinate_0_0_keyboard_subordinate_v1_0 is
