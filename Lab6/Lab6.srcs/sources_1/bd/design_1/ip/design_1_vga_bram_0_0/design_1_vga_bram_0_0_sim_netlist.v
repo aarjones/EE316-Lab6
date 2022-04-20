@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Apr 18 15:01:56 2022
+// Date        : Tue Apr 19 16:17:40 2022
 // Host        : AaronThinkPad running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_vga_bram_0_0/design_1_vga_bram_0_0_sim_netlist.v
@@ -48,7 +48,7 @@ module design_1_vga_bram_0_0
   output [3:0]g;
   output [3:0]b;
   input I_CLK_50;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [15:0]s00_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [31:0]s00_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
@@ -59,7 +59,7 @@ module design_1_vga_bram_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [15:0]s00_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [31:0]s00_axi_araddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
@@ -79,7 +79,7 @@ module design_1_vga_bram_0_0
   wire s00_axi_aresetn;
   wire s00_axi_arready;
   wire s00_axi_arvalid;
-  wire [15:0]s00_axi_awaddr;
+  wire [31:0]s00_axi_awaddr;
   wire s00_axi_awready;
   wire s00_axi_awvalid;
   wire s00_axi_bready;
@@ -122,7 +122,7 @@ module design_1_vga_bram_0_0
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn),
         .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr),
+        .s00_axi_awaddr(s00_axi_awaddr[15:0]),
         .s00_axi_awvalid(s00_axi_awvalid),
         .s00_axi_bready(s00_axi_bready),
         .s00_axi_bvalid(s00_axi_bvalid),
@@ -143,7 +143,10 @@ module design_1_vga_bram_0_0_bram
     s00_axi_aclk,
     Q,
     P,
-    ram_reg_1_7_1);
+    ram_reg_1_7_1,
+    we,
+    WEA,
+    ram_reg_0_6_0);
   output ram_reg_1_3_0;
   output ram_reg_1_7_0;
   input [1:0]h_count_reg_reg__0;
@@ -151,9 +154,13 @@ module design_1_vga_bram_0_0_bram
   input [15:0]Q;
   input [15:0]P;
   input [7:0]ram_reg_1_7_1;
+  input we;
+  input [1:0]WEA;
+  input [1:0]ram_reg_0_6_0;
 
   wire [15:0]P;
   wire [15:0]Q;
+  wire [1:0]WEA;
   wire [1:0]h_count_reg_reg__0;
   wire ram_reg_0_0_n_0;
   wire ram_reg_0_0_n_1;
@@ -167,6 +174,7 @@ module design_1_vga_bram_0_0_bram
   wire ram_reg_0_4_n_1;
   wire ram_reg_0_5_n_0;
   wire ram_reg_0_5_n_1;
+  wire [1:0]ram_reg_0_6_0;
   wire ram_reg_0_6_n_0;
   wire ram_reg_0_6_n_1;
   wire ram_reg_0_7_n_0;
@@ -176,6 +184,7 @@ module design_1_vga_bram_0_0_bram
   wire [7:0]ram_reg_1_7_1;
   wire s00_axi_aclk;
   wire [7:0]vga_data;
+  wire we;
   wire NLW_ram_reg_0_0_DBITERR_UNCONNECTED;
   wire NLW_ram_reg_0_0_INJECTDBITERR_UNCONNECTED;
   wire NLW_ram_reg_0_0_INJECTSBITERR_UNCONNECTED;
@@ -617,7 +626,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_0_0_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({we,we,we,we}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -831,7 +840,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_0_1_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({we,we,we,we}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -1045,7 +1054,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_0_2_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({we,we,we,we}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -1259,7 +1268,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_0_3_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({we,we,we,we}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -1473,7 +1482,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_0_4_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({WEA[1],WEA[1],WEA[1],WEA[1]}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -1687,7 +1696,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_0_5_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({WEA[0],WEA[0],WEA[0],WEA[0]}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -1901,7 +1910,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_0_6_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({ram_reg_0_6_0[1],ram_reg_0_6_0[1],ram_reg_0_6_0[1],ram_reg_0_6_0[1]}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -2115,7 +2124,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_0_7_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({ram_reg_0_6_0[1],ram_reg_0_6_0,ram_reg_0_6_0[0]}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -2317,7 +2326,7 @@ module design_1_vga_bram_0_0_bram
         .DOPADOP(NLW_ram_reg_1_0_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_0_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_0_ECCPARITY_UNCONNECTED[7:0]),
-        .ENARDEN(1'b1),
+        .ENARDEN(we),
         .ENBWREN(1'b1),
         .INJECTDBITERR(NLW_ram_reg_1_0_INJECTDBITERR_UNCONNECTED),
         .INJECTSBITERR(NLW_ram_reg_1_0_INJECTSBITERR_UNCONNECTED),
@@ -2329,7 +2338,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_1_0_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({we,we,we,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -2531,7 +2540,7 @@ module design_1_vga_bram_0_0_bram
         .DOPADOP(NLW_ram_reg_1_1_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_1_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_1_ECCPARITY_UNCONNECTED[7:0]),
-        .ENARDEN(1'b1),
+        .ENARDEN(we),
         .ENBWREN(1'b1),
         .INJECTDBITERR(NLW_ram_reg_1_1_INJECTDBITERR_UNCONNECTED),
         .INJECTSBITERR(NLW_ram_reg_1_1_INJECTSBITERR_UNCONNECTED),
@@ -2543,7 +2552,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_1_1_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({we,we,we,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -2745,7 +2754,7 @@ module design_1_vga_bram_0_0_bram
         .DOPADOP(NLW_ram_reg_1_2_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_2_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_2_ECCPARITY_UNCONNECTED[7:0]),
-        .ENARDEN(1'b1),
+        .ENARDEN(we),
         .ENBWREN(1'b1),
         .INJECTDBITERR(NLW_ram_reg_1_2_INJECTDBITERR_UNCONNECTED),
         .INJECTSBITERR(NLW_ram_reg_1_2_INJECTSBITERR_UNCONNECTED),
@@ -2757,7 +2766,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_1_2_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({we,we,we,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -2959,7 +2968,7 @@ module design_1_vga_bram_0_0_bram
         .DOPADOP(NLW_ram_reg_1_3_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_3_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_3_ECCPARITY_UNCONNECTED[7:0]),
-        .ENARDEN(1'b1),
+        .ENARDEN(we),
         .ENBWREN(1'b1),
         .INJECTDBITERR(NLW_ram_reg_1_3_INJECTDBITERR_UNCONNECTED),
         .INJECTSBITERR(NLW_ram_reg_1_3_INJECTSBITERR_UNCONNECTED),
@@ -2971,7 +2980,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_1_3_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({we,we,we,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -3173,7 +3182,7 @@ module design_1_vga_bram_0_0_bram
         .DOPADOP(NLW_ram_reg_1_4_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_4_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_4_ECCPARITY_UNCONNECTED[7:0]),
-        .ENARDEN(1'b1),
+        .ENARDEN(WEA[1]),
         .ENBWREN(1'b1),
         .INJECTDBITERR(NLW_ram_reg_1_4_INJECTDBITERR_UNCONNECTED),
         .INJECTSBITERR(NLW_ram_reg_1_4_INJECTSBITERR_UNCONNECTED),
@@ -3185,7 +3194,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_1_4_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({WEA[1],WEA[1],WEA[1],1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -3387,7 +3396,7 @@ module design_1_vga_bram_0_0_bram
         .DOPADOP(NLW_ram_reg_1_5_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_5_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_5_ECCPARITY_UNCONNECTED[7:0]),
-        .ENARDEN(1'b1),
+        .ENARDEN(WEA[1]),
         .ENBWREN(1'b1),
         .INJECTDBITERR(NLW_ram_reg_1_5_INJECTDBITERR_UNCONNECTED),
         .INJECTSBITERR(NLW_ram_reg_1_5_INJECTSBITERR_UNCONNECTED),
@@ -3399,7 +3408,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_1_5_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({WEA,WEA[0],1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -3601,7 +3610,7 @@ module design_1_vga_bram_0_0_bram
         .DOPADOP(NLW_ram_reg_1_6_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_6_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_6_ECCPARITY_UNCONNECTED[7:0]),
-        .ENARDEN(1'b1),
+        .ENARDEN(WEA[0]),
         .ENBWREN(1'b1),
         .INJECTDBITERR(NLW_ram_reg_1_6_INJECTDBITERR_UNCONNECTED),
         .INJECTSBITERR(NLW_ram_reg_1_6_INJECTSBITERR_UNCONNECTED),
@@ -3613,7 +3622,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_1_6_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({WEA[0],WEA[0],WEA[0],1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -3815,7 +3824,7 @@ module design_1_vga_bram_0_0_bram
         .DOPADOP(NLW_ram_reg_1_7_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_7_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_7_ECCPARITY_UNCONNECTED[7:0]),
-        .ENARDEN(1'b1),
+        .ENARDEN(ram_reg_0_6_0[1]),
         .ENBWREN(1'b1),
         .INJECTDBITERR(NLW_ram_reg_1_7_INJECTDBITERR_UNCONNECTED),
         .INJECTSBITERR(NLW_ram_reg_1_7_INJECTSBITERR_UNCONNECTED),
@@ -3827,7 +3836,7 @@ module design_1_vga_bram_0_0_bram
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .SBITERR(NLW_ram_reg_1_7_SBITERR_UNCONNECTED),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
+        .WEA({ram_reg_0_6_0[1],ram_reg_0_6_0[1],ram_reg_0_6_0[1],1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
@@ -4011,17 +4020,30 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
   wire \slv_reg3[31]_i_1_n_0 ;
   wire \slv_reg3[7]_i_1_n_0 ;
   wire slv_reg_rden;
-  wire slv_reg_wren__2;
+  wire slv_reg_wren;
   wire vsync;
+  wire we;
+  wire we_i_1_n_0;
+  wire we_reg_rep_rep__0_n_0;
+  wire we_reg_rep_rep__1_n_0;
+  wire we_reg_rep_rep__2_n_0;
+  wire we_reg_rep_rep_n_0;
+  wire we_rep_rep__0_i_1_n_0;
+  wire we_rep_rep__1_i_1_n_0;
+  wire we_rep_rep__2_i_1_n_0;
+  wire we_rep_rep_i_1_n_0;
 
   design_1_vga_bram_0_0_bram Inst_bram_0
        (.P(addrB),
         .Q(bram_address),
+        .WEA({we_reg_rep_rep_n_0,we_reg_rep_rep__0_n_0}),
         .h_count_reg_reg__0(h_count_reg_reg__0),
+        .ram_reg_0_6_0({we_reg_rep_rep__1_n_0,we_reg_rep_rep__2_n_0}),
         .ram_reg_1_3_0(Inst_bram_0_n_0),
         .ram_reg_1_7_0(Inst_bram_0_n_1),
         .ram_reg_1_7_1(bram_data),
-        .s00_axi_aclk(s00_axi_aclk));
+        .s00_axi_aclk(s00_axi_aclk),
+        .we(we));
   design_1_vga_bram_0_0_vga_sync Inst_vga
        (.I_CLK_50(I_CLK_50),
         .P(addrB),
@@ -4098,7 +4120,6 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
     axi_awready_i_1
        (.I0(s00_axi_aresetn),
         .O(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     axi_awready_i_2
@@ -4518,7 +4539,7 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(p_0_in[0]),
         .I3(s00_axi_wstrb[1]),
-        .I4(slv_reg_wren__2),
+        .I4(slv_reg_wren),
         .O(\slv_reg3[15]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h80000000)) 
@@ -4527,7 +4548,7 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(p_0_in[0]),
         .I3(s00_axi_wstrb[2]),
-        .I4(slv_reg_wren__2),
+        .I4(slv_reg_wren),
         .O(\slv_reg3[23]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h80000000)) 
@@ -4536,8 +4557,9 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(p_0_in[0]),
         .I3(s00_axi_wstrb[3]),
-        .I4(slv_reg_wren__2),
+        .I4(slv_reg_wren),
         .O(\slv_reg3[31]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg3[31]_i_2 
@@ -4545,7 +4567,7 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .I1(S_AXI_AWREADY),
         .I2(S_AXI_WREADY),
         .I3(s00_axi_wvalid),
-        .O(slv_reg_wren__2));
+        .O(slv_reg_wren));
   LUT5 #(
     .INIT(32'h80000000)) 
     \slv_reg3[7]_i_1 
@@ -4553,7 +4575,7 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(p_0_in[0]),
         .I3(s00_axi_wstrb[0]),
-        .I4(slv_reg_wren__2),
+        .I4(slv_reg_wren),
         .O(\slv_reg3[7]_i_1_n_0 ));
   FDRE \slv_reg3_reg[0] 
        (.C(s00_axi_aclk),
@@ -4747,6 +4769,91 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .D(s00_axi_wdata[9]),
         .Q(slv_reg3[9]),
         .R(1'b0));
+  LUT6 #(
+    .INIT(64'h8000FFFF80000000)) 
+    we_i_1
+       (.I0(s00_axi_awvalid),
+        .I1(S_AXI_AWREADY),
+        .I2(S_AXI_WREADY),
+        .I3(s00_axi_wvalid),
+        .I4(s00_axi_aresetn),
+        .I5(we),
+        .O(we_i_1_n_0));
+  (* ORIG_CELL_NAME = "we_reg" *) 
+  FDRE we_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(we_i_1_n_0),
+        .Q(we),
+        .R(1'b0));
+  (* ORIG_CELL_NAME = "we_reg" *) 
+  FDRE we_reg_rep_rep
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(we_rep_rep_i_1_n_0),
+        .Q(we_reg_rep_rep_n_0),
+        .R(1'b0));
+  (* ORIG_CELL_NAME = "we_reg" *) 
+  FDRE we_reg_rep_rep__0
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(we_rep_rep__0_i_1_n_0),
+        .Q(we_reg_rep_rep__0_n_0),
+        .R(1'b0));
+  (* ORIG_CELL_NAME = "we_reg" *) 
+  FDRE we_reg_rep_rep__1
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(we_rep_rep__1_i_1_n_0),
+        .Q(we_reg_rep_rep__1_n_0),
+        .R(1'b0));
+  (* ORIG_CELL_NAME = "we_reg" *) 
+  FDRE we_reg_rep_rep__2
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(we_rep_rep__2_i_1_n_0),
+        .Q(we_reg_rep_rep__2_n_0),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'h8000FFFF80000000)) 
+    we_rep_rep__0_i_1
+       (.I0(s00_axi_awvalid),
+        .I1(S_AXI_AWREADY),
+        .I2(S_AXI_WREADY),
+        .I3(s00_axi_wvalid),
+        .I4(s00_axi_aresetn),
+        .I5(we),
+        .O(we_rep_rep__0_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h8000FFFF80000000)) 
+    we_rep_rep__1_i_1
+       (.I0(s00_axi_awvalid),
+        .I1(S_AXI_AWREADY),
+        .I2(S_AXI_WREADY),
+        .I3(s00_axi_wvalid),
+        .I4(s00_axi_aresetn),
+        .I5(we),
+        .O(we_rep_rep__1_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h8000FFFF80000000)) 
+    we_rep_rep__2_i_1
+       (.I0(s00_axi_awvalid),
+        .I1(S_AXI_AWREADY),
+        .I2(S_AXI_WREADY),
+        .I3(s00_axi_wvalid),
+        .I4(s00_axi_aresetn),
+        .I5(we),
+        .O(we_rep_rep__2_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h8000FFFF80000000)) 
+    we_rep_rep_i_1
+       (.I0(s00_axi_awvalid),
+        .I1(S_AXI_AWREADY),
+        .I2(S_AXI_WREADY),
+        .I3(s00_axi_wvalid),
+        .I4(s00_axi_aresetn),
+        .I5(we),
+        .O(we_rep_rep_i_1_n_0));
 endmodule
 
 (* ORIG_REF_NAME = "vga_sync" *) 

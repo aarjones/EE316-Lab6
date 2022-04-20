@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Apr 18 15:01:06 2022
-# Process ID: 17364
+# Start of session at: Tue Apr 19 16:16:51 2022
+# Process ID: 18400
 # Current directory: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_vga_bram_0_0_synth_1
 # Command line: vivado.exe -log design_1_vga_bram_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_vga_bram_0_0.tcl
 # Log file: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_vga_bram_0_0_synth_1/design_1_vga_bram_0_0.vds

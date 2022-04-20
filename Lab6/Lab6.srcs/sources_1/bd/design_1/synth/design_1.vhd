@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Mon Apr 18 15:11:10 2022
+--Date        : Wed Apr 20 12:39:12 2022
 --Host        : AaronThinkPad running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -862,7 +862,7 @@ entity design_1 is
     vsync_0 : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=11,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=2,da_clkrst_cnt=8,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=12,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=2,da_clkrst_cnt=8,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -906,65 +906,6 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_clk_wiz_0_50M_0;
-  component design_1_keyboard_subordinate_0_0 is
-  port (
-    ps2_clk : in STD_LOGIC;
-    ps2_data : in STD_LOGIC;
-    IRQ_O : out STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component design_1_keyboard_subordinate_0_0;
-  component design_1_vga_bram_0_0 is
-  port (
-    hsync : out STD_LOGIC;
-    vsync : out STD_LOGIC;
-    r : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    g : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    b : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    I_CLK_50 : in STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_awready : out STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wready : out STD_LOGIC;
-    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_arready : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_rready : in STD_LOGIC;
-    s00_axi_aclk : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC
-  );
-  end component design_1_vga_bram_0_0;
   component design_1_videomemlab_master_0_0 is
   port (
     IRQ_I : in STD_LOGIC;
@@ -991,10 +932,80 @@ architecture STRUCTURE of design_1 is
     m00_axi_aresetn : in STD_LOGIC
   );
   end component design_1_videomemlab_master_0_0;
+  component design_1_system_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_system_ila_0_0;
+  component design_1_vga_bram_0_0 is
+  port (
+    hsync : out STD_LOGIC;
+    vsync : out STD_LOGIC;
+    r : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    g : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    b : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    I_CLK_50 : in STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component design_1_vga_bram_0_0;
+  component design_1_keyboard_subordinate_0_0 is
+  port (
+    I_CLK_50 : in STD_LOGIC;
+    ps2_clk : in STD_LOGIC;
+    ps2_data : in STD_LOGIC;
+    IRQ_O : out STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC;
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC
+  );
+  end component design_1_keyboard_subordinate_0_0;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal clk_wiz_0_clk_out2 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
   signal keyboard_subordinate_0_IRQ_O : STD_LOGIC;
+  attribute DEBUG : string;
+  attribute DEBUG of keyboard_subordinate_0_IRQ_O : signal is "true";
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of keyboard_subordinate_0_IRQ_O : signal is std.standard.true;
   signal ps2_clk_0_1 : STD_LOGIC;
   signal ps2_data_0_1 : STD_LOGIC;
   signal reset_rtl_1 : STD_LOGIC;
@@ -1100,15 +1111,16 @@ clk_wiz_0: component design_1_clk_wiz_0_0
 keyboard_subordinate_0: component design_1_keyboard_subordinate_0_0
      port map (
       IRQ_O => keyboard_subordinate_0_IRQ_O,
+      I_CLK_50 => clk_wiz_0_clk_out2,
       ps2_clk => ps2_clk_0_1,
       ps2_data => ps2_data_0_1,
       s00_axi_aclk => clk_wiz_0_clk_out1,
-      s00_axi_araddr(3 downto 0) => videomemlab_master_0_axi_periph_M00_AXI_ARADDR(3 downto 0),
+      s00_axi_araddr(31 downto 0) => videomemlab_master_0_axi_periph_M00_AXI_ARADDR(31 downto 0),
       s00_axi_aresetn => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       s00_axi_arprot(2 downto 0) => videomemlab_master_0_axi_periph_M00_AXI_ARPROT(2 downto 0),
       s00_axi_arready => videomemlab_master_0_axi_periph_M00_AXI_ARREADY,
       s00_axi_arvalid => videomemlab_master_0_axi_periph_M00_AXI_ARVALID,
-      s00_axi_awaddr(3 downto 0) => videomemlab_master_0_axi_periph_M00_AXI_AWADDR(3 downto 0),
+      s00_axi_awaddr(31 downto 0) => videomemlab_master_0_axi_periph_M00_AXI_AWADDR(31 downto 0),
       s00_axi_awprot(2 downto 0) => videomemlab_master_0_axi_periph_M00_AXI_AWPROT(2 downto 0),
       s00_axi_awready => videomemlab_master_0_axi_periph_M00_AXI_AWREADY,
       s00_axi_awvalid => videomemlab_master_0_axi_periph_M00_AXI_AWVALID,
@@ -1150,6 +1162,11 @@ rst_clk_wiz_0_50M: component design_1_rst_clk_wiz_0_50M_0
       peripheral_reset(0) => NLW_rst_clk_wiz_0_50M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => clk_wiz_0_clk_out1
     );
+system_ila_0: component design_1_system_ila_0_0
+     port map (
+      clk => clk_wiz_0_clk_out1,
+      probe0(0) => keyboard_subordinate_0_IRQ_O
+    );
 vga_bram_0: component design_1_vga_bram_0_0
      port map (
       I_CLK_50 => clk_wiz_0_clk_out2,
@@ -1158,12 +1175,12 @@ vga_bram_0: component design_1_vga_bram_0_0
       hsync => vga_bram_0_hsync,
       r(3 downto 0) => vga_bram_0_r(3 downto 0),
       s00_axi_aclk => clk_wiz_0_clk_out1,
-      s00_axi_araddr(15 downto 0) => videomemlab_master_0_axi_periph_M01_AXI_ARADDR(15 downto 0),
+      s00_axi_araddr(31 downto 0) => videomemlab_master_0_axi_periph_M01_AXI_ARADDR(31 downto 0),
       s00_axi_aresetn => rst_clk_wiz_0_50M_peripheral_aresetn(0),
       s00_axi_arprot(2 downto 0) => videomemlab_master_0_axi_periph_M01_AXI_ARPROT(2 downto 0),
       s00_axi_arready => videomemlab_master_0_axi_periph_M01_AXI_ARREADY,
       s00_axi_arvalid => videomemlab_master_0_axi_periph_M01_AXI_ARVALID,
-      s00_axi_awaddr(15 downto 0) => videomemlab_master_0_axi_periph_M01_AXI_AWADDR(15 downto 0),
+      s00_axi_awaddr(31 downto 0) => videomemlab_master_0_axi_periph_M01_AXI_AWADDR(31 downto 0),
       s00_axi_awprot(2 downto 0) => videomemlab_master_0_axi_periph_M01_AXI_AWPROT(2 downto 0),
       s00_axi_awready => videomemlab_master_0_axi_periph_M01_AXI_AWREADY,
       s00_axi_awvalid => videomemlab_master_0_axi_periph_M01_AXI_AWVALID,

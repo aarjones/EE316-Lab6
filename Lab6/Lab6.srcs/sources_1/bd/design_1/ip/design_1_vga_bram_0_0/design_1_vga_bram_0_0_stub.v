@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Apr 18 15:01:56 2022
+// Date        : Tue Apr 19 16:17:40 2022
 // Host        : AaronThinkPad running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_vga_bram_0_0/design_1_vga_bram_0_0_stub.v
@@ -19,14 +19,14 @@ module design_1_vga_bram_0_0(hsync, vsync, r, g, b, I_CLK_50, s00_axi_awaddr,
   s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, s00_axi_bready, 
   s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, 
   s00_axi_rresp, s00_axi_rvalid, s00_axi_rready, s00_axi_aclk, s00_axi_aresetn)
-/* synthesis syn_black_box black_box_pad_pin="hsync,vsync,r[3:0],g[3:0],b[3:0],I_CLK_50,s00_axi_awaddr[15:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[15:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn" */;
+/* synthesis syn_black_box black_box_pad_pin="hsync,vsync,r[3:0],g[3:0],b[3:0],I_CLK_50,s00_axi_awaddr[31:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[31:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn" */;
   output hsync;
   output vsync;
   output [3:0]r;
   output [3:0]g;
   output [3:0]b;
   input I_CLK_50;
-  input [15:0]s00_axi_awaddr;
+  input [31:0]s00_axi_awaddr;
   input [2:0]s00_axi_awprot;
   input s00_axi_awvalid;
   output s00_axi_awready;
@@ -37,7 +37,7 @@ module design_1_vga_bram_0_0(hsync, vsync, r, g, b, I_CLK_50, s00_axi_awaddr,
   output [1:0]s00_axi_bresp;
   output s00_axi_bvalid;
   input s00_axi_bready;
-  input [15:0]s00_axi_araddr;
+  input [31:0]s00_axi_araddr;
   input [2:0]s00_axi_arprot;
   input s00_axi_arvalid;
   output s00_axi_arready;

@@ -201,10 +201,18 @@ proc create_root_design { parentCell } {
   # Create instance: rst_clk_wiz_0_50M, and set properties
   set rst_clk_wiz_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_0_50M ]
 
+  # Create instance: system_ila_0, and set properties
+  set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_MON_TYPE {NATIVE} \
+   CONFIG.C_NUM_OF_PROBES {1} \
+   CONFIG.C_PROBE0_TYPE {0} \
+ ] $system_ila_0
+
   # Create instance: vga_bram_0, and set properties
   set vga_bram_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:vga_bram:1.0 vga_bram_0 ]
   set_property -dict [ list \
-   CONFIG.C_S00_AXI_ADDR_WIDTH {16} \
+   CONFIG.C_S00_AXI_ADDR_WIDTH {32} \
  ] $vga_bram_0
 
   # Create instance: videomemlab_master_0, and set properties
@@ -222,10 +230,11 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net videomemlab_master_0_axi_periph_M01_AXI [get_bd_intf_pins vga_bram_0/S00_AXI] [get_bd_intf_pins videomemlab_master_0_axi_periph/M01_AXI]
 
   # Create port connections
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins keyboard_subordinate_0/s00_axi_aclk] [get_bd_pins rst_clk_wiz_0_100M/slowest_sync_clk] [get_bd_pins rst_clk_wiz_0_50M/slowest_sync_clk] [get_bd_pins vga_bram_0/s00_axi_aclk] [get_bd_pins videomemlab_master_0/m00_axi_aclk] [get_bd_pins videomemlab_master_0_axi_periph/ACLK] [get_bd_pins videomemlab_master_0_axi_periph/M00_ACLK] [get_bd_pins videomemlab_master_0_axi_periph/M01_ACLK] [get_bd_pins videomemlab_master_0_axi_periph/S00_ACLK]
-  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins vga_bram_0/I_CLK_50]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins keyboard_subordinate_0/s00_axi_aclk] [get_bd_pins rst_clk_wiz_0_100M/slowest_sync_clk] [get_bd_pins rst_clk_wiz_0_50M/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins vga_bram_0/s00_axi_aclk] [get_bd_pins videomemlab_master_0/m00_axi_aclk] [get_bd_pins videomemlab_master_0_axi_periph/ACLK] [get_bd_pins videomemlab_master_0_axi_periph/M00_ACLK] [get_bd_pins videomemlab_master_0_axi_periph/M01_ACLK] [get_bd_pins videomemlab_master_0_axi_periph/S00_ACLK]
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins keyboard_subordinate_0/I_CLK_50] [get_bd_pins vga_bram_0/I_CLK_50]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins rst_clk_wiz_0_100M/dcm_locked] [get_bd_pins rst_clk_wiz_0_50M/dcm_locked]
-  connect_bd_net -net keyboard_subordinate_0_IRQ_O [get_bd_pins keyboard_subordinate_0/IRQ_O] [get_bd_pins videomemlab_master_0/IRQ_I]
+  connect_bd_net -net keyboard_subordinate_0_IRQ_O [get_bd_pins keyboard_subordinate_0/IRQ_O] [get_bd_pins system_ila_0/probe0] [get_bd_pins videomemlab_master_0/IRQ_I]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets keyboard_subordinate_0_IRQ_O]
   connect_bd_net -net ps2_clk_0_1 [get_bd_ports ps2_clk_0] [get_bd_pins keyboard_subordinate_0/ps2_clk]
   connect_bd_net -net ps2_data_0_1 [get_bd_ports ps2_data_0] [get_bd_pins keyboard_subordinate_0/ps2_data]
   connect_bd_net -net reset_rtl_1 [get_bd_ports reset_rtl] [get_bd_pins clk_wiz_0/reset] [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in] [get_bd_pins rst_clk_wiz_0_50M/ext_reset_in]

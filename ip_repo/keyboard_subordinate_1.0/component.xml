@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a61c8dc7</spirit:value>
+            <spirit:value>26e4e819</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a61c8dc7</spirit:value>
+            <spirit:value>26e4e819</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -331,6 +331,19 @@
     </spirit:views>
     <spirit:ports>
       <spirit:port>
+        <spirit:name>I_CLK_50</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>ps2_clk</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -374,7 +387,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -537,7 +550,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -690,7 +703,7 @@
         <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
         <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
         <spirit:description>Width of S_AXI address bus</spirit:description>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">4</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">32</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -728,7 +741,7 @@
       <spirit:file>
         <spirit:name>hdl/keyboard_subordinate_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_8991effa</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_a7afe249</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -818,7 +831,7 @@
       <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
       <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
       <spirit:description>Width of S_AXI address bus</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -865,8 +878,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>keyboard_subordinate_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>4</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-04-14T19:34:53Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>16</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-04-20T16:37:58Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@e2260b1_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@73d94862_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
@@ -921,16 +934,182 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@57137108_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@39bbd0bc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@397b648a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41151a71_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb4b0d8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@473141ef_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2179cdab_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e407e7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e869ef3_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ee6a73c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f312e4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c7e971c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d720705_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e431e78_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4413c0ac_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@488b1f62_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@637f7346_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cc90d3f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cfbdab3_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f016ac_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57dfeb48_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f8a98dc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cee464b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b559453_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c33a32f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fad45ee_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f6290ab_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@327b7bd2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@742f1e40_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f200e2d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@453c0c09_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d270e6c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@140ba149_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6627640a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4600aa58_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@564dfdbe_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a8ff98_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bb9ff3b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28583d27_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dbed76a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6b03bb_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67dec003_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e57a80_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6238a468_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e91fec_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@912d9a5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5645ae00_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@788679f8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fc29ea4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cc6d662_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38d093fb_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fdd042_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ae8ee59_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60008bac_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f9d3dcd_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d5c92f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@262160d8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22ae4c3e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ad1175c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31ce52e1_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bdda830_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f791f75_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7465c858_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7190f73b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48e194bf_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27139b9f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b59176_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7808216b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@397de831_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58518d59_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d87820_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f6d431e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7624d736_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29990ad7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f0540ee_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42dbbd4a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@740afc0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73979010_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6af6e8ec_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a9c4424_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d447d80_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17a57504_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bfd107e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@645a1d38_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a19c960_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@799c9477_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ef9bbc4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@558524c2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eb720a2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72687c42_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18482a3_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4de6a045_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6301d937_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a9ef5a6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@296787a9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@385200a2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4406f309_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46975d40_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@730b4061_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d72c6c2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5856f32b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30aa71c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33aeaced_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf2aa8c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b84f1a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@105de40a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51d08450_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ae820db_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d34b494_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2648fe58_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44db8943_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11cde58b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a5f3ff9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f22a489_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d6e3a58_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c80556_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@541c7391_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f4af5ea_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d25d3fa_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18bee25f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e783c65_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@617580e7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@442c36_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a9c395a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a2c797d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17d2e75e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55712f14_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1af2ef40_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b0aa615_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4996674e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@222b29c4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3380ad81_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@353319c6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ccc52b9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@153c530f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e610191_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@635536bd_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23fe016d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6300bf73_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37e8ae4e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5312edad_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b8f6b8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ca7cd00_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@589ea35_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fca6936_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21337659_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72c4e932_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@189ecb08_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22c7e606_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f48680c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23da42b2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c492868_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bf5e821_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@155bcd_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2314f720_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bc12e9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f66ea26_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2df62c1f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b10e9b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f4c93f9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19b9e50a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44228179_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@efc6e24_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75965c13_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dc31024_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d2cfb0b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fe40541_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41997a0a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d4f546c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/keyboard_subordinate_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a63f3fc"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8a6ac7bf"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="468461f1"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="def88462"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0020ec7f"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="c00a7aa9"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d6d597f2"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="1257bdbb"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Apr 18 15:01:56 2022
+-- Date        : Tue Apr 19 16:17:40 2022
 -- Host        : AaronThinkPad running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_vga_bram_0_0/design_1_vga_bram_0_0_sim_netlist.vhdl
@@ -22,7 +22,10 @@ entity design_1_vga_bram_0_0_bram is
     s00_axi_aclk : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 15 downto 0 );
     P : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    ram_reg_1_7_1 : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    ram_reg_1_7_1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    we : in STD_LOGIC;
+    WEA : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    ram_reg_0_6_0 : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_vga_bram_0_0_bram : entity is "bram";
@@ -722,7 +725,10 @@ ram_reg_0_0: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_0_0_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => we,
+      WEA(2) => we,
+      WEA(1) => we,
+      WEA(0) => we,
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_0_1: unisim.vcomponents.RAMB36E1
@@ -928,7 +934,10 @@ ram_reg_0_1: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_0_1_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => we,
+      WEA(2) => we,
+      WEA(1) => we,
+      WEA(0) => we,
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_0_2: unisim.vcomponents.RAMB36E1
@@ -1134,7 +1143,10 @@ ram_reg_0_2: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_0_2_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => we,
+      WEA(2) => we,
+      WEA(1) => we,
+      WEA(0) => we,
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_0_3: unisim.vcomponents.RAMB36E1
@@ -1340,7 +1352,10 @@ ram_reg_0_3: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_0_3_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => we,
+      WEA(2) => we,
+      WEA(1) => we,
+      WEA(0) => we,
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_0_4: unisim.vcomponents.RAMB36E1
@@ -1546,7 +1561,10 @@ ram_reg_0_4: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_0_4_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => WEA(1),
+      WEA(2) => WEA(1),
+      WEA(1) => WEA(1),
+      WEA(0) => WEA(1),
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_0_5: unisim.vcomponents.RAMB36E1
@@ -1752,7 +1770,10 @@ ram_reg_0_5: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_0_5_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => WEA(0),
+      WEA(2) => WEA(0),
+      WEA(1) => WEA(0),
+      WEA(0) => WEA(0),
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_0_6: unisim.vcomponents.RAMB36E1
@@ -1958,7 +1979,10 @@ ram_reg_0_6: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_0_6_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => ram_reg_0_6_0(1),
+      WEA(2) => ram_reg_0_6_0(1),
+      WEA(1) => ram_reg_0_6_0(1),
+      WEA(0) => ram_reg_0_6_0(1),
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_0_7: unisim.vcomponents.RAMB36E1
@@ -2164,7 +2188,9 @@ ram_reg_0_7: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_0_7_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => ram_reg_0_6_0(1),
+      WEA(2 downto 1) => ram_reg_0_6_0(1 downto 0),
+      WEA(0) => ram_reg_0_6_0(0),
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_1_0: unisim.vcomponents.RAMB36E1
@@ -2359,7 +2385,7 @@ ram_reg_1_0: unisim.vcomponents.RAMB36E1
       DOPADOP(3 downto 0) => NLW_ram_reg_1_0_DOPADOP_UNCONNECTED(3 downto 0),
       DOPBDOP(3 downto 0) => NLW_ram_reg_1_0_DOPBDOP_UNCONNECTED(3 downto 0),
       ECCPARITY(7 downto 0) => NLW_ram_reg_1_0_ECCPARITY_UNCONNECTED(7 downto 0),
-      ENARDEN => '1',
+      ENARDEN => we,
       ENBWREN => '1',
       INJECTDBITERR => NLW_ram_reg_1_0_INJECTDBITERR_UNCONNECTED,
       INJECTSBITERR => NLW_ram_reg_1_0_INJECTSBITERR_UNCONNECTED,
@@ -2371,7 +2397,10 @@ ram_reg_1_0: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_1_0_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => we,
+      WEA(2) => we,
+      WEA(1) => we,
+      WEA(0) => '1',
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_1_1: unisim.vcomponents.RAMB36E1
@@ -2566,7 +2595,7 @@ ram_reg_1_1: unisim.vcomponents.RAMB36E1
       DOPADOP(3 downto 0) => NLW_ram_reg_1_1_DOPADOP_UNCONNECTED(3 downto 0),
       DOPBDOP(3 downto 0) => NLW_ram_reg_1_1_DOPBDOP_UNCONNECTED(3 downto 0),
       ECCPARITY(7 downto 0) => NLW_ram_reg_1_1_ECCPARITY_UNCONNECTED(7 downto 0),
-      ENARDEN => '1',
+      ENARDEN => we,
       ENBWREN => '1',
       INJECTDBITERR => NLW_ram_reg_1_1_INJECTDBITERR_UNCONNECTED,
       INJECTSBITERR => NLW_ram_reg_1_1_INJECTSBITERR_UNCONNECTED,
@@ -2578,7 +2607,10 @@ ram_reg_1_1: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_1_1_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => we,
+      WEA(2) => we,
+      WEA(1) => we,
+      WEA(0) => '1',
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_1_2: unisim.vcomponents.RAMB36E1
@@ -2773,7 +2805,7 @@ ram_reg_1_2: unisim.vcomponents.RAMB36E1
       DOPADOP(3 downto 0) => NLW_ram_reg_1_2_DOPADOP_UNCONNECTED(3 downto 0),
       DOPBDOP(3 downto 0) => NLW_ram_reg_1_2_DOPBDOP_UNCONNECTED(3 downto 0),
       ECCPARITY(7 downto 0) => NLW_ram_reg_1_2_ECCPARITY_UNCONNECTED(7 downto 0),
-      ENARDEN => '1',
+      ENARDEN => we,
       ENBWREN => '1',
       INJECTDBITERR => NLW_ram_reg_1_2_INJECTDBITERR_UNCONNECTED,
       INJECTSBITERR => NLW_ram_reg_1_2_INJECTSBITERR_UNCONNECTED,
@@ -2785,7 +2817,10 @@ ram_reg_1_2: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_1_2_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => we,
+      WEA(2) => we,
+      WEA(1) => we,
+      WEA(0) => '1',
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_1_3: unisim.vcomponents.RAMB36E1
@@ -2980,7 +3015,7 @@ ram_reg_1_3: unisim.vcomponents.RAMB36E1
       DOPADOP(3 downto 0) => NLW_ram_reg_1_3_DOPADOP_UNCONNECTED(3 downto 0),
       DOPBDOP(3 downto 0) => NLW_ram_reg_1_3_DOPBDOP_UNCONNECTED(3 downto 0),
       ECCPARITY(7 downto 0) => NLW_ram_reg_1_3_ECCPARITY_UNCONNECTED(7 downto 0),
-      ENARDEN => '1',
+      ENARDEN => we,
       ENBWREN => '1',
       INJECTDBITERR => NLW_ram_reg_1_3_INJECTDBITERR_UNCONNECTED,
       INJECTSBITERR => NLW_ram_reg_1_3_INJECTSBITERR_UNCONNECTED,
@@ -2992,7 +3027,10 @@ ram_reg_1_3: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_1_3_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => we,
+      WEA(2) => we,
+      WEA(1) => we,
+      WEA(0) => '1',
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_1_4: unisim.vcomponents.RAMB36E1
@@ -3187,7 +3225,7 @@ ram_reg_1_4: unisim.vcomponents.RAMB36E1
       DOPADOP(3 downto 0) => NLW_ram_reg_1_4_DOPADOP_UNCONNECTED(3 downto 0),
       DOPBDOP(3 downto 0) => NLW_ram_reg_1_4_DOPBDOP_UNCONNECTED(3 downto 0),
       ECCPARITY(7 downto 0) => NLW_ram_reg_1_4_ECCPARITY_UNCONNECTED(7 downto 0),
-      ENARDEN => '1',
+      ENARDEN => WEA(1),
       ENBWREN => '1',
       INJECTDBITERR => NLW_ram_reg_1_4_INJECTDBITERR_UNCONNECTED,
       INJECTSBITERR => NLW_ram_reg_1_4_INJECTSBITERR_UNCONNECTED,
@@ -3199,7 +3237,10 @@ ram_reg_1_4: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_1_4_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => WEA(1),
+      WEA(2) => WEA(1),
+      WEA(1) => WEA(1),
+      WEA(0) => '1',
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_1_5: unisim.vcomponents.RAMB36E1
@@ -3394,7 +3435,7 @@ ram_reg_1_5: unisim.vcomponents.RAMB36E1
       DOPADOP(3 downto 0) => NLW_ram_reg_1_5_DOPADOP_UNCONNECTED(3 downto 0),
       DOPBDOP(3 downto 0) => NLW_ram_reg_1_5_DOPBDOP_UNCONNECTED(3 downto 0),
       ECCPARITY(7 downto 0) => NLW_ram_reg_1_5_ECCPARITY_UNCONNECTED(7 downto 0),
-      ENARDEN => '1',
+      ENARDEN => WEA(1),
       ENBWREN => '1',
       INJECTDBITERR => NLW_ram_reg_1_5_INJECTDBITERR_UNCONNECTED,
       INJECTSBITERR => NLW_ram_reg_1_5_INJECTSBITERR_UNCONNECTED,
@@ -3406,7 +3447,9 @@ ram_reg_1_5: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_1_5_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3 downto 2) => WEA(1 downto 0),
+      WEA(1) => WEA(0),
+      WEA(0) => '1',
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_1_6: unisim.vcomponents.RAMB36E1
@@ -3601,7 +3644,7 @@ ram_reg_1_6: unisim.vcomponents.RAMB36E1
       DOPADOP(3 downto 0) => NLW_ram_reg_1_6_DOPADOP_UNCONNECTED(3 downto 0),
       DOPBDOP(3 downto 0) => NLW_ram_reg_1_6_DOPBDOP_UNCONNECTED(3 downto 0),
       ECCPARITY(7 downto 0) => NLW_ram_reg_1_6_ECCPARITY_UNCONNECTED(7 downto 0),
-      ENARDEN => '1',
+      ENARDEN => WEA(0),
       ENBWREN => '1',
       INJECTDBITERR => NLW_ram_reg_1_6_INJECTDBITERR_UNCONNECTED,
       INJECTSBITERR => NLW_ram_reg_1_6_INJECTSBITERR_UNCONNECTED,
@@ -3613,7 +3656,10 @@ ram_reg_1_6: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_1_6_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => WEA(0),
+      WEA(2) => WEA(0),
+      WEA(1) => WEA(0),
+      WEA(0) => '1',
       WEBWE(7 downto 0) => B"00000000"
     );
 ram_reg_1_7: unisim.vcomponents.RAMB36E1
@@ -3808,7 +3854,7 @@ ram_reg_1_7: unisim.vcomponents.RAMB36E1
       DOPADOP(3 downto 0) => NLW_ram_reg_1_7_DOPADOP_UNCONNECTED(3 downto 0),
       DOPBDOP(3 downto 0) => NLW_ram_reg_1_7_DOPBDOP_UNCONNECTED(3 downto 0),
       ECCPARITY(7 downto 0) => NLW_ram_reg_1_7_ECCPARITY_UNCONNECTED(7 downto 0),
-      ENARDEN => '1',
+      ENARDEN => ram_reg_0_6_0(1),
       ENBWREN => '1',
       INJECTDBITERR => NLW_ram_reg_1_7_INJECTDBITERR_UNCONNECTED,
       INJECTSBITERR => NLW_ram_reg_1_7_INJECTSBITERR_UNCONNECTED,
@@ -3820,7 +3866,10 @@ ram_reg_1_7: unisim.vcomponents.RAMB36E1
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => NLW_ram_reg_1_7_SBITERR_UNCONNECTED,
-      WEA(3 downto 0) => B"1111",
+      WEA(3) => ram_reg_0_6_0(1),
+      WEA(2) => ram_reg_0_6_0(1),
+      WEA(1) => ram_reg_0_6_0(1),
+      WEA(0) => '1',
       WEBWE(7 downto 0) => B"00000000"
     );
 end STRUCTURE;
@@ -4797,12 +4846,28 @@ architecture STRUCTURE of design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI is
   signal \slv_reg3[31]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg3[7]_i_1_n_0\ : STD_LOGIC;
   signal slv_reg_rden : STD_LOGIC;
-  signal \slv_reg_wren__2\ : STD_LOGIC;
+  signal slv_reg_wren : STD_LOGIC;
+  signal we : STD_LOGIC;
+  signal we_i_1_n_0 : STD_LOGIC;
+  signal \we_reg_rep_rep__0_n_0\ : STD_LOGIC;
+  signal \we_reg_rep_rep__1_n_0\ : STD_LOGIC;
+  signal \we_reg_rep_rep__2_n_0\ : STD_LOGIC;
+  signal we_reg_rep_rep_n_0 : STD_LOGIC;
+  signal \we_rep_rep__0_i_1_n_0\ : STD_LOGIC;
+  signal \we_rep_rep__1_i_1_n_0\ : STD_LOGIC;
+  signal \we_rep_rep__2_i_1_n_0\ : STD_LOGIC;
+  signal we_rep_rep_i_1_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \slv_reg3[31]_i_2\ : label is "soft_lutpair6";
+  attribute ORIG_CELL_NAME : string;
+  attribute ORIG_CELL_NAME of we_reg : label is "we_reg";
+  attribute ORIG_CELL_NAME of we_reg_rep_rep : label is "we_reg";
+  attribute ORIG_CELL_NAME of \we_reg_rep_rep__0\ : label is "we_reg";
+  attribute ORIG_CELL_NAME of \we_reg_rep_rep__1\ : label is "we_reg";
+  attribute ORIG_CELL_NAME of \we_reg_rep_rep__2\ : label is "we_reg";
 begin
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
@@ -4813,11 +4878,16 @@ Inst_bram_0: entity work.design_1_vga_bram_0_0_bram
      port map (
       P(15 downto 0) => addrB(15 downto 0),
       Q(15 downto 0) => bram_address(15 downto 0),
+      WEA(1) => we_reg_rep_rep_n_0,
+      WEA(0) => \we_reg_rep_rep__0_n_0\,
       \h_count_reg_reg__0\(1 downto 0) => \h_count_reg_reg__0\(1 downto 0),
+      ram_reg_0_6_0(1) => \we_reg_rep_rep__1_n_0\,
+      ram_reg_0_6_0(0) => \we_reg_rep_rep__2_n_0\,
       ram_reg_1_3_0 => Inst_bram_0_n_0,
       ram_reg_1_7_0 => Inst_bram_0_n_1,
       ram_reg_1_7_1(7 downto 0) => bram_data(7 downto 0),
-      s00_axi_aclk => s00_axi_aclk
+      s00_axi_aclk => s00_axi_aclk,
+      we => we
     );
 Inst_vga: entity work.design_1_vga_bram_0_0_vga_sync
      port map (
@@ -5476,7 +5546,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I1 => p_0_in(1),
       I2 => p_0_in(0),
       I3 => s00_axi_wstrb(1),
-      I4 => \slv_reg_wren__2\,
+      I4 => slv_reg_wren,
       O => \slv_reg3[15]_i_1_n_0\
     );
 \slv_reg3[23]_i_1\: unisim.vcomponents.LUT5
@@ -5488,7 +5558,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I1 => p_0_in(1),
       I2 => p_0_in(0),
       I3 => s00_axi_wstrb(2),
-      I4 => \slv_reg_wren__2\,
+      I4 => slv_reg_wren,
       O => \slv_reg3[23]_i_1_n_0\
     );
 \slv_reg3[31]_i_1\: unisim.vcomponents.LUT5
@@ -5500,7 +5570,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I1 => p_0_in(1),
       I2 => p_0_in(0),
       I3 => s00_axi_wstrb(3),
-      I4 => \slv_reg_wren__2\,
+      I4 => slv_reg_wren,
       O => \slv_reg3[31]_i_1_n_0\
     );
 \slv_reg3[31]_i_2\: unisim.vcomponents.LUT4
@@ -5512,7 +5582,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I1 => \^s_axi_awready\,
       I2 => \^s_axi_wready\,
       I3 => s00_axi_wvalid,
-      O => \slv_reg_wren__2\
+      O => slv_reg_wren
     );
 \slv_reg3[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -5523,7 +5593,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I1 => p_0_in(1),
       I2 => p_0_in(0),
       I3 => s00_axi_wstrb(0),
-      I4 => \slv_reg_wren__2\,
+      I4 => slv_reg_wren,
       O => \slv_reg3[7]_i_1_n_0\
     );
 \slv_reg3_reg[0]\: unisim.vcomponents.FDRE
@@ -5782,6 +5852,111 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => slv_reg3(9),
       R => '0'
     );
+we_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8000FFFF80000000"
+    )
+        port map (
+      I0 => s00_axi_awvalid,
+      I1 => \^s_axi_awready\,
+      I2 => \^s_axi_wready\,
+      I3 => s00_axi_wvalid,
+      I4 => s00_axi_aresetn,
+      I5 => we,
+      O => we_i_1_n_0
+    );
+we_reg: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => we_i_1_n_0,
+      Q => we,
+      R => '0'
+    );
+we_reg_rep_rep: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => we_rep_rep_i_1_n_0,
+      Q => we_reg_rep_rep_n_0,
+      R => '0'
+    );
+\we_reg_rep_rep__0\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \we_rep_rep__0_i_1_n_0\,
+      Q => \we_reg_rep_rep__0_n_0\,
+      R => '0'
+    );
+\we_reg_rep_rep__1\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \we_rep_rep__1_i_1_n_0\,
+      Q => \we_reg_rep_rep__1_n_0\,
+      R => '0'
+    );
+\we_reg_rep_rep__2\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \we_rep_rep__2_i_1_n_0\,
+      Q => \we_reg_rep_rep__2_n_0\,
+      R => '0'
+    );
+\we_rep_rep__0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8000FFFF80000000"
+    )
+        port map (
+      I0 => s00_axi_awvalid,
+      I1 => \^s_axi_awready\,
+      I2 => \^s_axi_wready\,
+      I3 => s00_axi_wvalid,
+      I4 => s00_axi_aresetn,
+      I5 => we,
+      O => \we_rep_rep__0_i_1_n_0\
+    );
+\we_rep_rep__1_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8000FFFF80000000"
+    )
+        port map (
+      I0 => s00_axi_awvalid,
+      I1 => \^s_axi_awready\,
+      I2 => \^s_axi_wready\,
+      I3 => s00_axi_wvalid,
+      I4 => s00_axi_aresetn,
+      I5 => we,
+      O => \we_rep_rep__1_i_1_n_0\
+    );
+\we_rep_rep__2_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8000FFFF80000000"
+    )
+        port map (
+      I0 => s00_axi_awvalid,
+      I1 => \^s_axi_awready\,
+      I2 => \^s_axi_wready\,
+      I3 => s00_axi_wvalid,
+      I4 => s00_axi_aresetn,
+      I5 => we,
+      O => \we_rep_rep__2_i_1_n_0\
+    );
+we_rep_rep_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8000FFFF80000000"
+    )
+        port map (
+      I0 => s00_axi_awvalid,
+      I1 => \^s_axi_awready\,
+      I2 => \^s_axi_wready\,
+      I3 => s00_axi_wvalid,
+      I4 => s00_axi_aresetn,
+      I5 => we,
+      O => we_rep_rep_i_1_n_0
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -5854,7 +6029,7 @@ entity design_1_vga_bram_0_0 is
     g : out STD_LOGIC_VECTOR ( 3 downto 0 );
     b : out STD_LOGIC_VECTOR ( 3 downto 0 );
     I_CLK_50 : in STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_awready : out STD_LOGIC;
@@ -5865,7 +6040,7 @@ entity design_1_vga_bram_0_0 is
     s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_arready : out STD_LOGIC;
@@ -5909,7 +6084,7 @@ architecture STRUCTURE of design_1_vga_bram_0_0 is
   attribute x_interface_info of s00_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR";
   attribute x_interface_info of s00_axi_arprot : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT";
   attribute x_interface_info of s00_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
-  attribute x_interface_parameter of s00_axi_awaddr : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s00_axi_awaddr : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s00_axi_awprot : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
   attribute x_interface_info of s00_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BRESP";
   attribute x_interface_info of s00_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RDATA";
