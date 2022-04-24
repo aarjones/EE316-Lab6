@@ -1,44 +1,44 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace port reset_rtl -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
-preplace port sys_clock -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
-preplace port ps2_clk_0 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace port ps2_data_0 -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
-preplace port vsync_0 -pg 1 -lvl 6 -x 1550 -y 290 -defaultsOSRD
-preplace port hsync_0 -pg 1 -lvl 6 -x 1550 -y 260 -defaultsOSRD
-preplace portBus g_0 -pg 1 -lvl 6 -x 1550 -y 350 -defaultsOSRD
-preplace portBus r_0 -pg 1 -lvl 6 -x 1550 -y 320 -defaultsOSRD
-preplace portBus b_0 -pg 1 -lvl 6 -x 1550 -y 380 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 460 -defaultsOSRD
+preplace port reset_rtl -pg 1 -lvl 0 -x -10 -y 450 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x -10 -y 480 -defaultsOSRD
+preplace port ps2_clk_0 -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace port ps2_data_0 -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
+preplace port vsync_0 -pg 1 -lvl 6 -x 1610 -y 290 -defaultsOSRD
+preplace port hsync_0 -pg 1 -lvl 6 -x 1610 -y 260 -defaultsOSRD
+preplace portBus g_0 -pg 1 -lvl 6 -x 1610 -y 350 -defaultsOSRD
+preplace portBus r_0 -pg 1 -lvl 6 -x 1610 -y 320 -defaultsOSRD
+preplace portBus b_0 -pg 1 -lvl 6 -x 1610 -y 380 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 120 -y 460 -defaultsOSRD
 preplace inst videomemlab_master_0_axi_periph -pg 1 -lvl 4 -x 1100 -y 280 -defaultsOSRD
-preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 400 -y 560 -defaultsOSRD
-preplace inst rst_clk_wiz_0_50M -pg 1 -lvl 3 -x 760 -y 620 -defaultsOSRD
-preplace inst videomemlab_master_0 -pg 1 -lvl 3 -x 760 -y 200 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 3 -x 760 -y 370 -defaultsOSRD
-preplace inst vga_bram_0 -pg 1 -lvl 5 -x 1420 -y 320 -defaultsOSRD
+preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 410 -y 560 -defaultsOSRD
+preplace inst rst_clk_wiz_0_50M -pg 1 -lvl 3 -x 780 -y 620 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 3 -x 780 -y 370 -defaultsOSRD
 preplace inst keyboard_subordinate_0 -pg 1 -lvl 5 -x 1420 -y 110 -defaultsOSRD
-preplace netloc reset_rtl_1 1 0 3 20 370 210 670 590
-preplace netloc sys_clock_1 1 0 1 NJ 470
-preplace netloc clk_wiz_0_locked 1 1 2 200 660 NJ
-preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 3 570 290 950 140 1250J
-preplace netloc ps2_clk_0_1 1 0 5 NJ 100 230J 90 NJ 90 NJ 90 1310J
-preplace netloc ps2_data_0_1 1 0 5 20J 110 NJ 110 NJ 110 NJ 110 1290J
-preplace netloc keyboard_subordinate_0_IRQ_O 1 2 4 590 100 NJ 100 1280J 220 1530
-preplace netloc clk_wiz_0_clk_out1 1 1 4 230 430 580 280 930 120 1260
-preplace netloc rst_clk_wiz_0_50M_peripheral_aresetn 1 3 2 940 130 1240J
-preplace netloc vga_bram_0_g 1 5 1 1530J 340n
-preplace netloc vga_bram_0_r 1 5 1 NJ 320
-preplace netloc vga_bram_0_vsync 1 5 1 1530J 290n
+preplace inst videomemlab_master_0 -pg 1 -lvl 3 -x 780 -y 200 -defaultsOSRD
+preplace inst vga_bram_0 -pg 1 -lvl 5 -x 1420 -y 500 -defaultsOSRD
+preplace netloc reset_rtl_1 1 0 3 10 550 220 460 590
+preplace netloc sys_clock_1 1 0 1 20J 470n
+preplace netloc clk_wiz_0_locked 1 1 2 210 660 NJ
+preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 3 580 290 960 140 1240J
+preplace netloc ps2_clk_0_1 1 0 5 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc ps2_data_0_1 1 0 5 10J 120 NJ 120 NJ 120 NJ 120 NJ
+preplace netloc keyboard_subordinate_0_IRQ_O 1 2 4 610 110 NJ 110 1270J 220 1530
+preplace netloc clk_wiz_0_clk_out1 1 1 4 230 430 600 280 950 130 1250
+preplace netloc rst_clk_wiz_0_50M_peripheral_aresetn 1 3 2 960 530 NJ
+preplace netloc vga_bram_0_g 1 5 1 1560J 350n
+preplace netloc vga_bram_0_r 1 5 1 1550J 320n
+preplace netloc vga_bram_0_vsync 1 5 1 1540J 290n
 preplace netloc vga_bram_0_hsync 1 5 1 1530J 260n
-preplace netloc vga_bram_0_b 1 5 1 1530J 360n
-preplace netloc clk_wiz_0_clk_out2 1 1 4 220J 80 NJ 80 NJ 80 1300
-preplace netloc videomemlab_master_0_axi_periph_M00_AXI 1 4 1 1270 60n
-preplace netloc videomemlab_master_0_axi_periph_M01_AXI 1 4 1 N 290
+preplace netloc vga_bram_0_b 1 5 1 1570J 380n
+preplace netloc clk_wiz_0_clk_out2 1 1 4 NJ 450 NJ 450 NJ 450 1280
+preplace netloc videomemlab_master_0_axi_periph_M00_AXI 1 4 1 1260 60n
+preplace netloc videomemlab_master_0_axi_periph_M01_AXI 1 4 1 1240 290n
 preplace netloc videomemlab_master_0_M00_AXI 1 3 1 N 200
-levelinfo -pg 1 0 110 400 760 1100 1420 1550
-pagesize -pg 1 -db -bbox -sgen -120 0 1650 720
+levelinfo -pg 1 -10 120 410 780 1100 1420 1610
+pagesize -pg 1 -db -bbox -sgen -130 0 1710 780
 "
 }
 {

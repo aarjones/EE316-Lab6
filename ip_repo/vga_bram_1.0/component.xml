@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a6983e11</spirit:value>
+            <spirit:value>af9a077a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a6983e11</spirit:value>
+            <spirit:value>af9a077a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -916,8 +916,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>vga_bram_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>17</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-04-19T20:16:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-04-21T22:25:22Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2758faac_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@38f3b356_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
@@ -1144,13 +1144,77 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@40355611_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5f32c5b5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2edb3dfc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62032feb_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c89bdd6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@659e0a5c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a87a33e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45ebb08a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@204ea61_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@495c5f47_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@707d0baa_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c1ce339_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62b4c558_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@248147ec_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77d1a523_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62ce3928_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20d15553_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@258e7d32_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11a4d790_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7757d31f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b960355_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d4222d6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe0ce0c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d8cd804_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7500546f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2384af41_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ae5abaa_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bcd641b_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d8c1af5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6af00aa4_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13528b56_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b2dc34f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@588c72fa_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29a648fc_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d10c734_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@924032d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@478949de_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a4072c6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19d47740_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74598836_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37af0ce1_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70919a73_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@242734ad_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ee9b094_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52ffc2b5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e2c4c4e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d588bfa_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e4b755a_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76d27f88_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61ad9497_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d11e40f_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ef53271_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6de68b44_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e0fad2c_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ff9d1b0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@325e7049_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fdad703_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69da43df_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d8d9f82_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b21f8f7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26c41fe7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@688d64d7_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@304b6e52_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6aa7508_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c49ed1_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@770a61b8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1996e924_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/vga_bram_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a63f3fc"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7275bb8a"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e8088cdc"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="ec0a9bd0"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d6d597f2"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="21bb3bd5"/>

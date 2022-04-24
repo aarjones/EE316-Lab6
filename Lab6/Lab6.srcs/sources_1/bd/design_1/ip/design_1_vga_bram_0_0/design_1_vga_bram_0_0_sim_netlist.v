@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Apr 19 16:17:40 2022
+// Date        : Thu Apr 21 18:26:33 2022
 // Host        : AaronThinkPad running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_vga_bram_0_0/design_1_vga_bram_0_0_sim_netlist.v
@@ -74,7 +74,7 @@ module design_1_vga_bram_0_0
   wire I_CLK_50;
   wire [3:3]\^g ;
   wire hsync;
-  wire [0:0]\^r ;
+  wire [3:3]\^r ;
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
   wire s00_axi_arready;
@@ -93,18 +93,18 @@ module design_1_vga_bram_0_0
   wire s00_axi_wvalid;
   wire vsync;
 
-  assign b[3] = \<const0> ;
-  assign b[2] = \<const0> ;
-  assign b[1] = \<const0> ;
-  assign b[0] = \<const0> ;
+  assign b[3] = \^g [3];
+  assign b[2] = \^g [3];
+  assign b[1] = \^g [3];
+  assign b[0] = \^g [3];
   assign g[3] = \^g [3];
   assign g[2] = \^g [3];
   assign g[1] = \^g [3];
   assign g[0] = \^g [3];
-  assign r[3] = \^r [0];
-  assign r[2] = \^r [0];
-  assign r[1] = \^r [0];
-  assign r[0] = \^r [0];
+  assign r[3] = \^r [3];
+  assign r[2] = \^r [3];
+  assign r[1] = \^r [3];
+  assign r[0] = \^r [3];
   assign s00_axi_bresp[1] = \<const0> ;
   assign s00_axi_bresp[0] = \<const0> ;
   assign s00_axi_rresp[1] = \<const0> ;
@@ -139,7 +139,7 @@ endmodule
 module design_1_vga_bram_0_0_bram
    (ram_reg_1_3_0,
     ram_reg_1_7_0,
-    h_count_reg_reg__0,
+    h_count_reg_reg,
     s00_axi_aclk,
     Q,
     P,
@@ -149,7 +149,7 @@ module design_1_vga_bram_0_0_bram
     ram_reg_0_6_0);
   output ram_reg_1_3_0;
   output ram_reg_1_7_0;
-  input [1:0]h_count_reg_reg__0;
+  input [1:0]h_count_reg_reg;
   input s00_axi_aclk;
   input [15:0]Q;
   input [15:0]P;
@@ -161,7 +161,7 @@ module design_1_vga_bram_0_0_bram
   wire [15:0]P;
   wire [15:0]Q;
   wire [1:0]WEA;
-  wire [1:0]h_count_reg_reg__0;
+  wire [1:0]h_count_reg_reg;
   wire ram_reg_0_0_n_0;
   wire ram_reg_0_0_n_1;
   wire ram_reg_0_1_n_0;
@@ -182,8 +182,8 @@ module design_1_vga_bram_0_0_bram
   wire ram_reg_1_3_0;
   wire ram_reg_1_7_0;
   wire [7:0]ram_reg_1_7_1;
+  wire [7:0]regB;
   wire s00_axi_aclk;
-  wire [7:0]vga_data;
   wire we;
   wire NLW_ram_reg_0_0_DBITERR_UNCONNECTED;
   wire NLW_ram_reg_0_0_INJECTDBITERR_UNCONNECTED;
@@ -396,23 +396,23 @@ module design_1_vga_bram_0_0_bram
 
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \r[0]_INST_0_i_3 
-       (.I0(vga_data[3]),
-        .I1(vga_data[2]),
-        .I2(h_count_reg_reg__0[1]),
-        .I3(vga_data[1]),
-        .I4(h_count_reg_reg__0[0]),
-        .I5(vga_data[0]),
+    \b[0]_INST_0_i_2 
+       (.I0(regB[3]),
+        .I1(regB[2]),
+        .I2(h_count_reg_reg[1]),
+        .I3(regB[1]),
+        .I4(h_count_reg_reg[0]),
+        .I5(regB[0]),
         .O(ram_reg_1_3_0));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \r[0]_INST_0_i_4 
-       (.I0(vga_data[7]),
-        .I1(vga_data[6]),
-        .I2(h_count_reg_reg__0[1]),
-        .I3(vga_data[5]),
-        .I4(h_count_reg_reg__0[0]),
-        .I5(vga_data[4]),
+    \b[0]_INST_0_i_3 
+       (.I0(regB[7]),
+        .I1(regB[6]),
+        .I2(h_count_reg_reg[1]),
+        .I3(regB[5]),
+        .I4(h_count_reg_reg[0]),
+        .I5(regB[4]),
         .O(ram_reg_1_7_0));
   (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d1" *) 
   (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d1" *) 
@@ -2322,7 +2322,7 @@ module design_1_vga_bram_0_0_bram
         .DIPADIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_0_DIPADIP_UNCONNECTED[0]}),
         .DIPBDIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_0_DIPBDIP_UNCONNECTED[0]}),
         .DOADO(NLW_ram_reg_1_0_DOADO_UNCONNECTED[31:0]),
-        .DOBDO({NLW_ram_reg_1_0_DOBDO_UNCONNECTED[31:1],vga_data[0]}),
+        .DOBDO({NLW_ram_reg_1_0_DOBDO_UNCONNECTED[31:1],regB[0]}),
         .DOPADOP(NLW_ram_reg_1_0_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_0_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_0_ECCPARITY_UNCONNECTED[7:0]),
@@ -2536,7 +2536,7 @@ module design_1_vga_bram_0_0_bram
         .DIPADIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_1_DIPADIP_UNCONNECTED[0]}),
         .DIPBDIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_1_DIPBDIP_UNCONNECTED[0]}),
         .DOADO(NLW_ram_reg_1_1_DOADO_UNCONNECTED[31:0]),
-        .DOBDO({NLW_ram_reg_1_1_DOBDO_UNCONNECTED[31:1],vga_data[1]}),
+        .DOBDO({NLW_ram_reg_1_1_DOBDO_UNCONNECTED[31:1],regB[1]}),
         .DOPADOP(NLW_ram_reg_1_1_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_1_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_1_ECCPARITY_UNCONNECTED[7:0]),
@@ -2750,7 +2750,7 @@ module design_1_vga_bram_0_0_bram
         .DIPADIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_2_DIPADIP_UNCONNECTED[0]}),
         .DIPBDIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_2_DIPBDIP_UNCONNECTED[0]}),
         .DOADO(NLW_ram_reg_1_2_DOADO_UNCONNECTED[31:0]),
-        .DOBDO({NLW_ram_reg_1_2_DOBDO_UNCONNECTED[31:1],vga_data[2]}),
+        .DOBDO({NLW_ram_reg_1_2_DOBDO_UNCONNECTED[31:1],regB[2]}),
         .DOPADOP(NLW_ram_reg_1_2_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_2_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_2_ECCPARITY_UNCONNECTED[7:0]),
@@ -2964,7 +2964,7 @@ module design_1_vga_bram_0_0_bram
         .DIPADIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_3_DIPADIP_UNCONNECTED[0]}),
         .DIPBDIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_3_DIPBDIP_UNCONNECTED[0]}),
         .DOADO(NLW_ram_reg_1_3_DOADO_UNCONNECTED[31:0]),
-        .DOBDO({NLW_ram_reg_1_3_DOBDO_UNCONNECTED[31:1],vga_data[3]}),
+        .DOBDO({NLW_ram_reg_1_3_DOBDO_UNCONNECTED[31:1],regB[3]}),
         .DOPADOP(NLW_ram_reg_1_3_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_3_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_3_ECCPARITY_UNCONNECTED[7:0]),
@@ -3178,7 +3178,7 @@ module design_1_vga_bram_0_0_bram
         .DIPADIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_4_DIPADIP_UNCONNECTED[0]}),
         .DIPBDIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_4_DIPBDIP_UNCONNECTED[0]}),
         .DOADO(NLW_ram_reg_1_4_DOADO_UNCONNECTED[31:0]),
-        .DOBDO({NLW_ram_reg_1_4_DOBDO_UNCONNECTED[31:1],vga_data[4]}),
+        .DOBDO({NLW_ram_reg_1_4_DOBDO_UNCONNECTED[31:1],regB[4]}),
         .DOPADOP(NLW_ram_reg_1_4_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_4_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_4_ECCPARITY_UNCONNECTED[7:0]),
@@ -3392,7 +3392,7 @@ module design_1_vga_bram_0_0_bram
         .DIPADIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_5_DIPADIP_UNCONNECTED[0]}),
         .DIPBDIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_5_DIPBDIP_UNCONNECTED[0]}),
         .DOADO(NLW_ram_reg_1_5_DOADO_UNCONNECTED[31:0]),
-        .DOBDO({NLW_ram_reg_1_5_DOBDO_UNCONNECTED[31:1],vga_data[5]}),
+        .DOBDO({NLW_ram_reg_1_5_DOBDO_UNCONNECTED[31:1],regB[5]}),
         .DOPADOP(NLW_ram_reg_1_5_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_5_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_5_ECCPARITY_UNCONNECTED[7:0]),
@@ -3606,7 +3606,7 @@ module design_1_vga_bram_0_0_bram
         .DIPADIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_6_DIPADIP_UNCONNECTED[0]}),
         .DIPBDIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_6_DIPBDIP_UNCONNECTED[0]}),
         .DOADO(NLW_ram_reg_1_6_DOADO_UNCONNECTED[31:0]),
-        .DOBDO({NLW_ram_reg_1_6_DOBDO_UNCONNECTED[31:1],vga_data[6]}),
+        .DOBDO({NLW_ram_reg_1_6_DOBDO_UNCONNECTED[31:1],regB[6]}),
         .DOPADOP(NLW_ram_reg_1_6_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_6_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_6_ECCPARITY_UNCONNECTED[7:0]),
@@ -3820,7 +3820,7 @@ module design_1_vga_bram_0_0_bram
         .DIPADIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_7_DIPADIP_UNCONNECTED[0]}),
         .DIPBDIP({1'b0,1'b0,1'b0,NLW_ram_reg_1_7_DIPBDIP_UNCONNECTED[0]}),
         .DOADO(NLW_ram_reg_1_7_DOADO_UNCONNECTED[31:0]),
-        .DOBDO({NLW_ram_reg_1_7_DOBDO_UNCONNECTED[31:1],vga_data[7]}),
+        .DOBDO({NLW_ram_reg_1_7_DOBDO_UNCONNECTED[31:1],regB[7]}),
         .DOPADOP(NLW_ram_reg_1_7_DOPADOP_UNCONNECTED[3:0]),
         .DOPBDOP(NLW_ram_reg_1_7_DOPBDOP_UNCONNECTED[3:0]),
         .ECCPARITY(NLW_ram_reg_1_7_ECCPARITY_UNCONNECTED[7:0]),
@@ -3842,43 +3842,43 @@ endmodule
 
 (* ORIG_REF_NAME = "vga_bram_v1_0" *) 
 module design_1_vga_bram_0_0_vga_bram_v1_0
-   (r,
-    S_AXI_WREADY,
+   (S_AXI_WREADY,
     S_AXI_AWREADY,
     S_AXI_ARREADY,
     s00_axi_rdata,
     g,
+    r,
     s00_axi_rvalid,
     s00_axi_bvalid,
     hsync,
     vsync,
+    s00_axi_wdata,
     s00_axi_aclk,
     s00_axi_awaddr,
+    I_CLK_50,
     s00_axi_wvalid,
     s00_axi_awvalid,
-    s00_axi_wdata,
-    I_CLK_50,
     s00_axi_aresetn,
     s00_axi_wstrb,
     s00_axi_arvalid,
     s00_axi_bready,
     s00_axi_rready);
-  output [0:0]r;
   output S_AXI_WREADY;
   output S_AXI_AWREADY;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output [0:0]g;
+  output [0:0]r;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
   output hsync;
   output vsync;
+  input [31:0]s00_axi_wdata;
   input s00_axi_aclk;
   input [15:0]s00_axi_awaddr;
+  input I_CLK_50;
   input s00_axi_wvalid;
   input s00_axi_awvalid;
-  input [31:0]s00_axi_wdata;
-  input I_CLK_50;
   input s00_axi_aresetn;
   input [3:0]s00_axi_wstrb;
   input s00_axi_arvalid;
@@ -3933,43 +3933,43 @@ endmodule
 
 (* ORIG_REF_NAME = "vga_bram_v1_0_S00_AXI" *) 
 module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
-   (r,
-    S_AXI_WREADY,
+   (S_AXI_WREADY,
     S_AXI_AWREADY,
     S_AXI_ARREADY,
     s00_axi_rdata,
     g,
+    r,
     s00_axi_rvalid,
     s00_axi_bvalid,
     hsync,
     vsync,
+    s00_axi_wdata,
     s00_axi_aclk,
     s00_axi_awaddr,
+    I_CLK_50,
     s00_axi_wvalid,
     s00_axi_awvalid,
-    s00_axi_wdata,
-    I_CLK_50,
     s00_axi_aresetn,
     s00_axi_wstrb,
     s00_axi_arvalid,
     s00_axi_bready,
     s00_axi_rready);
-  output [0:0]r;
   output S_AXI_WREADY;
   output S_AXI_AWREADY;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output [0:0]g;
+  output [0:0]r;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
   output hsync;
   output vsync;
+  input [31:0]s00_axi_wdata;
   input s00_axi_aclk;
   input [15:0]s00_axi_awaddr;
+  input I_CLK_50;
   input s00_axi_wvalid;
   input s00_axi_awvalid;
-  input [31:0]s00_axi_wdata;
-  input I_CLK_50;
   input s00_axi_aresetn;
   input [3:0]s00_axi_wstrb;
   input s00_axi_arvalid;
@@ -3986,6 +3986,7 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
   wire aw_en_i_1_n_0;
   wire aw_en_reg_n_0;
   wire axi_arready0;
+  wire [3:2]axi_awaddr;
   wire \axi_awaddr[2]_i_1_n_0 ;
   wire \axi_awaddr[3]_i_1_n_0 ;
   wire axi_awready0;
@@ -3997,9 +3998,8 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
   wire bram_address_0;
   wire [7:0]bram_data;
   wire [0:0]g;
-  wire [1:0]h_count_reg_reg__0;
+  wire [1:0]h_count_reg_reg;
   wire hsync;
-  wire [1:0]p_0_in;
   wire [0:0]r;
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
@@ -4037,7 +4037,7 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
        (.P(addrB),
         .Q(bram_address),
         .WEA({we_reg_rep_rep_n_0,we_reg_rep_rep__0_n_0}),
-        .h_count_reg_reg__0(h_count_reg_reg__0),
+        .h_count_reg_reg(h_count_reg_reg),
         .ram_reg_0_6_0({we_reg_rep_rep__1_n_0,we_reg_rep_rep__2_n_0}),
         .ram_reg_1_3_0(Inst_bram_0_n_0),
         .ram_reg_1_7_0(Inst_bram_0_n_1),
@@ -4050,7 +4050,7 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .g(g),
         .\g[3] (Inst_bram_0_n_0),
         .\g[3]_0 (Inst_bram_0_n_1),
-        .\h_count_reg_reg[1]_0 (h_count_reg_reg__0),
+        .\h_count_reg_reg[1]_0 (h_count_reg_reg),
         .hsync(hsync),
         .r(r),
         .vsync(vsync));
@@ -4091,7 +4091,7 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .I2(s00_axi_wvalid),
         .I3(s00_axi_awvalid),
         .I4(S_AXI_AWREADY),
-        .I5(p_0_in[0]),
+        .I5(axi_awaddr[2]),
         .O(\axi_awaddr[2]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFBFFF00008000)) 
@@ -4101,19 +4101,19 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
         .I2(s00_axi_wvalid),
         .I3(s00_axi_awvalid),
         .I4(S_AXI_AWREADY),
-        .I5(p_0_in[1]),
+        .I5(axi_awaddr[3]),
         .O(\axi_awaddr[3]_i_1_n_0 ));
   FDRE \axi_awaddr_reg[2] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\axi_awaddr[2]_i_1_n_0 ),
-        .Q(p_0_in[0]),
+        .Q(axi_awaddr[2]),
         .R(axi_awready_i_1_n_0));
   FDRE \axi_awaddr_reg[3] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\axi_awaddr[3]_i_1_n_0 ),
-        .Q(p_0_in[1]),
+        .Q(axi_awaddr[3]),
         .R(axi_awready_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -4536,8 +4536,8 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
     .INIT(32'h80000000)) 
     \slv_reg3[15]_i_1 
        (.I0(s00_axi_aresetn),
-        .I1(p_0_in[1]),
-        .I2(p_0_in[0]),
+        .I1(axi_awaddr[3]),
+        .I2(axi_awaddr[2]),
         .I3(s00_axi_wstrb[1]),
         .I4(slv_reg_wren),
         .O(\slv_reg3[15]_i_1_n_0 ));
@@ -4545,8 +4545,8 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
     .INIT(32'h80000000)) 
     \slv_reg3[23]_i_1 
        (.I0(s00_axi_aresetn),
-        .I1(p_0_in[1]),
-        .I2(p_0_in[0]),
+        .I1(axi_awaddr[3]),
+        .I2(axi_awaddr[2]),
         .I3(s00_axi_wstrb[2]),
         .I4(slv_reg_wren),
         .O(\slv_reg3[23]_i_1_n_0 ));
@@ -4554,8 +4554,8 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
     .INIT(32'h80000000)) 
     \slv_reg3[31]_i_1 
        (.I0(s00_axi_aresetn),
-        .I1(p_0_in[1]),
-        .I2(p_0_in[0]),
+        .I1(axi_awaddr[3]),
+        .I2(axi_awaddr[2]),
         .I3(s00_axi_wstrb[3]),
         .I4(slv_reg_wren),
         .O(\slv_reg3[31]_i_1_n_0 ));
@@ -4572,8 +4572,8 @@ module design_1_vga_bram_0_0_vga_bram_v1_0_S00_AXI
     .INIT(32'h80000000)) 
     \slv_reg3[7]_i_1 
        (.I0(s00_axi_aresetn),
-        .I1(p_0_in[1]),
-        .I2(p_0_in[0]),
+        .I1(axi_awaddr[3]),
+        .I2(axi_awaddr[2]),
         .I3(s00_axi_wstrb[0]),
         .I4(slv_reg_wren),
         .O(\slv_reg3[7]_i_1_n_0 ));
@@ -4861,24 +4861,25 @@ module design_1_vga_bram_0_0_vga_sync
    (P,
     hsync,
     vsync,
-    r,
     \h_count_reg_reg[1]_0 ,
     g,
+    r,
     I_CLK_50,
     \g[3] ,
     \g[3]_0 );
   output [15:0]P;
   output hsync;
   output vsync;
-  output [0:0]r;
   output [1:0]\h_count_reg_reg[1]_0 ;
   output [0:0]g;
+  output [0:0]r;
   input I_CLK_50;
   input \g[3] ;
   input \g[3]_0 ;
 
   wire I_CLK_50;
   wire [15:0]P;
+  wire \b[0]_INST_0_i_1_n_0 ;
   wire [0:0]g;
   wire \g[3] ;
   wire \g[3]_0 ;
@@ -4886,18 +4887,24 @@ module design_1_vga_bram_0_0_vga_sync
   wire \h_count_reg[1]_i_1_n_0 ;
   wire \h_count_reg[2]_i_1_n_0 ;
   wire \h_count_reg[2]_i_2_n_0 ;
-  wire [9:3]h_count_reg_reg;
+  wire \h_count_reg[3]_i_1_n_0 ;
+  wire \h_count_reg[4]_i_1_n_0 ;
+  wire \h_count_reg[5]_i_1_n_0 ;
+  wire \h_count_reg[6]_i_1_n_0 ;
+  wire \h_count_reg[7]_i_1_n_0 ;
+  wire \h_count_reg[8]_i_1_n_0 ;
+  wire \h_count_reg[9]_i_1_n_0 ;
+  wire [9:2]h_count_reg_reg;
   wire [1:0]\h_count_reg_reg[1]_0 ;
-  wire [2:2]h_count_reg_reg__0;
   wire h_sync_next;
   wire hsync;
   wire mod2_next;
   wire mod2_reg;
-  wire [5:1]plusOp;
-  wire [5:1]plusOp__0;
+  wire [9:3]plusOp;
+  wire [1:1]plusOp__0;
+  wire [5:1]plusOp__0__0;
   wire [0:0]r;
   wire \r[0]_INST_0_i_1_n_0 ;
-  wire \r[0]_INST_0_i_2_n_0 ;
   wire v_count_reg0;
   wire [9:0]v_count_reg_reg;
   wire v_sync_next;
@@ -4906,17 +4913,11 @@ module design_1_vga_bram_0_0_vga_sync
   wire v_sync_reg_i_4_n_0;
   wire vga_address_i_10_n_0;
   wire vga_address_i_11_n_0;
-  wire vga_address_i_12_n_0;
-  wire vga_address_i_13_n_0;
-  wire vga_address_i_14_n_0;
-  wire vga_address_i_15_n_0;
-  wire vga_address_i_16_n_0;
-  wire vga_address_i_17_n_0;
-  wire vga_address_i_18_n_0;
   wire vga_address_i_19_n_0;
   wire vga_address_i_20_n_0;
   wire vga_address_i_21_n_0;
   wire vga_address_i_27_n_0;
+  wire vga_address_i_28_n_0;
   wire vga_address_i_2_n_0;
   wire vga_address_i_3_n_0;
   wire vga_address_i_4_n_0;
@@ -4939,15 +4940,23 @@ module design_1_vga_bram_0_0_vga_sync
   wire [47:0]NLW_vga_address_PCOUT_UNCONNECTED;
 
   LUT6 #(
-    .INIT(64'h1010100000001000)) 
-    \g[0]_INST_0 
+    .INIT(64'h1010100000100000)) 
+    \b[0]_INST_0 
        (.I0(v_count_reg_reg[9]),
         .I1(\r[0]_INST_0_i_1_n_0 ),
-        .I2(\r[0]_INST_0_i_2_n_0 ),
-        .I3(\g[3] ),
-        .I4(h_count_reg_reg__0),
+        .I2(\b[0]_INST_0_i_1_n_0 ),
+        .I3(h_count_reg_reg[2]),
+        .I4(\g[3] ),
         .I5(\g[3]_0 ),
         .O(g));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h1F)) 
+    \b[0]_INST_0_i_1 
+       (.I0(h_count_reg_reg[7]),
+        .I1(h_count_reg_reg[8]),
+        .I2(h_count_reg_reg[9]),
+        .O(\b[0]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h5555455555555555)) 
     \h_count_reg[0]_i_1 
@@ -4961,7 +4970,7 @@ module design_1_vga_bram_0_0_vga_sync
   LUT6 #(
     .INIT(64'hAAAA8AAAAAAAAAAA)) 
     \h_count_reg[1]_i_1 
-       (.I0(plusOp[1]),
+       (.I0(plusOp__0),
         .I1(h_count_reg_reg[6]),
         .I2(vga_address_i_19_n_0),
         .I3(h_count_reg_reg[8]),
@@ -4974,7 +4983,7 @@ module design_1_vga_bram_0_0_vga_sync
     \h_count_reg[1]_i_2 
        (.I0(\h_count_reg_reg[1]_0 [0]),
         .I1(\h_count_reg_reg[1]_0 [1]),
-        .O(plusOp[1]));
+        .O(plusOp__0));
   LUT6 #(
     .INIT(64'hAAAA8AAAAAAAAAAA)) 
     \h_count_reg[2]_i_1 
@@ -4991,8 +5000,75 @@ module design_1_vga_bram_0_0_vga_sync
     \h_count_reg[2]_i_2 
        (.I0(\h_count_reg_reg[1]_0 [1]),
         .I1(\h_count_reg_reg[1]_0 [0]),
-        .I2(h_count_reg_reg__0),
+        .I2(h_count_reg_reg[2]),
         .O(\h_count_reg[2]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAA8AAAAAAAAAAA)) 
+    \h_count_reg[3]_i_1 
+       (.I0(plusOp[3]),
+        .I1(h_count_reg_reg[6]),
+        .I2(vga_address_i_19_n_0),
+        .I3(h_count_reg_reg[8]),
+        .I4(h_count_reg_reg[7]),
+        .I5(h_count_reg_reg[9]),
+        .O(\h_count_reg[3]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAA8AAAAAAAAAAA)) 
+    \h_count_reg[4]_i_1 
+       (.I0(plusOp[4]),
+        .I1(h_count_reg_reg[6]),
+        .I2(vga_address_i_19_n_0),
+        .I3(h_count_reg_reg[8]),
+        .I4(h_count_reg_reg[7]),
+        .I5(h_count_reg_reg[9]),
+        .O(\h_count_reg[4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAA8AAAAAAAAAAA)) 
+    \h_count_reg[5]_i_1 
+       (.I0(plusOp[5]),
+        .I1(h_count_reg_reg[6]),
+        .I2(vga_address_i_19_n_0),
+        .I3(h_count_reg_reg[8]),
+        .I4(h_count_reg_reg[7]),
+        .I5(h_count_reg_reg[9]),
+        .O(\h_count_reg[5]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h6666466666666666)) 
+    \h_count_reg[6]_i_1 
+       (.I0(vga_address_i_27_n_0),
+        .I1(h_count_reg_reg[6]),
+        .I2(vga_address_i_19_n_0),
+        .I3(h_count_reg_reg[8]),
+        .I4(h_count_reg_reg[7]),
+        .I5(h_count_reg_reg[9]),
+        .O(\h_count_reg[6]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h78)) 
+    \h_count_reg[7]_i_1 
+       (.I0(vga_address_i_27_n_0),
+        .I1(h_count_reg_reg[6]),
+        .I2(h_count_reg_reg[7]),
+        .O(\h_count_reg[7]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h7788CF007788FF00)) 
+    \h_count_reg[8]_i_1 
+       (.I0(vga_address_i_27_n_0),
+        .I1(h_count_reg_reg[6]),
+        .I2(vga_address_i_19_n_0),
+        .I3(h_count_reg_reg[8]),
+        .I4(h_count_reg_reg[7]),
+        .I5(h_count_reg_reg[9]),
+        .O(\h_count_reg[8]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h77FFCFFF88000000)) 
+    \h_count_reg[9]_i_1 
+       (.I0(vga_address_i_27_n_0),
+        .I1(h_count_reg_reg[6]),
+        .I2(vga_address_i_19_n_0),
+        .I3(h_count_reg_reg[8]),
+        .I4(h_count_reg_reg[7]),
+        .I5(h_count_reg_reg[9]),
+        .O(\h_count_reg[9]_i_1_n_0 ));
   FDRE \h_count_reg_reg[0] 
        (.C(I_CLK_50),
         .CE(mod2_reg),
@@ -5009,48 +5085,48 @@ module design_1_vga_bram_0_0_vga_sync
        (.C(I_CLK_50),
         .CE(mod2_reg),
         .D(\h_count_reg[2]_i_1_n_0 ),
-        .Q(h_count_reg_reg__0),
+        .Q(h_count_reg_reg[2]),
         .R(1'b0));
   FDRE \h_count_reg_reg[3] 
        (.C(I_CLK_50),
         .CE(mod2_reg),
-        .D(vga_address_i_18_n_0),
+        .D(\h_count_reg[3]_i_1_n_0 ),
         .Q(h_count_reg_reg[3]),
         .R(1'b0));
   FDRE \h_count_reg_reg[4] 
        (.C(I_CLK_50),
         .CE(mod2_reg),
-        .D(vga_address_i_17_n_0),
+        .D(\h_count_reg[4]_i_1_n_0 ),
         .Q(h_count_reg_reg[4]),
         .R(1'b0));
   FDRE \h_count_reg_reg[5] 
        (.C(I_CLK_50),
         .CE(mod2_reg),
-        .D(vga_address_i_16_n_0),
+        .D(\h_count_reg[5]_i_1_n_0 ),
         .Q(h_count_reg_reg[5]),
         .R(1'b0));
   FDRE \h_count_reg_reg[6] 
        (.C(I_CLK_50),
         .CE(mod2_reg),
-        .D(vga_address_i_15_n_0),
+        .D(\h_count_reg[6]_i_1_n_0 ),
         .Q(h_count_reg_reg[6]),
         .R(1'b0));
   FDRE \h_count_reg_reg[7] 
        (.C(I_CLK_50),
         .CE(mod2_reg),
-        .D(vga_address_i_14_n_0),
+        .D(\h_count_reg[7]_i_1_n_0 ),
         .Q(h_count_reg_reg[7]),
         .R(1'b0));
   FDRE \h_count_reg_reg[8] 
        (.C(I_CLK_50),
         .CE(mod2_reg),
-        .D(vga_address_i_13_n_0),
+        .D(\h_count_reg[8]_i_1_n_0 ),
         .Q(h_count_reg_reg[8]),
         .R(1'b0));
   FDRE \h_count_reg_reg[9] 
        (.C(I_CLK_50),
         .CE(mod2_reg),
-        .D(vga_address_i_12_n_0),
+        .D(\h_count_reg[9]_i_1_n_0 ),
         .Q(h_count_reg_reg[9]),
         .R(1'b0));
   LUT6 #(
@@ -5080,15 +5156,15 @@ module design_1_vga_bram_0_0_vga_sync
         .D(mod2_next),
         .Q(mod2_reg),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0000001010100010)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h00000057)) 
     \r[0]_INST_0 
-       (.I0(v_count_reg_reg[9]),
-        .I1(\r[0]_INST_0_i_1_n_0 ),
-        .I2(\r[0]_INST_0_i_2_n_0 ),
-        .I3(\g[3] ),
-        .I4(h_count_reg_reg__0),
-        .I5(\g[3]_0 ),
+       (.I0(h_count_reg_reg[9]),
+        .I1(h_count_reg_reg[8]),
+        .I2(h_count_reg_reg[7]),
+        .I3(\r[0]_INST_0_i_1_n_0 ),
+        .I4(v_count_reg_reg[9]),
         .O(r));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
@@ -5099,13 +5175,6 @@ module design_1_vga_bram_0_0_vga_sync
         .I2(v_count_reg_reg[8]),
         .I3(v_count_reg_reg[7]),
         .O(\r[0]_INST_0_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h1F)) 
-    \r[0]_INST_0_i_2 
-       (.I0(h_count_reg_reg[7]),
-        .I1(h_count_reg_reg[8]),
-        .I2(h_count_reg_reg[9]),
-        .O(\r[0]_INST_0_i_2_n_0 ));
   FDRE \v_count_reg_reg[0] 
        (.C(I_CLK_50),
         .CE(v_count_reg0),
@@ -5176,7 +5245,7 @@ module design_1_vga_bram_0_0_vga_sync
         .I4(v_sync_reg_i_4_n_0),
         .I5(\r[0]_INST_0_i_1_n_0 ),
         .O(v_sync_next));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h5555777F)) 
     v_sync_reg_i_2
@@ -5193,7 +5262,7 @@ module design_1_vga_bram_0_0_vga_sync
        (.I0(v_count_reg_reg[6]),
         .I1(v_count_reg_reg[7]),
         .O(v_sync_reg_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h07)) 
     v_sync_reg_i_4
@@ -5220,7 +5289,7 @@ module design_1_vga_bram_0_0_vga_sync
     .B_INPUT("DIRECT"),
     .CARRYINREG(0),
     .CARRYINSELREG(0),
-    .CREG(1),
+    .CREG(0),
     .DREG(1),
     .INMODEREG(0),
     .MASK(48'h3FFFFFFFFFFF),
@@ -5242,7 +5311,7 @@ module design_1_vga_bram_0_0_vga_sync
         .B({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0}),
         .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .BCOUT(NLW_vga_address_BCOUT_UNCONNECTED[17:0]),
-        .C({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,vga_address_i_12_n_0,vga_address_i_13_n_0,vga_address_i_14_n_0,vga_address_i_15_n_0,vga_address_i_16_n_0,vga_address_i_17_n_0,vga_address_i_18_n_0}),
+        .C({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,plusOp}),
         .CARRYCASCIN(1'b0),
         .CARRYCASCOUT(NLW_vga_address_CARRYCASCOUT_UNCONNECTED),
         .CARRYIN(1'b0),
@@ -5254,7 +5323,7 @@ module design_1_vga_bram_0_0_vga_sync
         .CEALUMODE(1'b0),
         .CEB1(1'b0),
         .CEB2(1'b0),
-        .CEC(mod2_reg),
+        .CEC(1'b0),
         .CECARRYIN(1'b0),
         .CECTRL(1'b0),
         .CED(1'b0),
@@ -5297,7 +5366,7 @@ module design_1_vga_bram_0_0_vga_sync
   LUT6 #(
     .INIT(64'hAAAAAA8AAAAAAAAA)) 
     vga_address_i_10
-       (.I0(plusOp__0[1]),
+       (.I0(plusOp__0__0[1]),
         .I1(v_count_reg_reg[6]),
         .I2(vga_address_i_21_n_0),
         .I3(v_count_reg_reg[8]),
@@ -5314,78 +5383,72 @@ module design_1_vga_bram_0_0_vga_sync
         .I4(v_count_reg_reg[7]),
         .I5(v_count_reg_reg[9]),
         .O(vga_address_i_11_n_0));
-  LUT6 #(
-    .INIT(64'h77FFCFFF88000000)) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
     vga_address_i_12
-       (.I0(vga_address_i_27_n_0),
-        .I1(h_count_reg_reg[6]),
-        .I2(vga_address_i_19_n_0),
+       (.I0(h_count_reg_reg[7]),
+        .I1(vga_address_i_27_n_0),
+        .I2(h_count_reg_reg[6]),
         .I3(h_count_reg_reg[8]),
-        .I4(h_count_reg_reg[7]),
-        .I5(h_count_reg_reg[9]),
-        .O(vga_address_i_12_n_0));
-  LUT6 #(
-    .INIT(64'h7788CF007788FF00)) 
+        .I4(h_count_reg_reg[9]),
+        .O(plusOp[9]));
+  LUT4 #(
+    .INIT(16'h7F80)) 
     vga_address_i_13
-       (.I0(vga_address_i_27_n_0),
-        .I1(h_count_reg_reg[6]),
-        .I2(vga_address_i_19_n_0),
+       (.I0(h_count_reg_reg[6]),
+        .I1(vga_address_i_27_n_0),
+        .I2(h_count_reg_reg[7]),
         .I3(h_count_reg_reg[8]),
-        .I4(h_count_reg_reg[7]),
-        .I5(h_count_reg_reg[9]),
-        .O(vga_address_i_13_n_0));
+        .O(plusOp[8]));
   LUT3 #(
     .INIT(8'h78)) 
     vga_address_i_14
        (.I0(vga_address_i_27_n_0),
         .I1(h_count_reg_reg[6]),
         .I2(h_count_reg_reg[7]),
-        .O(vga_address_i_14_n_0));
+        .O(plusOp[7]));
   LUT6 #(
-    .INIT(64'h6666466666666666)) 
+    .INIT(64'hF7FFFFFF08000000)) 
     vga_address_i_15
-       (.I0(vga_address_i_27_n_0),
-        .I1(h_count_reg_reg[6]),
-        .I2(vga_address_i_19_n_0),
-        .I3(h_count_reg_reg[8]),
-        .I4(h_count_reg_reg[7]),
-        .I5(h_count_reg_reg[9]),
-        .O(vga_address_i_15_n_0));
+       (.I0(h_count_reg_reg[4]),
+        .I1(h_count_reg_reg[2]),
+        .I2(vga_address_i_28_n_0),
+        .I3(h_count_reg_reg[3]),
+        .I4(h_count_reg_reg[5]),
+        .I5(h_count_reg_reg[6]),
+        .O(plusOp[6]));
   LUT6 #(
-    .INIT(64'hAAAA8AAAAAAAAAAA)) 
+    .INIT(64'h7FFFFFFF80000000)) 
     vga_address_i_16
-       (.I0(plusOp[5]),
-        .I1(h_count_reg_reg[6]),
-        .I2(vga_address_i_19_n_0),
-        .I3(h_count_reg_reg[8]),
-        .I4(h_count_reg_reg[7]),
-        .I5(h_count_reg_reg[9]),
-        .O(vga_address_i_16_n_0));
-  LUT6 #(
-    .INIT(64'hAAAA8AAAAAAAAAAA)) 
+       (.I0(h_count_reg_reg[3]),
+        .I1(\h_count_reg_reg[1]_0 [0]),
+        .I2(\h_count_reg_reg[1]_0 [1]),
+        .I3(h_count_reg_reg[2]),
+        .I4(h_count_reg_reg[4]),
+        .I5(h_count_reg_reg[5]),
+        .O(plusOp[5]));
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
     vga_address_i_17
-       (.I0(plusOp[4]),
-        .I1(h_count_reg_reg[6]),
-        .I2(vga_address_i_19_n_0),
-        .I3(h_count_reg_reg[8]),
-        .I4(h_count_reg_reg[7]),
-        .I5(h_count_reg_reg[9]),
-        .O(vga_address_i_17_n_0));
-  LUT6 #(
-    .INIT(64'hAAAA8AAAAAAAAAAA)) 
+       (.I0(h_count_reg_reg[2]),
+        .I1(\h_count_reg_reg[1]_0 [1]),
+        .I2(\h_count_reg_reg[1]_0 [0]),
+        .I3(h_count_reg_reg[3]),
+        .I4(h_count_reg_reg[4]),
+        .O(plusOp[4]));
+  LUT4 #(
+    .INIT(16'h7F80)) 
     vga_address_i_18
-       (.I0(plusOp[3]),
-        .I1(h_count_reg_reg[6]),
-        .I2(vga_address_i_19_n_0),
-        .I3(h_count_reg_reg[8]),
-        .I4(h_count_reg_reg[7]),
-        .I5(h_count_reg_reg[9]),
-        .O(vga_address_i_18_n_0));
+       (.I0(\h_count_reg_reg[1]_0 [0]),
+        .I1(\h_count_reg_reg[1]_0 [1]),
+        .I2(h_count_reg_reg[2]),
+        .I3(h_count_reg_reg[3]),
+        .O(plusOp[3]));
   LUT6 #(
     .INIT(64'h0000000080000000)) 
     vga_address_i_19
        (.I0(\h_count_reg_reg[1]_0 [0]),
-        .I1(h_count_reg_reg__0),
+        .I1(h_count_reg_reg[2]),
         .I2(\h_count_reg_reg[1]_0 [1]),
         .I3(h_count_reg_reg[3]),
         .I4(h_count_reg_reg[4]),
@@ -5430,8 +5493,8 @@ module design_1_vga_bram_0_0_vga_sync
         .I3(v_count_reg_reg[2]),
         .I4(v_count_reg_reg[4]),
         .I5(v_count_reg_reg[5]),
-        .O(plusOp__0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+        .O(plusOp__0__0[5]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     vga_address_i_23
@@ -5440,8 +5503,8 @@ module design_1_vga_bram_0_0_vga_sync
         .I2(v_count_reg_reg[1]),
         .I3(v_count_reg_reg[3]),
         .I4(v_count_reg_reg[4]),
-        .O(plusOp__0[4]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+        .O(plusOp__0__0[4]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     vga_address_i_24
@@ -5449,7 +5512,7 @@ module design_1_vga_bram_0_0_vga_sync
         .I1(v_count_reg_reg[0]),
         .I2(v_count_reg_reg[2]),
         .I3(v_count_reg_reg[3]),
-        .O(plusOp__0[3]));
+        .O(plusOp__0__0[3]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h78)) 
@@ -5457,14 +5520,14 @@ module design_1_vga_bram_0_0_vga_sync
        (.I0(v_count_reg_reg[0]),
         .I1(v_count_reg_reg[1]),
         .I2(v_count_reg_reg[2]),
-        .O(plusOp__0[2]));
+        .O(plusOp__0__0[2]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h6)) 
     vga_address_i_26
        (.I0(v_count_reg_reg[0]),
         .I1(v_count_reg_reg[1]),
-        .O(plusOp__0[1]));
+        .O(plusOp__0__0[1]));
   LUT6 #(
     .INIT(64'h8000000000000000)) 
     vga_address_i_27
@@ -5472,29 +5535,15 @@ module design_1_vga_bram_0_0_vga_sync
         .I1(h_count_reg_reg[3]),
         .I2(\h_count_reg_reg[1]_0 [0]),
         .I3(\h_count_reg_reg[1]_0 [1]),
-        .I4(h_count_reg_reg__0),
+        .I4(h_count_reg_reg[2]),
         .I5(h_count_reg_reg[4]),
         .O(vga_address_i_27_n_0));
-  LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
+  LUT2 #(
+    .INIT(4'h7)) 
     vga_address_i_28
-       (.I0(h_count_reg_reg[3]),
-        .I1(\h_count_reg_reg[1]_0 [0]),
-        .I2(\h_count_reg_reg[1]_0 [1]),
-        .I3(h_count_reg_reg__0),
-        .I4(h_count_reg_reg[4]),
-        .I5(h_count_reg_reg[5]),
-        .O(plusOp[5]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    vga_address_i_29
-       (.I0(h_count_reg_reg__0),
+       (.I0(\h_count_reg_reg[1]_0 [0]),
         .I1(\h_count_reg_reg[1]_0 [1]),
-        .I2(\h_count_reg_reg[1]_0 [0]),
-        .I3(h_count_reg_reg[3]),
-        .I4(h_count_reg_reg[4]),
-        .O(plusOp[4]));
+        .O(vga_address_i_28_n_0));
   LUT4 #(
     .INIT(16'h78F0)) 
     vga_address_i_3
@@ -5503,15 +5552,6 @@ module design_1_vga_bram_0_0_vga_sync
         .I2(v_count_reg_reg[8]),
         .I3(v_count_reg_reg[7]),
         .O(vga_address_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    vga_address_i_30
-       (.I0(\h_count_reg_reg[1]_0 [0]),
-        .I1(\h_count_reg_reg[1]_0 [1]),
-        .I2(h_count_reg_reg__0),
-        .I3(h_count_reg_reg[3]),
-        .O(plusOp[3]));
   LUT3 #(
     .INIT(8'h78)) 
     vga_address_i_4
@@ -5532,7 +5572,7 @@ module design_1_vga_bram_0_0_vga_sync
   LUT6 #(
     .INIT(64'hAAAAAA8AAAAAAAAA)) 
     vga_address_i_6
-       (.I0(plusOp__0[5]),
+       (.I0(plusOp__0__0[5]),
         .I1(v_count_reg_reg[6]),
         .I2(vga_address_i_21_n_0),
         .I3(v_count_reg_reg[8]),
@@ -5542,7 +5582,7 @@ module design_1_vga_bram_0_0_vga_sync
   LUT6 #(
     .INIT(64'hAAAAAA8AAAAAAAAA)) 
     vga_address_i_7
-       (.I0(plusOp__0[4]),
+       (.I0(plusOp__0__0[4]),
         .I1(v_count_reg_reg[6]),
         .I2(vga_address_i_21_n_0),
         .I3(v_count_reg_reg[8]),
@@ -5552,7 +5592,7 @@ module design_1_vga_bram_0_0_vga_sync
   LUT6 #(
     .INIT(64'hAAAAAA8AAAAAAAAA)) 
     vga_address_i_8
-       (.I0(plusOp__0[3]),
+       (.I0(plusOp__0__0[3]),
         .I1(v_count_reg_reg[6]),
         .I2(vga_address_i_21_n_0),
         .I3(v_count_reg_reg[8]),
@@ -5562,7 +5602,7 @@ module design_1_vga_bram_0_0_vga_sync
   LUT6 #(
     .INIT(64'hAAAAAA8AAAAAAAAA)) 
     vga_address_i_9
-       (.I0(plusOp__0[2]),
+       (.I0(plusOp__0__0[2]),
         .I1(v_count_reg_reg[6]),
         .I2(vga_address_i_21_n_0),
         .I3(v_count_reg_reg[8]),

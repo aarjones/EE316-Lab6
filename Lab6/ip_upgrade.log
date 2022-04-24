@@ -1,6 +1,510 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 18:25:33 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_vga_bram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_vga_bram_0_0 (xilinx.com:user:vga_bram:1.0) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 18:11:01 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_vga_bram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_vga_bram_0_0 (xilinx.com:user:vga_bram:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 17:59:10 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_vga_bram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_vga_bram_0_0 (xilinx.com:user:vga_bram:1.0) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 17:42:01 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 23) to (Rev. 24)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 17:33:31 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 22) to (Rev. 23)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 17:23:53 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 17:15:10 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 17:06:03 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 17:04:11 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 16:55:32 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 16:45:46 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 16:27:37 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 16:18:35 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 16:10:30 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 16:00:52 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 15:50:54 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 15:50:54 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_keyboard_subordinate_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_keyboard_subordinate_0_0 (xilinx.com:user:keyboard_subordinate:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 15:40:38 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_keyboard_subordinate_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_keyboard_subordinate_0_0 (xilinx.com:user:keyboard_subordinate:1.0) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 15:38:05 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_keyboard_subordinate_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_keyboard_subordinate_0_0 (xilinx.com:user:keyboard_subordinate:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 15:26:33 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_keyboard_subordinate_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_keyboard_subordinate_0_0 (xilinx.com:user:keyboard_subordinate:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 15:21:36 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_keyboard_subordinate_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_keyboard_subordinate_0_0 (xilinx.com:user:keyboard_subordinate:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 14:31:46 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_videomemlab_master_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_videomemlab_master_0_0 (xilinx.com:user:videomemlab_master:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 13:52:07 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_vga_bram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_vga_bram_0_0 (xilinx.com:user:vga_bram:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Apr 21 13:43:40 2022
+| Host         : AaronThinkPad running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_vga_bram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_vga_bram_0_0 (xilinx.com:user:vga_bram:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Wed Apr 20 12:38:15 2022
 | Host         : AaronThinkPad running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

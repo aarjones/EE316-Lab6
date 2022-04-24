@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2035460fs"></ZoomStartTime>
+      <ZoomEndTime time="2138276fs"></ZoomEndTime>
+      <Cursor1Time time="2062000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="686"></NameColumnWidth>
+      <ValueColumnWidth column_width="309"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="design_1_i/videomemlab_master_0_axi_periph_M01_AXI_WVALID" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/videomemlab_master_0_axi_periph_M01_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">videomemlab_master_0_axi_periph_M01_AXI_WVALID</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">AXI_WADDR</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">vga_data[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">VGA_DATA</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_address[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">BRAM_ADDR</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_data[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">BRAM_DATA</obj_property>
+   </wvobject>
+</wave_config>

@@ -20,153 +20,53 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14516 
+INFO: Helper process launched with PID 22116 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 827.215 ; gain = 177.016
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 827.027 ; gain = 177.207
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_keyboard_subordinate_0_0' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_keyboard_subordinate_0_0/synth/design_1_keyboard_subordinate_0_0.vhd:86]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'keyboard_subordinate_v1_0' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0.vhd:5' bound to instance 'U0' of component 'keyboard_subordinate_v1_0' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_keyboard_subordinate_0_0/synth/design_1_keyboard_subordinate_0_0.vhd:156]
-INFO: [Synth 8-638] synthesizing module 'keyboard_subordinate_v1_0' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0.vhd:52]
+INFO: [Synth 8-3491] module 'keyboard_subordinate_v1_0' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0.vhd:5' bound to instance 'U0' of component 'keyboard_subordinate_v1_0' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_keyboard_subordinate_0_0/synth/design_1_keyboard_subordinate_0_0.vhd:156]
+INFO: [Synth 8-638] synthesizing module 'keyboard_subordinate_v1_0' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0.vhd:52]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'keyboard_subordinate_v1_0_S00_AXI' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:5' bound to instance 'keyboard_subordinate_v1_0_S00_AXI_inst' of component 'keyboard_subordinate_v1_0_S00_AXI' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'keyboard_subordinate_v1_0_S00_AXI' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:89]
+INFO: [Synth 8-3491] module 'keyboard_subordinate_v1_0_S00_AXI' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:5' bound to instance 'keyboard_subordinate_v1_0_S00_AXI_inst' of component 'keyboard_subordinate_v1_0_S00_AXI' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'keyboard_subordinate_v1_0_S00_AXI' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:89]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:244]
-INFO: [Synth 8-226] default block is never used [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:374]
+INFO: [Synth 8-226] default block is never used [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:244]
+INFO: [Synth 8-226] default block is never used [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:374]
 	Parameter clk_freq bound to: 50000000 - type: integer 
 	Parameter debounce_counter_size bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'ps2_keyboard' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/ps2_keyboard.vhd:26' bound to instance 'Inst_keyboard' of component 'ps2_keyboard' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:409]
-INFO: [Synth 8-638] synthesizing module 'ps2_keyboard' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/ps2_keyboard.vhd:38]
+INFO: [Synth 8-3491] module 'ps2_keyboard' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/ps2_keyboard.vhd:26' bound to instance 'Inst_keyboard' of component 'ps2_keyboard' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:411]
+INFO: [Synth 8-638] synthesizing module 'ps2_keyboard' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/ps2_keyboard.vhd:38]
 	Parameter clk_freq bound to: 50000000 - type: integer 
 	Parameter debounce_counter_size bound to: 8 - type: integer 
 	Parameter counter_size bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'debounce' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/debounce.vhd:27' bound to instance 'debounce_ps2_clk' of component 'debounce' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/ps2_keyboard.vhd:67]
-INFO: [Synth 8-638] synthesizing module 'debounce' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/debounce.vhd:36]
+INFO: [Synth 8-3491] module 'debounce' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/debounce.vhd:27' bound to instance 'debounce_ps2_clk' of component 'debounce' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/ps2_keyboard.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'debounce' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/debounce.vhd:36]
 	Parameter counter_size bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/debounce.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/debounce.vhd:36]
 	Parameter counter_size bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'debounce' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/debounce.vhd:27' bound to instance 'debounce_ps2_data' of component 'debounce' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/ps2_keyboard.vhd:70]
-INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard' (2#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/src/ps2_keyboard.vhd:38]
-WARNING: [Synth 8-614] signal 'new_edge' is read in the process but is not in the sensitivity list [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:423]
-WARNING: [Synth 8-614] signal 'slv_reg_rden' is read in the process but is not in the sensitivity list [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:423]
-WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:189]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:238]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:239]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:240]
-WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:242]
-WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:323]
-INFO: [Synth 8-256] done synthesizing module 'keyboard_subordinate_v1_0_S00_AXI' (3#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:89]
-INFO: [Synth 8-256] done synthesizing module 'keyboard_subordinate_v1_0' (4#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0.vhd:52]
+INFO: [Synth 8-3491] module 'debounce' declared at 'c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/debounce.vhd:27' bound to instance 'debounce_ps2_data' of component 'debounce' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/ps2_keyboard.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard' (2#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/src/ps2_keyboard.vhd:38]
+WARNING: [Synth 8-614] signal 'new_edge' is read in the process but is not in the sensitivity list [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:425]
+WARNING: [Synth 8-614] signal 'slv_reg_rden' is read in the process but is not in the sensitivity list [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:242]
+INFO: [Synth 8-256] done synthesizing module 'keyboard_subordinate_v1_0_S00_AXI' (3#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'keyboard_subordinate_v1_0' (4#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0.vhd:52]
 INFO: [Synth 8-256] done synthesizing module 'design_1_keyboard_subordinate_0_0' (5#1) [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_keyboard_subordinate_0_0/synth/design_1_keyboard_subordinate_0_0.vhd:86]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[31]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[30]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[29]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[28]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[27]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[26]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[25]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[24]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[23]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[22]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[21]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[20]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[19]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[18]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[17]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[16]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[15]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[14]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[13]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[12]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[11]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[10]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[9]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[8]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[7]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[6]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[5]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[4]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[3]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[2]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[1]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[0]
 WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
 WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[31]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[30]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[29]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[28]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[27]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[26]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[25]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[24]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[23]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[22]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[21]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[20]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[19]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[18]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[17]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[16]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[15]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[14]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[13]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[12]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[11]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[10]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[9]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[8]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[7]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[6]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[5]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[4]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[3]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[2]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[1]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WDATA[0]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[3]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[2]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[1]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[0]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[31]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[30]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[29]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[28]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[27]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[26]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[25]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[24]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[23]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[22]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[21]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[20]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[19]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[18]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[17]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[16]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[15]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[14]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[13]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[12]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[11]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[10]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[9]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[8]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[7]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[6]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[5]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[4]
-WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARADDR[3]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design keyboard_subordinate_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 895.004 ; gain = 244.805
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 893.398 ; gain = 243.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -179,10 +79,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 895.004 ; gain = 244.805
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 893.398 ; gain = 243.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 895.004 ; gain = 244.805
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 893.398 ; gain = 243.578
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -190,32 +90,32 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1018.766 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 998.738 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1019.758 ; gain = 0.992
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 999.758 ; gain = 1.020
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 999.758 ; gain = 349.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 999.758 ; gain = 349.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 999.758 ; gain = 349.938
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'IRQ_O_reg' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:431]
+WARNING: [Synth 8-327] inferring latch for variable 'IRQ_O_reg' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/f54d/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:433]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 999.758 ; gain = 349.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -233,12 +133,15 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 2     
 	   9 Input      1 Bit         XORs := 1     
 +---Registers : 
+	               32 Bit    Registers := 6     
 	               11 Bit    Registers := 1     
 	                9 Bit    Registers := 2     
 	                8 Bit    Registers := 1     
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 11    
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -269,9 +172,12 @@ Detailed RTL Component Info :
 Module keyboard_subordinate_v1_0_S00_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
+	               32 Bit    Registers := 6     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 8     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -289,60 +195,18 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_keyboard_subordinate_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_keyboard_subordinate_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_keyboard_subordinate_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_keyboard_subordinate_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_keyboard_subordinate_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_keyboard_subordinate_0_0 has unconnected port s00_axi_arprot[0]
 INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[8]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[9]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[9]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[10]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[10]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[11]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[11]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[12]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[12]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[13]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[13]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[14]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[14]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[15]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[16]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[16]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[17]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[17]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[18]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[18]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[19]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[19]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[20]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[20]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[21]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[21]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[22]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[22]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[23]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[24]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[24]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[25]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[25]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[26]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[26]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[27]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[27]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[28]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[28]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[29]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[29]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[30]'
-INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[30]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[31] )
 INFO: [Synth 8-3886] merging instance 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[7]/Q' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[6]/Q' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[5]/Q' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[4]/Q' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[3]/Q' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[2]/Q' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[1]/Q' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'U0/keyboard_subordinate_v1_0_S00_AXI_inst/axi_rdata_reg[0]/Q' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ipshared/6c7a/hdl/keyboard_subordinate_v1_0_S00_AXI.vhd:149]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 999.758 ; gain = 349.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -354,13 +218,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 999.758 ; gain = 349.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 999.758 ; gain = 349.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -372,7 +236,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1007.625 ; gain = 357.805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -396,7 +260,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1013.398 ; gain = 363.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -409,7 +273,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1013.398 ; gain = 363.578
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -421,25 +285,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1013.398 ; gain = 363.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1013.398 ; gain = 363.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1013.398 ; gain = 363.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1013.398 ; gain = 363.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -459,11 +323,11 @@ Report Cell Usage:
 |2     |LUT1   |     7|
 |3     |LUT2   |     6|
 |4     |LUT3   |     3|
-|5     |LUT4   |    15|
-|6     |LUT5   |     6|
-|7     |LUT6   |     6|
-|8     |FDRE   |    57|
-|9     |FDSE   |     1|
+|5     |LUT4   |    30|
+|6     |LUT5   |    30|
+|7     |LUT6   |    16|
+|8     |FDRE   |   195|
+|9     |FDSE   |     3|
 |10    |LDP    |     1|
 +------+-------+------+
 
@@ -471,43 +335,43 @@ Report Instance Areas:
 +------+-------------------------------------------+----------------------------------+------+
 |      |Instance                                   |Module                            |Cells |
 +------+-------------------------------------------+----------------------------------+------+
-|1     |top                                        |                                  |   105|
-|2     |  U0                                       |keyboard_subordinate_v1_0         |   105|
-|3     |    keyboard_subordinate_v1_0_S00_AXI_inst |keyboard_subordinate_v1_0_S00_AXI |   105|
-|4     |      Inst_keyboard                        |ps2_keyboard                      |    87|
+|1     |top                                        |                                  |   294|
+|2     |  U0                                       |keyboard_subordinate_v1_0         |   294|
+|3     |    keyboard_subordinate_v1_0_S00_AXI_inst |keyboard_subordinate_v1_0_S00_AXI |   294|
+|4     |      Inst_keyboard                        |ps2_keyboard                      |    95|
 |5     |        debounce_ps2_clk                   |debounce                          |    26|
 |6     |        debounce_ps2_data                  |debounce_0                        |    25|
 +------+-------------------------------------------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1013.398 ; gain = 363.578
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 24 critical warnings and 107 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1019.758 ; gain = 244.805
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1019.758 ; gain = 369.559
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1013.398 ; gain = 257.219
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1013.398 ; gain = 363.578
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1033.004 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1033.840 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   LDP => LDPE: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-62 Infos, 110 Warnings, 24 Critical Warnings and 0 Errors encountered.
+37 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1033.004 ; gain = 624.852
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1033.004 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1033.840 ; gain = 627.207
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1033.840 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_keyboard_subordinate_0_0_synth_1/design_1_keyboard_subordinate_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_keyboard_subordinate_0_0, cache-ID = b1df0814f49d309b
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_keyboard_subordinate_0_0, cache-ID = 45d912472f0b1ee9
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1033.004 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1033.840 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_keyboard_subordinate_0_0_synth_1/design_1_keyboard_subordinate_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_keyboard_subordinate_0_0_utilization_synth.rpt -pb design_1_keyboard_subordinate_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 12:39:57 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 21 15:51:49 2022...

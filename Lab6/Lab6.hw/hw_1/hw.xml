@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z007s_1" gui_info="dashboard1=hw_ila_1[xc7z007s_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z007s_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z007s_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z007s_1/hw_ila_1/Status=ILA_STATUS_1;xc7z007s_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;]"/>
+  <device name="xc7z007s_1" gui_info="dashboard1=hw_ila_1[xc7z007s_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z007s_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z007s_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z007s_1/hw_ila_1/Status=ILA_STATUS_1;xc7z007s_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;],dashboard2=hw_ila_2[xc7z007s_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7z007s_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z007s_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7z007s_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7z007s_1/hw_ila_2/Status=ILA_STATUS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z007s_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_2/design_1_wrapper.ltx"/>
@@ -18,9 +18,14 @@
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="design_1_i/system_ila_0/U0/probe0_1" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/videomemlab_master_0_axi_periph_M01_AXI_WVALID" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -42,6 +47,171 @@
       </probeOptions>
       <nets>
         <net name="design_1_i/system_ila_0/U0/probe0_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[7:0]"/>
+        <Option Id="NAME.CUSTOM" value="VGA_DATA"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[7]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[6]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[5]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[4]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[3]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[2]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[1]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="BRAM_ADDR"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[15]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[14]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[13]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[12]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[11]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[10]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[9]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[8]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[7]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[6]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[5]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[4]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[3]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[2]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[1]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[7:0]"/>
+        <Option Id="NAME.CUSTOM" value="BRAM_DATA"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[7]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[6]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[5]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[4]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[3]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[2]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[1]"/>
+        <net name="design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bB"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value="AXI_WVALID"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bB"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/videomemlab_master_0_axi_periph_M01_AXI_WVALID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="AXI_WADDR"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[31]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[30]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[29]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[28]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[27]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[26]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[25]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[24]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[23]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[22]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[21]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[20]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[19]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[18]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[17]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[16]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[15]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[14]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[13]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[12]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[11]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[10]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[9]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[8]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[7]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[6]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[5]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[4]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[3]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[2]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[1]"/>
+        <net name="u_ila_0_videomemlab_master_0_axi_periph_M01_AXI_AWADDR[0]"/>
       </nets>
     </probe>
   </probeset>

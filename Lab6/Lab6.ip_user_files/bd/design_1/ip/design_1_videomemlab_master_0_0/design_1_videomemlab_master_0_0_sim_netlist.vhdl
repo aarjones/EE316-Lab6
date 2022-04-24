@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Apr 19 13:42:30 2022
+-- Date        : Thu Apr 21 17:43:03 2022
 -- Host        : AaronThinkPad running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_videomemlab_master_0_0 -prefix
---               design_1_videomemlab_master_0_0_ design_1_videomemlab_master_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_videomemlab_master_0_0/design_1_videomemlab_master_0_0_sim_netlist.vhdl
 -- Design      : design_1_videomemlab_master_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,10 +16,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_videomemlab_master_0_0_char8x12_lookup_table is
   port (
+    reset : out STD_LOGIC;
     ascii : out STD_LOGIC_VECTOR ( 1 downto 0 );
     D : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m00_axi_aclk : in STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC;
     ADDR : in STD_LOGIC_VECTOR ( 8 downto 0 );
     \reg_pixels_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \reg_pixels_reg[0]_0\ : in STD_LOGIC;
@@ -28,8 +28,11 @@ entity design_1_videomemlab_master_0_0_char8x12_lookup_table is
     \current_char[6]_i_5_0\ : in STD_LOGIC;
     ctrl : in STD_LOGIC;
     \current_char[6]_i_5_1\ : in STD_LOGIC;
-    \current_char[6]_i_5_2\ : in STD_LOGIC
+    \current_char[6]_i_5_2\ : in STD_LOGIC;
+    m00_axi_aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_videomemlab_master_0_0_char8x12_lookup_table : entity is "char8x12_lookup_table";
 end design_1_videomemlab_master_0_0_char8x12_lookup_table;
 
 architecture STRUCTURE of design_1_videomemlab_master_0_0_char8x12_lookup_table is
@@ -37,6 +40,7 @@ architecture STRUCTURE of design_1_videomemlab_master_0_0_char8x12_lookup_table 
   signal \^ascii\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal bram_do1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal bram_do2 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \^reset\ : STD_LOGIC;
   signal NLW_bram1_DIADI_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 8 );
   signal NLW_bram1_DIBDI_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_bram1_DIPADIP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 to 1 );
@@ -67,6 +71,7 @@ architecture STRUCTURE of design_1_videomemlab_master_0_0_char8x12_lookup_table 
   attribute SOFT_HLUTNM of \reg_pixels[1]_i_1\ : label is "soft_lutpair0";
 begin
   ascii(1 downto 0) <= \^ascii\(1 downto 0);
+  reset <= \^reset\;
 bram1: unisim.vcomponents.RAMB18E1
     generic map(
       DOA_REG => 0,
@@ -175,7 +180,7 @@ bram1: unisim.vcomponents.RAMB18E1
       ENBWREN => '0',
       REGCEAREGCE => '0',
       REGCEB => '0',
-      RSTRAMARSTRAM => m00_axi_aresetn,
+      RSTRAMARSTRAM => \^reset\,
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
@@ -322,7 +327,7 @@ bram2: unisim.vcomponents.RAMB18E1
       ENBWREN => '0',
       REGCEAREGCE => '0',
       REGCEB => '0',
-      RSTRAMARSTRAM => m00_axi_aresetn,
+      RSTRAMARSTRAM => \^reset\,
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
@@ -406,6 +411,14 @@ bram2: unisim.vcomponents.RAMB18E1
       I3 => \reg_pixels_reg[0]_0\,
       O => D(6)
     );
+\reg_pixels[7]_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => m00_axi_aresetn,
+      O => \^reset\
+    );
 \reg_pixels[7]_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00E2"
@@ -441,6 +454,8 @@ entity design_1_videomemlab_master_0_0_scancode2ascii is
     \code_reg[1]_8\ : out STD_LOGIC;
     sel0 : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_videomemlab_master_0_0_scancode2ascii : entity is "scancode2ascii";
 end design_1_videomemlab_master_0_0_scancode2ascii;
 
 architecture STRUCTURE of design_1_videomemlab_master_0_0_scancode2ascii is
@@ -1062,6 +1077,8 @@ entity design_1_videomemlab_master_0_0_videomemlab_master_v1_0_M00_AXI is
     m00_axi_awready : in STD_LOGIC;
     m00_axi_arready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_videomemlab_master_0_0_videomemlab_master_v1_0_M00_AXI : entity is "videomemlab_master_v1_0_M00_AXI";
 end design_1_videomemlab_master_0_0_videomemlab_master_v1_0_M00_AXI;
 
 architecture STRUCTURE of design_1_videomemlab_master_0_0_videomemlab_master_v1_0_M00_AXI is
@@ -1900,12 +1917,12 @@ architecture STRUCTURE of design_1_videomemlab_master_0_0_videomemlab_master_v1_
   signal read_issued_i_1_n_0 : STD_LOGIC;
   signal read_issued_reg_n_0 : STD_LOGIC;
   signal reg_pixels : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \reg_pixels[7]_i_1_n_0\ : STD_LOGIC;
   signal \reg_pixels[7]_i_2_n_0\ : STD_LOGIC;
   signal \reg_pixels[7]_i_4_n_0\ : STD_LOGIC;
   signal \reg_pixels[7]_i_5_n_0\ : STD_LOGIC;
   signal \reg_pixels[7]_i_6_n_0\ : STD_LOGIC;
   signal \reg_pixels[7]_i_7_n_0\ : STD_LOGIC;
+  signal reset : STD_LOGIC;
   signal scan_line : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \scan_line[3]_i_1_n_0\ : STD_LOGIC;
   signal \scan_line_reg_n_0_[0]\ : STD_LOGIC;
@@ -2062,10 +2079,10 @@ begin
 Inst_char_lookup: entity work.design_1_videomemlab_master_0_0_char8x12_lookup_table
      port map (
       ADDR(8 downto 4) => ascii(4 downto 0),
-      ADDR(3) => \current_line_reg_n_0_[3]\,
-      ADDR(2) => \current_line_reg_n_0_[2]\,
-      ADDR(1) => \current_line_reg_n_0_[1]\,
-      ADDR(0) => \current_line_reg_n_0_[0]\,
+      ADDR(3) => \scan_line_reg_n_0_[3]\,
+      ADDR(2) => \scan_line_reg_n_0_[2]\,
+      ADDR(1) => \scan_line_reg_n_0_[1]\,
+      ADDR(0) => \scan_line_reg_n_0_[0]\,
       D(7 downto 0) => reg_pixels(7 downto 0),
       Q(1 downto 0) => sel0(7 downto 6),
       ascii(1 downto 0) => ascii(6 downto 5),
@@ -2077,7 +2094,8 @@ Inst_char_lookup: entity work.design_1_videomemlab_master_0_0_char8x12_lookup_ta
       m00_axi_aclk => m00_axi_aclk,
       m00_axi_aresetn => m00_axi_aresetn,
       \reg_pixels_reg[0]\(0) => ascii(7),
-      \reg_pixels_reg[0]_0\ => \reg_pixels[7]_i_5_n_0\
+      \reg_pixels_reg[0]_0\ => \reg_pixels[7]_i_5_n_0\,
+      reset => reset
     );
 Inst_scancode_ascii: entity work.design_1_videomemlab_master_0_0_scancode2ascii
      port map (
@@ -2976,7 +2994,7 @@ R2: unisim.vcomponents.DSP48E1
       PCOUT(2) => R2_n_151,
       PCOUT(1) => R2_n_152,
       PCOUT(0) => R2_n_153,
-      RSTA => \reg_pixels[7]_i_1_n_0\,
+      RSTA => reset,
       RSTALLCARRYIN => '0',
       RSTALUMODE => '0',
       RSTB => '0',
@@ -3153,7 +3171,7 @@ R2: unisim.vcomponents.DSP48E1
       RSTA => '0',
       RSTALLCARRYIN => '0',
       RSTALUMODE => '0',
-      RSTB => \reg_pixels[7]_i_1_n_0\,
+      RSTB => reset,
       RSTC => '0',
       RSTCTRL => '0',
       RSTD => '0',
@@ -4117,7 +4135,7 @@ R4: unisim.vcomponents.DSP48E1
       PCOUT(2) => R4_n_151,
       PCOUT(1) => R4_n_152,
       PCOUT(0) => R4_n_153,
-      RSTA => \reg_pixels[7]_i_1_n_0\,
+      RSTA => reset,
       RSTALLCARRYIN => '0',
       RSTALUMODE => '0',
       RSTB => '0',
@@ -4299,7 +4317,7 @@ R4: unisim.vcomponents.DSP48E1
       RSTA => '0',
       RSTALLCARRYIN => '0',
       RSTALUMODE => '0',
-      RSTB => \reg_pixels[7]_i_1_n_0\,
+      RSTB => reset,
       RSTC => '0',
       RSTCTRL => '0',
       RSTD => '0',
@@ -4386,7 +4404,7 @@ alt_l_down_reg: unisim.vcomponents.FDRE
       CE => alt,
       D => alt_l_down_i_1_n_0,
       Q => alt_l_down_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 alt_r_down_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -4428,7 +4446,7 @@ alt_r_down_reg: unisim.vcomponents.FDRE
       CE => alt,
       D => alt_r_down_i_1_n_0,
       Q => alt_r_down_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 alt_reg: unisim.vcomponents.FDRE
      port map (
@@ -4646,7 +4664,7 @@ ctrl_l_down_reg: unisim.vcomponents.FDRE
       CE => alt,
       D => ctrl_l_down_i_1_n_0,
       Q => ctrl_l_down_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 ctrl_r_down_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -4688,7 +4706,7 @@ ctrl_r_down_reg: unisim.vcomponents.FDRE
       CE => alt,
       D => ctrl_r_down_i_1_n_0,
       Q => ctrl_r_down_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 ctrl_reg: unisim.vcomponents.FDRE
      port map (
@@ -4959,7 +4977,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_char[6]_i_1_n_0\,
       D => \current_char[0]_i_1_n_0\,
       Q => \current_char_reg_n_0_[0]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_char_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -4967,7 +4985,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_char[6]_i_1_n_0\,
       D => \current_char[1]_i_1_n_0\,
       Q => \current_char_reg_n_0_[1]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_char_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -4975,7 +4993,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_char[6]_i_1_n_0\,
       D => \current_char[2]_i_1_n_0\,
       Q => \current_char_reg_n_0_[2]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_char_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -4983,7 +5001,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_char[6]_i_1_n_0\,
       D => \current_char[3]_i_1_n_0\,
       Q => \current_char_reg_n_0_[3]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_char_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -4991,7 +5009,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_char[6]_i_1_n_0\,
       D => \current_char[4]_i_1_n_0\,
       Q => \current_char_reg_n_0_[4]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_char_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -4999,7 +5017,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_char[6]_i_1_n_0\,
       D => \current_char[5]_i_1_n_0\,
       Q => \current_char_reg_n_0_[5]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_char_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -5007,7 +5025,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_char[6]_i_1_n_0\,
       D => \current_char[6]_i_2_n_0\,
       Q => \current_char_reg_n_0_[6]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_line[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -5231,7 +5249,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_line[5]_i_1_n_0\,
       D => \current_line[0]_i_1_n_0\,
       Q => \current_line_reg_n_0_[0]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_line_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -5239,7 +5257,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_line[5]_i_1_n_0\,
       D => \current_line[1]_i_1_n_0\,
       Q => \current_line_reg_n_0_[1]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_line_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -5247,7 +5265,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_line[5]_i_1_n_0\,
       D => \current_line[2]_i_1_n_0\,
       Q => \current_line_reg_n_0_[2]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_line_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -5255,7 +5273,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_line[5]_i_1_n_0\,
       D => \current_line[3]_i_1_n_0\,
       Q => \current_line_reg_n_0_[3]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_line_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -5263,7 +5281,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_line[5]_i_1_n_0\,
       D => \current_line[4]_i_1_n_0\,
       Q => \current_line_reg_n_0_[4]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \current_line_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -5271,7 +5289,7 @@ ctrl_reg: unisim.vcomponents.FDRE
       CE => \current_line[5]_i_1_n_0\,
       D => \current_line[5]_i_2_n_0\,
       Q => \current_line_reg_n_0_[5]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 extended_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -5290,7 +5308,7 @@ extended_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => extended_i_1_n_0,
       Q => extended_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 keyup_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -5309,7 +5327,7 @@ keyup_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => keyup_i_1_n_0,
       Q => keyup_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \mst_exec_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -5511,7 +5529,7 @@ keyup_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \mst_exec_state[0]_i_1_n_0\,
       Q => \mst_exec_state_reg_n_0_[0]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \mst_exec_state_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -5519,7 +5537,7 @@ keyup_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \mst_exec_state[1]_i_1_n_0\,
       Q => \mst_exec_state_reg_n_0_[1]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \mst_exec_state_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -5527,7 +5545,7 @@ keyup_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \mst_exec_state[2]_i_1_n_0\,
       Q => \mst_exec_state_reg_n_0_[2]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 plusOp_carry: unisim.vcomponents.CARRY4
      port map (
@@ -5657,15 +5675,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => read_issued_i_1_n_0,
       Q => read_issued_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
-    );
-\reg_pixels[7]_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => m00_axi_aresetn,
-      O => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \reg_pixels[7]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -5728,7 +5738,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \reg_pixels[7]_i_2_n_0\,
       D => reg_pixels(0),
       Q => m00_axi_wdata(0),
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \reg_pixels_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -5736,7 +5746,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \reg_pixels[7]_i_2_n_0\,
       D => reg_pixels(1),
       Q => m00_axi_wdata(1),
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \reg_pixels_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -5744,7 +5754,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \reg_pixels[7]_i_2_n_0\,
       D => reg_pixels(2),
       Q => m00_axi_wdata(2),
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \reg_pixels_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -5752,7 +5762,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \reg_pixels[7]_i_2_n_0\,
       D => reg_pixels(3),
       Q => m00_axi_wdata(3),
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \reg_pixels_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -5760,7 +5770,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \reg_pixels[7]_i_2_n_0\,
       D => reg_pixels(4),
       Q => m00_axi_wdata(4),
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \reg_pixels_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -5768,7 +5778,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \reg_pixels[7]_i_2_n_0\,
       D => reg_pixels(5),
       Q => m00_axi_wdata(5),
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \reg_pixels_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -5776,7 +5786,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \reg_pixels[7]_i_2_n_0\,
       D => reg_pixels(6),
       Q => m00_axi_wdata(6),
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \reg_pixels_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -5784,7 +5794,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \reg_pixels[7]_i_2_n_0\,
       D => reg_pixels(7),
       Q => m00_axi_wdata(7),
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \scan_line[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -5843,7 +5853,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \scan_line[3]_i_1_n_0\,
       D => scan_line(0),
       Q => \scan_line_reg_n_0_[0]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \scan_line_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -5851,7 +5861,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \scan_line[3]_i_1_n_0\,
       D => scan_line(1),
       Q => \scan_line_reg_n_0_[1]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \scan_line_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -5859,7 +5869,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \scan_line[3]_i_1_n_0\,
       D => scan_line(2),
       Q => \scan_line_reg_n_0_[2]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 \scan_line_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -5867,7 +5877,7 @@ read_issued_reg: unisim.vcomponents.FDRE
       CE => \scan_line[3]_i_1_n_0\,
       D => scan_line(3),
       Q => \scan_line_reg_n_0_[3]\,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 shift_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -5969,7 +5979,7 @@ shift_l_down_reg: unisim.vcomponents.FDRE
       CE => alt,
       D => shift_l_down_i_1_n_0,
       Q => shift_l_down_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 shift_r_down_i_1: unisim.vcomponents.LUT5
     generic map(
@@ -6001,7 +6011,7 @@ shift_r_down_reg: unisim.vcomponents.FDRE
       CE => alt,
       D => shift_r_down_i_2_n_0,
       Q => shift_r_down_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 shift_reg: unisim.vcomponents.FDRE
      port map (
@@ -6030,7 +6040,7 @@ start_single_read_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => start_single_read_i_1_n_0,
       Q => start_single_read_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 start_single_write_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -6063,7 +6073,7 @@ start_single_write_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => start_single_write_i_1_n_0,
       Q => start_single_write_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 write_issued_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -6084,7 +6094,7 @@ write_issued_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => write_issued_i_1_n_0,
       Q => write_issued_reg_n_0,
-      R => \reg_pixels[7]_i_1_n_0\
+      R => reset
     );
 end STRUCTURE;
 library IEEE;
@@ -6110,6 +6120,8 @@ entity design_1_videomemlab_master_0_0_videomemlab_master_v1_0 is
     m00_axi_awready : in STD_LOGIC;
     m00_axi_arready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_videomemlab_master_0_0_videomemlab_master_v1_0 : entity is "videomemlab_master_v1_0";
 end design_1_videomemlab_master_0_0_videomemlab_master_v1_0;
 
 architecture STRUCTURE of design_1_videomemlab_master_0_0_videomemlab_master_v1_0 is

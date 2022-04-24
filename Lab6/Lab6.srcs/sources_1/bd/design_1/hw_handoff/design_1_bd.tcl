@@ -194,6 +194,9 @@ proc create_root_design { parentCell } {
 
   # Create instance: keyboard_subordinate_0, and set properties
   set keyboard_subordinate_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:keyboard_subordinate:1.0 keyboard_subordinate_0 ]
+  set_property -dict [ list \
+   CONFIG.C_S00_AXI_ADDR_WIDTH {32} \
+ ] $keyboard_subordinate_0
 
   # Create instance: rst_clk_wiz_0_100M, and set properties
   set rst_clk_wiz_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_0_100M ]

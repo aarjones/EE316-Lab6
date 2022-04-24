@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Apr 20 12:39:19 2022
-# Process ID: 19164
+# Start of session at: Thu Apr 21 15:51:04 2022
+# Process ID: 3228
 # Current directory: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_keyboard_subordinate_0_0_synth_1
 # Command line: vivado.exe -log design_1_keyboard_subordinate_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_keyboard_subordinate_0_0.tcl
 # Log file: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/design_1_keyboard_subordinate_0_0_synth_1/design_1_keyboard_subordinate_0_0.vds

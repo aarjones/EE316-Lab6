@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:keyboard_subordinate:1.0
--- IP Revision: 16
+-- IP Revision: 21
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -124,7 +124,7 @@ ARCHITECTURE design_1_keyboard_subordinate_0_0_arch OF design_1_keyboard_subordi
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_keyboard_subordinate_0_0_arch : ARCHITECTURE IS "design_1_keyboard_subordinate_0_0,keyboard_subordinate_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_keyboard_subordinate_0_0_arch: ARCHITECTURE IS "design_1_keyboard_subordinate_0_0,keyboard_subordinate_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=keyboard_subordinate,x_ipVersion=1.0,x_ipCoreRevision=16,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=32}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_keyboard_subordinate_0_0_arch: ARCHITECTURE IS "design_1_keyboard_subordinate_0_0,keyboard_subordinate_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=keyboard_subordinate,x_ipVersion=1.0,x_ipCoreRevision=21,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=32}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
