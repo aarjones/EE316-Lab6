@@ -19,10 +19,10 @@ vcom -work xpm -64 -93 \
 "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work xil_defaultlib -64 -93 \
-"../../../bd/design_1/ipshared/5b04/src/char8x12_lookup_table.vhd" \
-"../../../bd/design_1/ipshared/5b04/src/scancode2ascii.vhd" \
-"../../../bd/design_1/ipshared/5b04/hdl/videomemlab_master_v1_0_M00_AXI.vhd" \
-"../../../bd/design_1/ipshared/5b04/hdl/videomemlab_master_v1_0.vhd" \
+"../../../bd/design_1/ipshared/91a5/src/char8x12_lookup_table.vhd" \
+"../../../bd/design_1/ipshared/91a5/src/scancode2ascii.vhd" \
+"../../../bd/design_1/ipshared/91a5/hdl/videomemlab_master_v1_0_M00_AXI.vhd" \
+"../../../bd/design_1/ipshared/91a5/hdl/videomemlab_master_v1_0.vhd" \
 "../../../bd/design_1/ip/design_1_videomemlab_master_0_0/sim/design_1_videomemlab_master_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.vhdl" \
 "../../../bd/design_1/ipshared/f54d/src/debounce.vhd" \
@@ -40,10 +40,10 @@ vcom -work proc_sys_reset_v5_0_13 -64 -93 \
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/ip/design_1_rst_clk_wiz_0_100M_0/sim/design_1_rst_clk_wiz_0_100M_0.vhd" \
 "../../../bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_sim_netlist.vhdl" \
-"../../../bd/design_1/ipshared/83a0/src/bram.vhd" \
-"../../../bd/design_1/ipshared/83a0/src/list_ch12_01_vga_sync.vhd" \
-"../../../bd/design_1/ipshared/83a0/hdl/vga_bram_v1_0_S00_AXI.vhd" \
-"../../../bd/design_1/ipshared/83a0/hdl/vga_bram_v1_0.vhd" \
+"../../../bd/design_1/ipshared/be08/src/bram.vhd" \
+"../../../bd/design_1/ipshared/be08/src/list_ch12_01_vga_sync.vhd" \
+"../../../bd/design_1/ipshared/be08/hdl/vga_bram_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/ipshared/be08/hdl/vga_bram_v1_0.vhd" \
 "../../../bd/design_1/ip/design_1_vga_bram_0_0/sim/design_1_vga_bram_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_rst_clk_wiz_0_50M_0/sim/design_1_rst_clk_wiz_0_50M_0.vhd" \
 "../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/sim/bd_f60c.vhd" \

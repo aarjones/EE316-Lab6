@@ -794,8 +794,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>videomemlab_master_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>24</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-04-21T21:41:53Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>26</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-04-25T18:36:54Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5007b6db_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6abef3c1_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
@@ -1111,6 +1111,28 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@28e95793_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@42182db_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2dc5a3d6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f2f5762_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51f05c01_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@416b3e91_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@762a0ec8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d9324e8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ef524f2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61e0de5e_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4790fad9_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ca07769_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6622d3d5_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ee698d0_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73652dd6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70da87bb_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13c136a2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da11cd2_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c9203f6_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@633a31ef_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@785df4a8_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68c57b85_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@643e8e59_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b1956d_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bb7936_ARCHIVE_LOCATION">c:/Users/jones/Desktop/EE316-Lab6/ip_repo/videomemlab_master_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:videomemlab_master:1.0
--- IP Revision: 24
+-- IP Revision: 26
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -125,7 +125,7 @@ ARCHITECTURE design_1_videomemlab_master_0_0_arch OF design_1_videomemlab_master
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_videomemlab_master_0_0_arch : ARCHITECTURE IS "design_1_videomemlab_master_0_0,videomemlab_master_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_videomemlab_master_0_0_arch: ARCHITECTURE IS "design_1_videomemlab_master_0_0,videomemlab_master_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=videomemlab_master,x_ipVersion=1.0,x_ipCoreRevision=24,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_M00_AXI_START_DATA_VALUE=0xAA000000,C_M00_AXI_TARGET_SLAVE_BASE_ADDR=0x40000000,C_M00_AXI_ADDR_WIDTH=32,C_M00_AXI_DATA_WIDTH=32,C_M00_AXI_TRANSACTIONS_NUM=4}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_videomemlab_master_0_0_arch: ARCHITECTURE IS "design_1_videomemlab_master_0_0,videomemlab_master_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=videomemlab_master,x_ipVersion=1.0,x_ipCoreRevision=26,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_M00_AXI_START_DATA_VALUE=0xAA000000,C_M00_AXI_TARGET_SLAVE_BASE_ADDR=0x40000000,C_M00_AXI_ADDR_WIDTH=32,C_M00_AXI_DATA_WIDTH=32,C_M00_AXI_TRANSACTIONS_NUM=4}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME M00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";

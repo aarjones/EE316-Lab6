@@ -1,6 +1,6 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port reset_rtl -pg 1 -lvl 0 -x -10 -y 450 -defaultsOSRD
 preplace port sys_clock -pg 1 -lvl 0 -x -10 -y 480 -defaultsOSRD
@@ -17,8 +17,8 @@ preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 410 -y 560 -defaultsOSRD
 preplace inst rst_clk_wiz_0_50M -pg 1 -lvl 3 -x 780 -y 620 -defaultsOSRD
 preplace inst system_ila_0 -pg 1 -lvl 3 -x 780 -y 370 -defaultsOSRD
 preplace inst keyboard_subordinate_0 -pg 1 -lvl 5 -x 1420 -y 110 -defaultsOSRD
-preplace inst videomemlab_master_0 -pg 1 -lvl 3 -x 780 -y 200 -defaultsOSRD
 preplace inst vga_bram_0 -pg 1 -lvl 5 -x 1420 -y 500 -defaultsOSRD
+preplace inst videomemlab_master_0 -pg 1 -lvl 3 -x 780 -y 200 -defaultsOSRD
 preplace netloc reset_rtl_1 1 0 3 10 550 220 460 590
 preplace netloc sys_clock_1 1 0 1 20J 470n
 preplace netloc clk_wiz_0_locked 1 1 2 210 660 NJ

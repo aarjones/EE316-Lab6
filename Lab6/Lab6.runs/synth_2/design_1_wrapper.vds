@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr 21 18:26:47 2022
-# Process ID: 18772
+# Start of session at: Mon Apr 25 14:39:34 2022
+# Process ID: 5452
 # Current directory: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/design_1_wrapper.vds
@@ -21,27 +21,27 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16564 
+INFO: Helper process launched with PID 20412 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 861.973 ; gain = 177.762
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 862.738 ; gain = 177.840
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:28]
 INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:852' bound to instance 'design_1_i' of component 'design_1' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:43]
 INFO: [Synth 8-638] synthesizing module 'design_1' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:870]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1102]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_clk_wiz_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_keyboard_subordinate_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_keyboard_subordinate_0_0_stub.vhdl:5' bound to instance 'keyboard_subordinate_0' of component 'design_1_keyboard_subordinate_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1111]
-INFO: [Synth 8-638] synthesizing module 'design_1_keyboard_subordinate_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_keyboard_subordinate_0_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_100M_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_rst_clk_wiz_0_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_100M' of component 'design_1_rst_clk_wiz_0_100M_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1139]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_100M_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_rst_clk_wiz_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_50M_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_rst_clk_wiz_0_50M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_50M' of component 'design_1_rst_clk_wiz_0_50M_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1152]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_50M_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_rst_clk_wiz_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_system_ila_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_system_ila_0_0_stub.vhdl:5' bound to instance 'system_ila_0' of component 'design_1_system_ila_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1165]
-INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_system_ila_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_vga_bram_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_vga_bram_0_0_stub.vhdl:5' bound to instance 'vga_bram_0' of component 'design_1_vga_bram_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1170]
-INFO: [Synth 8-638] synthesizing module 'design_1_vga_bram_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_vga_bram_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'design_1_videomemlab_master_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_videomemlab_master_0_0_stub.vhdl:5' bound to instance 'videomemlab_master_0' of component 'design_1_videomemlab_master_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1200]
-INFO: [Synth 8-638] synthesizing module 'design_1_videomemlab_master_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_videomemlab_master_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1102]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_clk_wiz_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_keyboard_subordinate_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_keyboard_subordinate_0_0_stub.vhdl:5' bound to instance 'keyboard_subordinate_0' of component 'design_1_keyboard_subordinate_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1111]
+INFO: [Synth 8-638] synthesizing module 'design_1_keyboard_subordinate_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_keyboard_subordinate_0_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_100M_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_rst_clk_wiz_0_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_100M' of component 'design_1_rst_clk_wiz_0_100M_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1139]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_100M_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_rst_clk_wiz_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_50M_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_rst_clk_wiz_0_50M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_50M' of component 'design_1_rst_clk_wiz_0_50M_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1152]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_50M_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_rst_clk_wiz_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_system_ila_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_system_ila_0_0_stub.vhdl:5' bound to instance 'system_ila_0' of component 'design_1_system_ila_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1165]
+INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_system_ila_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_vga_bram_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_vga_bram_0_0_stub.vhdl:5' bound to instance 'vga_bram_0' of component 'design_1_vga_bram_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1170]
+INFO: [Synth 8-638] synthesizing module 'design_1_vga_bram_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_vga_bram_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_1_videomemlab_master_0_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_videomemlab_master_0_0_stub.vhdl:5' bound to instance 'videomemlab_master_0' of component 'design_1_videomemlab_master_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1200]
+INFO: [Synth 8-638] synthesizing module 'design_1_videomemlab_master_0_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_videomemlab_master_0_0_stub.vhdl:33]
 INFO: [Synth 8-638] synthesizing module 'design_1_videomemlab_master_0_axi_periph_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:417]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_T8KPGA' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_T8KPGA' (1#1) [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:61]
@@ -49,8 +49,8 @@ INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_118H4XN' [C:/Users/jon
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_118H4XN' (2#1) [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:172]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1422L5K' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:283]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1422L5K' (3#1) [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:283]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:785]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-18772-AaronThinkPad/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:785]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/.Xil/Vivado-5452-AaronThinkPad/realtime/design_1_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'design_1_videomemlab_master_0_axi_periph_0' (4#1) [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:417]
 INFO: [Synth 8-256] done synthesizing module 'design_1' (5#1) [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:870]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (6#1) [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:28]
@@ -67,7 +67,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_T8KPGA has unconnected port M_AR
 WARNING: [Synth 8-3331] design m00_couplers_imp_T8KPGA has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_T8KPGA has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 930.582 ; gain = 246.371
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 931.363 ; gain = 246.465
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -80,10 +80,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 930.582 ; gain = 246.371
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 931.363 ; gain = 246.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 930.582 ; gain = 246.371
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 931.363 ; gain = 246.465
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -106,38 +106,38 @@ Finished Parsing XDC File [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sour
 Parsing XDC File [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0/design_1_system_ila_0_0_in_context.xdc] for cell 'design_1_i/system_ila_0'
 Finished Parsing XDC File [c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0/design_1_system_ila_0_0_in_context.xdc] for cell 'design_1_i/system_ila_0'
 Parsing XDC File [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[0]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:219]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[1]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:220]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[2]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:221]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[3]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:222]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[4]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:223]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[5]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:224]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[6]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:225]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[7]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:226]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[5]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:227]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[9]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:228]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[10]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:229]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[15]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:230]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[6]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:231]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[11]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:232]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[13]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:233]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[1]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:234]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[2]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:235]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[3]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:236]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[12]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:237]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[14]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:238]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[0]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:239]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[4]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:240]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[7]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:241]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[8]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:242]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[0]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:243]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[1]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:244]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[2]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:245]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[3]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:246]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[4]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:247]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[5]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:248]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[6]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:249]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[7]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:250]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[0]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:155]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[1]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:156]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[2]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:157]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[3]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:158]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[4]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:159]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[5]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:160]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[6]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:161]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/Inst_bram_0/vga_data[7]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:162]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[0]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:232]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[6]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:233]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[8]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:234]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[13]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:235]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[14]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:236]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[4]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:237]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[11]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:238]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[15]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:239]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[1]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:240]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[2]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:241]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[3]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:242]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[5]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:243]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[7]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:244]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[9]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:245]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[10]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:246]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_address[12]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:247]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[0]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:248]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[1]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:249]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[2]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:250]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[3]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:251]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[4]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:252]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[5]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:253]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[6]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:254]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/vga_bram_0/U0/vga_bram_v1_0_S00_AXI_inst/bram_data[7]'. [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc:255]
 Finished Parsing XDC File [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -146,20 +146,20 @@ Parsing XDC File [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/dont_
 Finished Parsing XDC File [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 991.137 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 991.176 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 991.137 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 991.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 991.137 ; gain = 306.926
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 991.176 ; gain = 306.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 991.137 ; gain = 306.926
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 991.176 ; gain = 306.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -167,8 +167,6 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 5).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 6).
 Applied set_property MARK_DEBUG = true for design_1_i/videomemlab_master_0_axi_periph_M01_AXI_WVALID. (constraint file  C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc, line 152).
-Applied set_property MARK_DEBUG = true for design_1_i/videomemlab_master_0_axi_periph_M01_AXI_AWADDR[6]. (constraint file  C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc, line 154).
-Applied set_property MARK_DEBUG = true for design_1_i/videomemlab_master_0_axi_periph_M01_AXI_WDATA[1]. (constraint file  C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/constrs_1/imports/constraints/Cora-Z7-07S-Master.xdc, line 186).
 Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/videomemlab_master_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
@@ -180,11 +178,11 @@ Applied set_property DONT_TOUCH = true for design_1_i/vga_bram_0. (constraint fi
 Applied set_property DONT_TOUCH = true for design_1_i/rst_clk_wiz_0_50M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/system_ila_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 991.137 ; gain = 306.926
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 991.176 ; gain = 306.277
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'videomemlab_master_0_axi_periph'. This will prevent further optimization [C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.srcs/sources_1/bd/design_1/synth/design_1.vhd:1225]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 991.137 ; gain = 306.926
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 991.176 ; gain = 306.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -232,7 +230,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_T8KPGA has unconnected port M_AR
 WARNING: [Synth 8-3331] design m00_couplers_imp_T8KPGA has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_T8KPGA has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 991.137 ; gain = 306.926
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 991.176 ; gain = 306.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -248,13 +246,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_out3' to pin 'design_1_i/clk_wiz_0/bbstub_clk_out3/O'
 INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1009.836 ; gain = 325.625
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1008.043 ; gain = 323.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1009.910 ; gain = 325.699
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1008.117 ; gain = 323.219
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -266,7 +264,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1019.902 ; gain = 335.691
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1018.184 ; gain = 333.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -284,7 +282,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1035.684 ; gain = 351.473
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1033.980 ; gain = 349.082
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -297,7 +295,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1035.684 ; gain = 351.473
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1033.980 ; gain = 349.082
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -309,7 +307,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1035.684 ; gain = 351.473
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1033.980 ; gain = 349.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -354,27 +352,27 @@ Report Instance Areas:
 |3     |    videomemlab_master_0_axi_periph |design_1_videomemlab_master_0_axi_periph_0 |   263|
 +------+------------------------------------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1035.684 ; gain = 351.473
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1033.980 ; gain = 349.082
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1035.684 ; gain = 290.918
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1035.684 ; gain = 351.473
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1033.980 ; gain = 289.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1033.980 ; gain = 349.082
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1052.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1044.863 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 49 Infos, 57 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1052.047 ; gain = 614.160
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 1044.863 ; gain = 605.918
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1052.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1044.863 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jones/Desktop/EE316-Lab6/Lab6/Lab6.runs/synth_2/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 21 18:27:32 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 25 14:40:23 2022...
